@@ -1,4 +1,3 @@
-
 /*
  
 Pedir por teclado una cadena:
@@ -12,18 +11,19 @@ Decir si es palíndroma
 */
 
 import java.util.*;
+import java.lang.*;
 
 public class Ejercicio1 {
     static Scanner teclado = new Scanner(System.in);
 
-    public static void main (String[] args){
-		//DECLARACION DE VARIABLES
-		byte opcion;
+    public static void main(String[] args) {
+        //DECLARACION DE VARIABLES
+        byte opcion;
         boolean salirMenu = false;
         String palabra;
-		
-		System.out.println("Bienvenido a este programa, introduce una palabra");
-        palabra=teclado.nextLine();
+
+        System.out.println("Bienvenido a este programa, introduce una palabra");
+        palabra = teclado.nextLine();
 
         do {
             System.out.println("\nSeleccione una opción:");
@@ -41,28 +41,27 @@ public class Ejercicio1 {
                 switch (opcion) {
                     case 1:
                         //MOSTRAR AL REVES
-                        
-						
+                        System.out.println(palabra + " al revés es: " + reves(palabra));
                         break;
                     case 2:
-                        
-						
+                        //CONTAR NUMERO DE VOCALES
+                        System.out.println(palabra + " tiene "+ vocales(palabra)+ " vocales");
                         break;
                     case 3:
-                        
-						
+                        //CONTAR NUMERO DE CONSONANTES
+                        System.out.println(palabra + " tiene "+ consonantes(palabra)+ " consonantes");
                         break;
                     case 4:
-                        
-						
+
+
                         break;
                     case 5:
-                        
-						
+
+
                         break;
                     case 6:
-                        
-						
+
+
                         break;
                     case 0: //SALIDA
                         System.out.println("Vas a salir, estás seguro?\n(s/n)");
@@ -78,7 +77,7 @@ public class Ejercicio1 {
                 teclado.nextLine(); // limpiar buffer de teclado
             }
         } while (salirMenu != true);
-	}//FIN MENU
+    } //FIN MENU
 
     //CONFIRMACION DE SALIDA
     public static boolean confirmarSalida(char x) {
@@ -89,17 +88,39 @@ public class Ejercicio1 {
         } else {
             return false;
         }
-    }//FIN SALIDA
+    } //FIN SALIDA
 
-    public static String reves(String revesString){
-        String palabraOriginal=revesString;
-        String palabraInvertida;
-        int reverse=palabraOriginal.length();
-        for (int i = 0; i < palabraOriginal.length(); i++) {
-            palabraInvertida.charAt(reverse)=;
-            reverse--;
-        }
-        return palabraInvertida;
+    //INVERTIR PALABRAS
+    public static String reves(String revesString) {
+        StringBuilder palabraInvertida = new StringBuilder(revesString);
+        palabraInvertida.reverse();
+        return palabraInvertida.toString();
     }
 
-}//FIN CLASS
+    //CONTAR NUMERO DE VOCALES
+    public static int vocales(String vocalString) {
+        String palabra = vocalString.toLowerCase();
+        int numVocales=0;
+        for (int i = 0; i < palabra.length(); i++) {
+            char v = palabra.charAt(i);
+            if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u') {
+                numVocales++;
+            }
+        }
+        return numVocales;
+    }
+
+    //CONTAR NUMERO DE CONSONANTES
+    public static int consonantes(String consonanteString) {
+        String palabra = consonanteString.toLowerCase();
+        int numConsonantes=0;
+        for (int i = 0; i < palabra.length(); i++) {
+            char v = palabra.charAt(i);
+            if (v != 'a' && v != 'e' && v != 'i' && v != 'o' && v != 'u') {
+                numConsonantes++;
+            }
+        }
+        return numConsonantes;
+    }
+
+} //FIN CLASS
