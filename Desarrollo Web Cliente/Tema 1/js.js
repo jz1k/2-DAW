@@ -1,4 +1,4 @@
 function diAlgo() {
-    alert("Hola amigo, este es tu primer javascript!");
+    alert("Hola amigo");
 }
 diAlgo();
