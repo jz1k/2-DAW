@@ -32,7 +32,7 @@ public class Ejercicio1 {
             System.out.println("\t3 - Contar el nº de consonantes");
             System.out.println("\t4 - Pasar todo a minúsculas");
             System.out.println("\t5 - Pasar todo a mayúsculas");
-            System.out.println("\t6 - Deci si es palindroma");
+            System.out.println("\t6 - Decir si es palindroma");
             System.out.println("\t0 - Salir");
             try {
                 opcion = teclado.nextByte();
@@ -52,12 +52,12 @@ public class Ejercicio1 {
                         System.out.println(palabra + " tiene "+ consonantes(palabra)+ " consonantes");
                         break;
                     case 4:
-
-
+                        //MINUSCULA
+                        System.out.println("La palabra "+palabra+" en minuscula es " + minuscula(palabra));
                         break;
                     case 5:
-
-
+                        //mayuscula
+                        System.out.println("La palabra "+palabra+" en mayuscula es " + mayuscula(palabra));
                         break;
                     case 6:
 
@@ -121,6 +121,18 @@ public class Ejercicio1 {
             }
         }
         return numConsonantes;
+    }
+
+    //PASAR A MINUSCULA
+    public static String minuscula (String minusculaString){
+        String minuscula=minusculaString.toLowerCase();
+        return minuscula;
+    }
+
+    //PASAR A MAYUSCULA
+    public static String mayuscula (String mayusculaString){
+        String mayuscula=mayusculaString.toUpperCase();
+        return mayuscula;
     }
 
 } //FIN CLASS
