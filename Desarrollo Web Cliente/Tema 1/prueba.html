@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Primer JavaScript</title>
-    <script src="primerJavaScript.js"></script>
+    <!-- <script src="primerJavaScript.js"></script> -->
 </head>
 
 <body>
@@ -17,6 +17,61 @@
         ¡Dale!
     </button>
 
+    <!-- 1.6 -->
+
+    <h1>Cambio de imagenes con JavaScript</h1>
+
+    <img id="myFPImage" onclick="cambiaPic()" src="http://myfpschool.com/wp-content/uploads/2016/06/myblack.jpeg"
+        width="100" height="180">
+
+    <p>Haz click sobre las letras para cambiarlas.</p>
+
+    <script>
+        function cambiaPic() {
+            var image = document.getElementById('myFPImage');
+            if (image.src.match("green")) {
+                image.src = "http://myfpschool.com/wp-content/uploads/2016/06/myblack.jpeg";
+            } else {
+                image.src = "http://myfpschool.com/wp-content/uploads/2016/06/mygreen.jpeg"
+            }
+        }
+    </script>
+
+    <!-- 1.7/8 -->
+
+    <p id="mytxt">Aprende JavaScript con El Nano!</p>
+    <button type="button" onclick="myFunction()">¡Dale!</button>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mytxt");
+            x.style.fontSize = "25px";
+            x.style.color = "red";
+        }
+    </script>
+
+    <!-- 1.8.1 -->
+
+    <script>
+        console.log("Sintesis, ejemplo de consola");
+    </script>
+
+    <!-- 1.8.2 -->
+
+    <p id="parrafito"></p>
+    <script>
+        document.getElementById("parrafito").innerHTML=5+6;
+    </script>
+    
+    <!-- 1.8.3 -->
+
+    <script>
+        document.write("<h2>Buenos Dias</h2>");
+    </script>
+
+    <!-- 1.8.4 -->
+    <script>
+        window.alert("BUENAS NOCHES");
+    </script>
 </body>
 
 </html>
