@@ -11,7 +11,6 @@ Decir si es palíndroma
 */
 
 import java.util.*;
-import java.lang.*;
 
 public class Ejercicio1 {
     static Scanner teclado = new Scanner(System.in);
@@ -45,23 +44,23 @@ public class Ejercicio1 {
                         break;
                     case 2:
                         //CONTAR NUMERO DE VOCALES
-                        System.out.println(palabra + " tiene "+ vocales(palabra)+ " vocales");
+                        System.out.println(palabra + " tiene " + vocales(palabra) + " vocales");
                         break;
                     case 3:
                         //CONTAR NUMERO DE CONSONANTES
-                        System.out.println(palabra + " tiene "+ consonantes(palabra)+ " consonantes");
+                        System.out.println(palabra + " tiene " + consonantes(palabra) + " consonantes");
                         break;
                     case 4:
                         //MINUSCULA
-                        System.out.println("La palabra "+palabra+" en minuscula es " + minuscula(palabra));
+                        System.out.println("La palabra " + palabra + " en minuscula es " + minuscula(palabra));
                         break;
                     case 5:
-                        //mayuscula
-                        System.out.println("La palabra "+palabra+" en mayuscula es " + mayuscula(palabra));
+                        //MAYUSCULA
+                        System.out.println("La palabra " + palabra + " en mayuscula es " + mayuscula(palabra));
                         break;
                     case 6:
-
-
+                        //COMPROBAR SI ES PALINDROMA
+                        System.out.println("La palabra " + palabra + " " + palindroma(palabra));
                         break;
                     case 0: //SALIDA
                         System.out.println("Vas a salir, estás seguro?\n(s/n)");
@@ -100,7 +99,7 @@ public class Ejercicio1 {
     //CONTAR NUMERO DE VOCALES
     public static int vocales(String vocalString) {
         String palabra = vocalString.toLowerCase();
-        int numVocales=0;
+        int numVocales = 0;
         for (int i = 0; i < palabra.length(); i++) {
             char v = palabra.charAt(i);
             if (v == 'a' || v == 'e' || v == 'i' || v == 'o' || v == 'u') {
@@ -113,7 +112,7 @@ public class Ejercicio1 {
     //CONTAR NUMERO DE CONSONANTES
     public static int consonantes(String consonanteString) {
         String palabra = consonanteString.toLowerCase();
-        int numConsonantes=0;
+        int numConsonantes = 0;
         for (int i = 0; i < palabra.length(); i++) {
             char v = palabra.charAt(i);
             if (v != 'a' && v != 'e' && v != 'i' && v != 'o' && v != 'u') {
@@ -124,15 +123,38 @@ public class Ejercicio1 {
     }
 
     //PASAR A MINUSCULA
-    public static String minuscula (String minusculaString){
-        String minuscula=minusculaString.toLowerCase();
+    public static String minuscula(String minusculaString) {
+        String minuscula = minusculaString.toLowerCase();
         return minuscula;
     }
 
     //PASAR A MAYUSCULA
-    public static String mayuscula (String mayusculaString){
-        String mayuscula=mayusculaString.toUpperCase();
+    public static String mayuscula(String mayusculaString) {
+        String mayuscula = mayusculaString.toUpperCase();
         return mayuscula;
+    }
+
+    //PALINDROMA
+    public static String palindroma(String palindroma) {
+        if (comprobarPalindroma(palindroma) == true) {
+            return "es palindroma";
+        } else {
+            return "no es palindroma";
+        }
+    }
+
+    //ES PALINDROMA
+    public static boolean comprobarPalindroma(String palabraPalindroma) {
+        palabraPalindroma = palabraPalindroma.toLowerCase().trim();
+        String palabraInvertida = reves(palabraPalindroma);
+        boolean esPalindroma = true;
+        for (int i = 0; i < palabraPalindroma.length() / 2; i++) {
+            if (palabraPalindroma.charAt(i) != palabraInvertida.charAt(i)) {
+                esPalindroma = false;
+                break;
+            }
+        }
+        return esPalindroma;
     }
 
 } //FIN CLASS
