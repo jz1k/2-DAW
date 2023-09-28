@@ -19,10 +19,8 @@ public class Ej_6_ContarLetras {
                 contador++;
                 index = texto.indexOf(letra, index + 1); // Buscar la siguiente ocurrencia
             }
-
             contadorLetras[letra - 'a'] = contador;
         }
-
         System.out.println("Letra\tCantidad");
         for (char letra = 'a'; letra <= 'z'; letra++) {
             int cantidad = contadorLetras[letra - 'a'];
