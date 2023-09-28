@@ -1,18 +1,11 @@
-/*
- 
-Pedir por teclado una cadena:
-Mostrar menú:
-Mostrarla al revés
-Contar el nº de vocales
-Contar el nº de consonantes
-Pasar todo a minúscula
-Pasar todo a mayúscula
-Decir si es palíndroma
-*/
+// Juan Carlos Bailon Rubi
+// Ejercicio 1: 
+// A=Falso, cuando se compara un string se usaría equals, ya que con == compara la variable como tal
+// B=Falso, los string no son modificables, cuando se modifica un string realmente se está creando otro
 
 import java.util.*;
 
-public class bailonRubi_Ficha1 {
+public class BailonRubi_Ficha2 {
     static Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {

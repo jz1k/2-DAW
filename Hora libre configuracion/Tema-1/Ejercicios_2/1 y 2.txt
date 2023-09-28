@@ -1,0 +1,10 @@
+Juan Carlos Bailon Rubi
+
+Ejercicio 1: 
+- A) Falso, cuando se compara un string se usaría equals, ya que con == compara la variable como tal
+- B) Falso, los string no son modificables, cuando se modifica un string realmente se está creando otro
+
+Ejercicio 2:
+- A) boolean sonIguales = s1.equals(s2);
+- B) s1 += s2;
+- C) int longitud = s1.length();
