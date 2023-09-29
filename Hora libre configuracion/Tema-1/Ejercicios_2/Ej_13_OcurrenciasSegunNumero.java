@@ -8,7 +8,7 @@ public class Ej_13_OcurrenciasSegunNumero {
 
         System.out.print("Introduce texto: ");
         String texto = scanner.nextLine();
-        String[] palabras = texto.split("\\s+"); // Dividir el texto en palabras
+        String[] palabras = texto.split(" "); // Dividir el texto en palabras
 
         int[] contadorPalabrasPorLongitud = new int[11]; // Para palabras de 1 a 10 letras
 

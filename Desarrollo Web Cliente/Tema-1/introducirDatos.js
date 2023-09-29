@@ -14,6 +14,4 @@ function pedirNumero() {
             alert("Has superado el numero maximo de intentos");
         }
     } while (intentos<3);
-
-    
 }
