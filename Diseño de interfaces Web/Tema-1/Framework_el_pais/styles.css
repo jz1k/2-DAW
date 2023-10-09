@@ -3,11 +3,6 @@
 
 }
 
-header {
-    /* color: rgb(0, 156, 196); */
-
-}
-
 .grid {
     font-family: 'Times New Roman', Times, serif;
     margin: 0 auto;
@@ -27,13 +22,13 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
+
 .imgCentro{
     width: 100%;
 }
 
 div {
     padding: 5px;
-    /* border: solid red 1px; */
 }
 
 div div div div{
@@ -42,6 +37,7 @@ div div div div{
 
 .autor{
     font-size: 12px;
+    margin-block-start: -4%;
 }
 
 .eh1{
@@ -70,6 +66,12 @@ div div div div{
 
 .col-6 {
     width: 50%;
+}
+
+.col-6-center {
+    width: 50%;
+    border-left: solid rgb(224, 224, 224) 1px ;
+    border-right: solid rgb(224, 224, 224) 1px ;
 }
 
 .col-7 {
