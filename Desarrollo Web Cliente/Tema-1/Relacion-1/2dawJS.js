@@ -132,20 +132,112 @@ function baseOcho() {
 
 function numEnBase() {
     var numero = prompt("Por favor, ingrese un número entero:");
-        var base = prompt("Ingrese la base a la que desea convertir el número:");
+    var base = prompt("Ingrese la base a la que desea convertir el número:");
 
-        // Convertir las entradas a números enteros
-        numero = parseInt(numero);
-        base = parseInt(base);
+    // Convertir las entradas a números enteros
+    numero = parseInt(numero);
+    base = parseInt(base);
 
-        // Verificar si las entradas son números válidos y si la base está en el rango [2, 36]
-        if (!isNaN(numero) && !isNaN(base) && base >= 2 && base <= 36) {
-            var numeroConvertido = numero.toString(base);
+    // Verificar si las entradas son números válidos y si la base está en el rango [2, 36]
+    if (!isNaN(numero) && !isNaN(base) && base >= 2 && base <= 36) {
+        var numeroConvertido = numero.toString(base);
 
-            // Mostrar el resultado en una alerta
-            document.writeln("El número en la base seleccionada: " + numeroConvertido);
-        } else {
-            alert("Por favor, ingrese un número entero válido y una base válida");
-        }
+        // Mostrar el resultado en una alerta
+        document.writeln("El número en la base seleccionada: " + numeroConvertido);
+    } else {
+        alert("Por favor, ingrese un número entero válido y una base válida");
+    }
 }
 
+function multiplicacion() {
+
+    var repetir;
+
+    do {
+        var numero1 = parseInt(prompt("Escribe el primer número (positivo y menor de 57):"));
+        var numero2 = parseInt(prompt("Escribe el segundo número (positivo y menor de 57):"));
+
+        if (isNaN(numero1) || isNaN(numero2) || numero1 <= 0 || numero2 <= 0 || numero1 >= 57 || numero2 >= 57) {
+            alert("Números no válidos. Deben ser positivos y menores de 57.");
+        } else {
+            var producto = numero1 * numero2;
+            alert("El producto es: " + producto);
+        }
+
+        repetir = prompt("¿Quieres volver a empezar? (s/n):").toLowerCase() === 's';
+    } while (repetir);
+}
+
+function contadorNumeros() {
+    var contador = 0;
+
+    while (true) {
+        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+
+        if (numero === 9999) {
+            break; // Salir del bucle si se ingresa 9999
+        }
+
+        contador++;
+    }
+
+    alert("Número de números introducidos (excluyendo el 9999): " + contador);
+
+}
+
+function contadorNumeros2() {
+    var contador = 0;
+    var suma = 0;
+
+    while (true) {
+        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+
+        if (numero === 9999) {
+            break; // Salir del bucle si se ingresa 9999
+        }
+
+        contador++;
+        suma += numero;
+    }
+
+    alert("Número de números introducidos (excluyendo el 9999): " + contador);
+    alert("Suma de los números introducidos (excluyendo el 9999): " + suma);
+
+}
+
+function contadorNumeros3() {
+    var contador = 0;
+    var suma = 0;
+    var producto = 1;
+
+    while (true) {
+        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+
+        if (numero === 9999) {
+            break; // Salir del bucle si se ingresa 9999
+        }
+
+        contador++;
+        suma += numero;
+        producto *= numero;
+    }
+
+    alert("Número de números introducidos (excluyendo el 9999): " + contador);
+    alert("Suma de los números introducidos (excluyendo el 9999): " + suma);
+    alert("Producto de los números introducidos (excluyendo el 9999): " + producto);
+
+}
+
+function multiploYSuma() {
+    var suma = 0;
+
+        for (var i = 1; i < 1000; i++) {
+            if (i % 23 === 0) {
+                document.write(i + "<br>");
+                suma += i;
+            }
+        }
+
+        document.write("<br>Suma de todos los múltiplos de 23 inferiores a 1000: " + suma);
+
+}
