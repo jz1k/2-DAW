@@ -170,9 +170,10 @@ function multiplicacion() {
 
 function contadorNumeros() {
     var contador = 0;
+    var numero=0;
 
-    while (true) {
-        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+    while (!isNaN(numero)) {
+        numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
 
         if (numero === 9999) {
             break; // Salir del bucle si se ingresa 9999
@@ -188,9 +189,10 @@ function contadorNumeros() {
 function contadorNumeros2() {
     var contador = 0;
     var suma = 0;
+    var numero=0;
 
-    while (true) {
-        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+    while (!isNaN(numero)) {
+        numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
 
         if (numero === 9999) {
             break; // Salir del bucle si se ingresa 9999
@@ -209,9 +211,10 @@ function contadorNumeros3() {
     var contador = 0;
     var suma = 0;
     var producto = 1;
+    var numero=0;
 
-    while (true) {
-        var numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
+    while (!isNaN(numero)) {
+        numero = parseInt(prompt("Escribe un número (9999 para terminar):"));
 
         if (numero === 9999) {
             break; // Salir del bucle si se ingresa 9999
