@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conversión de Temperaturas</title>
+</head>
+<body>
+    <h1>Conversión de Temperaturas</h1>
+    <script>
+        var farenheit, celsius;
+        var s = "";
+
+        for (var i = -2; i <= 12; i++) {
+            celsius = 10 * i;
+            farenheit = 32 + (celsius * 9) / 5;
+            s = s + "C = " + celsius + " F = " + farenheit + "\n";
+
+            // Cambio 1: Se agregaron llaves para envolver el código dentro del bucle for.
+            
+            if (celsius == 0) {
+                s = s + "Punto de congelación del Agua\n";
+            }
+
+            if (celsius == 100) {
+                s = s + "Punto de ebullición del Agua\n";
+            }
+        }
+
+        alert(s);
+        // Cambio 2: Se cerró correctamente la función alert con alert(s);
+    </script>
+</body>
+</html>
+
+
+<!-- Se corrigieron las etiquetas <SCRIPT> y <//SCRIPT> a <script> y </script> respectivamente, para que estén en minúsculas.
+    Se agregaron los operadores var adecuadamente para declarar las variables farenheit, celsius, e i.
+    Se reemplazó for(i=-2;i<=12:i++) con for (var i = -2; i <= 12; i++) para corregir la sintaxis del bucle for.
+    Se agregaron llaves {} para envolver las secciones de código dentro del bucle for.
+    Se utilizó if con llaves {} para envolver las condiciones y declaraciones relacionadas.
+    Se corrigieron los cálculos para la conversión de temperaturas de Celsius a Fahrenheit.
+    Se cerró correctamente la función alert con alert(s);. -->
