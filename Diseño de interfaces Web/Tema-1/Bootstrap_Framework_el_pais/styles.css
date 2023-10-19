@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+
+}
+
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgCentro{
+    width: 100%;
+}
+
+@media (max-width: 500px){
+    p{
+        display: none;
+    }
+}
+
+div {
+    padding: 5px;
+}
+
+div div div div{
+    border-bottom: solid rgb(224, 224, 224) 1px ;
+} 
+
+.autor{
+    font-size: 12px;
+    margin-block-start: -4%;
+}
+
+.eh1{
+    width: 8%;
+    text-align: center;
+}
