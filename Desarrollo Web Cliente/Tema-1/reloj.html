@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Atrás</title>
+</head>
+<body>
+    <h1>Cuenta Atrás</h1>
+    <p>Introduce el tiempo en horas, minutos y segundos:</p>
+    <input type="number" id="horas" placeholder="Horas">
+    <input type="number" id="minutos" placeholder="Minutos">
+    <input type="number" id="segundos" placeholder="Segundos">
+    <button onclick="iniciarCuentaAtras()">Iniciar Cuenta Atrás</button>
+    <div id="cuentaAtras"></div>
+
+    <script>
+        var horasRestantes, minutosRestantes, segundosRestantes;
+        var intervalId;
+
+        function iniciarCuentaAtras() {
+            var horasInput = document.getElementById("horas");
+            var minutosInput = document.getElementById("minutos");
+            var segundosInput = document.getElementById("segundos");
+            var cuentaAtrasDiv = document.getElementById("cuentaAtras");
+
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+
+            horasRestantes = parseInt(horasInput.value);
+            minutosRestantes = parseInt(minutosInput.value);
+            segundosRestantes = parseInt(segundosInput.value);
+
+            if (!isNaN(horasRestantes) && !isNaN(minutosRestantes) && !isNaN(segundosRestantes) &&
+                horasRestantes >= 0 && minutosRestantes >= 0 && segundosRestantes >= 0) {
+
+                intervalId = setInterval(function () {
+                    cuentaAtrasDiv.innerHTML = "Tiempo restante: " + horasRestantes + "h " + minutosRestantes + "m " + segundosRestantes + "s";
+
+                    if (horasRestantes === 0 && minutosRestantes === 0 && segundosRestantes === 0) {
+                        clearInterval(intervalId);
+                        cuentaAtrasDiv.innerHTML = "¡Cuenta atrás finalizada!";
+                    } else {
+                        if (segundosRestantes === 0) {
+                            if (minutosRestantes === 0) {
+                                horasRestantes--;
+                                minutosRestantes = 59;
+                            } else {
+                                minutosRestantes--;
+                            }
+                            segundosRestantes = 59;
+                        } else {
+                            segundosRestantes--;
+                        }
+                    }
+                }, 1000);
+            } else {
+                cuentaAtrasDiv.innerHTML = "Introduce valores válidos para horas, minutos y segundos.";
+            }
+        }
+    </script>
+</body>
+</html>
