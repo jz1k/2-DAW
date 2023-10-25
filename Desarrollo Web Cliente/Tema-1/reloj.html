@@ -8,40 +8,54 @@
 <body>
     <h1>Cuenta Atrás</h1>
     <p>Introduce el tiempo en horas, minutos y segundos:</p>
+    <!-- Estos son campos de entrada para las horas, minutos y segundos. -->
     <input type="number" id="horas" placeholder="Horas">
     <input type="number" id="minutos" placeholder="Minutos">
     <input type="number" id="segundos" placeholder="Segundos">
+    <!-- Este botón activa la función iniciarCuentaAtras() al hacer clic. -->
     <button onclick="iniciarCuentaAtras()">Iniciar Cuenta Atrás</button>
+    <!-- Aquí se mostrará la cuenta atrás. -->
     <div id="cuentaAtras"></div>
 
+    <!-- JavaScript -->
     <script>
+        // Variables para rastrear las horas, minutos y segundos restantes.
         var horasRestantes, minutosRestantes, segundosRestantes;
+        // Variable para el intervalo de tiempo.
         var intervalId;
 
+        // Función para iniciar la cuenta atrás.
         function iniciarCuentaAtras() {
+            // Obtenemos los elementos HTML necesarios.
             var horasInput = document.getElementById("horas");
             var minutosInput = document.getElementById("minutos");
             var segundosInput = document.getElementById("segundos");
             var cuentaAtrasDiv = document.getElementById("cuentaAtras");
 
+            // Si ya hay un intervalo en ejecución, lo detenemos.
             if (intervalId) {
                 clearInterval(intervalId);
             }
 
+            // Obtenemos los valores de horas, minutos y segundos introducidos por el usuario.
             horasRestantes = parseInt(horasInput.value);
             minutosRestantes = parseInt(minutosInput.value);
             segundosRestantes = parseInt(segundosInput.value);
 
+            // Comprobamos si los valores son válidos y mayores o iguales a cero.
             if (!isNaN(horasRestantes) && !isNaN(minutosRestantes) && !isNaN(segundosRestantes) &&
                 horasRestantes >= 0 && minutosRestantes >= 0 && segundosRestantes >= 0) {
 
+                // Iniciamos un intervalo que actualiza la cuenta atrás cada segundo.
                 intervalId = setInterval(function () {
                     cuentaAtrasDiv.innerHTML = "Tiempo restante: " + horasRestantes + "h " + minutosRestantes + "m " + segundosRestantes + "s";
 
+                    // Comprobamos si la cuenta atrás ha llegado a cero.
                     if (horasRestantes === 0 && minutosRestantes === 0 && segundosRestantes === 0) {
                         clearInterval(intervalId);
                         cuentaAtrasDiv.innerHTML = "¡Cuenta atrás finalizada!";
                     } else {
+                        // Actualizamos los valores de tiempo restante.
                         if (segundosRestantes === 0) {
                             if (minutosRestantes === 0) {
                                 horasRestantes--;
