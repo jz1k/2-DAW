@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Oswald', sans-serif;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 20px 0;
+    /* Ajusta el espacio arriba y abajo según sea necesario */
+}
+
+.logo-container img {
+    max-width: 200px;
+    /* Tamaño máximo del logo */
+}
+
+.menuNav {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid rgb(32, 32, 32);
+    margin: 1%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Media query para reducir el tamaño del logo en pantallas más pequeñas */
+@media (max-width: 576px) {
+    .logo-container img {
+        max-width: 150px;
+        /* Tamaño máximo del logo en pantallas más pequeñas */
+    }
+}
