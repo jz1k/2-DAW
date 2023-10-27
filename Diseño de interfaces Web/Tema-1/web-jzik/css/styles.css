@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 body {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.493);
-    background-blend-mode:darken;
+    background-blend-mode: darken;
     background-image: url("https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.blackground{
+.blackground {
     /* position: relative; */
     background-color: black;
     color: white;
@@ -22,11 +22,10 @@ body {
 
 .logo-container {
     text-align: center;
-    padding: 20px 0;
 }
 
 .logo-container img {
-    max-width: 200px;
+    max-width: 60%;
 }
 
 .menuNav {
@@ -40,40 +39,58 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
- .degradado{
+
+.degradado {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    color: white; /* Texto en blanco para contraste */
-    padding: 20px; /* Espaciado interior */
- }
+    color: white;
+    /* Texto en blanco para contraste */
+    padding: 20px;
+    /* Espaciado interior */
+}
 
- .noPadding-bot{
+.degradado-bot {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    color: white;
+    /* Texto en blanco para contraste */
+    padding: 20px;
+    /* Espaciado interior */
+}
+
+.carousel-img {
+    width: 100%;
+    /* Ajusta el ancho al 100% del contenedor del carrusel */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+}
+
+.noPadding-bot {
     padding-bottom: 0px !important;
- }
+}
 
- .noPadding-tot{
+.noPadding-tot {
     padding-top: 0px !important;
- }
+}
 
- .noPadding-right{
+.noPadding-right {
     padding-right: 0px !important;
- }
+}
 
- .noPadding-left{
+.noPadding-left {
     padding-left: 0px !important;
- }
+}
 
 
- .imgStudio{
+.imgStudio {
     max-width: 300px;
- }
+}
 
- .rrss{
+.rrss {
     max-width: 65px;
     min-width: 65px;
- }
+}
 
-.imagen-cuerpo{
-    background-image:url(https://i.ibb.co/5LfL7t9/IMG-20230812-224214.jpg);
+.imagen-cuerpo {
+    background-image: url(https://i.ibb.co/5LfL7t9/IMG-20230812-224214.jpg);
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
@@ -83,50 +100,74 @@ body {
     margin: 5%;
 }
 
-.contenidoStats{
+.contenidoStats {
     margin: 5%;
-    
 }
 
-.blurStats{
+
+
+.blurStats {
     background-color: rgba(0, 0, 0, 0.274);
     backdrop-filter: blur(6px);
+    margin-top: 20%;
+    margin-bottom: 20%;
 }
 
+.navBlur {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(6px);
+    margin: 0px !important;
+}
 
- /* .imgEstadisticas{
-    z-index: 1;
-    position: relative;
- }
+.margin-top {
+    padding-top: 5%;
+}
 
-.contenidoStats {
-    width: 50%;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    right: 0;
+.margin-bot {
+    padding-bottom: 5%;
+}
+
+.imagen-hover {
+    transition: transform 0.3s;
+    /* Agrega una transición suave */
+}
+
+.imagen-hover:hover {
+    transform: scale(1.2);
+    /* Cambia el tamaño de la imagen en hover (escala al 120%) */
+}
+
+.footer {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.308);
     color: white;
-    padding: 20px;
-}*/
+  }
+  
 
 
 
-
-
-/* Media query para reducir el tamaño del logo en pantallas más pequeñas */
 @media (max-width: 768px) {
     .logo-container img {
         max-width: 150px;
     }
-    .degradado {
-        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        color: white; /* Texto en blanco para contraste */
-        padding: 20px; /* Espaciado interior */
-    }
 
-    .rrss{
+    .rrss {
         max-width: 50px;
         min-width: 50px;
-     }
+    }
+
+    h1 {
+        font-size: 20px;
+    }
 }
 
+/* @container (width < 100px) {
+
+    h1 {
+        font-size: 15px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+} */
