@@ -15,64 +15,164 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- Estilos personalizados -->
+  <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/jzik-logo.png" type="image/x-icon">
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
 
 <body>
-  <header>
+  <header class="container">
     <!-- Logo en la parte superior -->
     <div class="logo-container">
-      <a class="navbar-brand" href="#">
-        <img src="assets/img/jzik-logo.png" alt="JZIK Logo">
-      </a>
+      <img src="assets/img/jzik-logo.png" alt="JZIK Logo">
+
     </div>
-    
-    
+
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-sm navbar-dark menuNav">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+      <button class="navbar-toggler mx-auto dropdown-toggle" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> <!-- Las tres líneas típicas -->
+      </button>
+
       <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0 mx-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
+            <a class="nav-link active" href="#" aria-current="page">Inicio <span
+                class="visually-hidden">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Tour</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">Merchandising</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Música</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Merchandising</a>
           </li>
         </ul>
-        <form class="d-flex my-2 my-lg-0">
-          <input class="form-control me-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
       </div>
     </nav>
   </header>
+
+
   <main>
+    <div class="container-fluid">
+      <section class="container">
+        <div class="row col-12 justify-content-evenly">
+          <!-- Spotify -->
+          <div class="col-3 rrss">
+            <img class="col-12 " src="assets/rrss/spotify.png" alt="">
+          </div>
+          <!-- Soundcloud -->
+          <div class="col-3 rrss">
+            <img class="col-12" src="assets/rrss/soundcloud.png" alt="">
+          </div>
+          <!-- Instagram -->
+          <div class="col-3 rrss">
+            <img class="col-12" src="assets/rrss/instagram.png" alt="">
+          </div>
+          <!-- Twitter -->
+          <div class="col-3 rrss">
+            <img class="col-12" src="assets/rrss/twitter.png" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- Mi historia -->
+    <section class="container-fluid degradado noPadding-bot">
+      <div class="container">
+        <div class="row mx-auto">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <h1>Mi historia</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, ad. Perferendis, aspernatur nemo harum
+              expedita qui cumque unde. Ratione aperiam ad sequi dolore adipisci qui mollitia ipsam impedit accusamus?
+              Non! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus perferendis illum in iusto culpa
+              repellat modi dolorum deleniti odio, quidem non! Assumenda ad vel molestias esse, soluta tenetur natus
+              nostrum?
+            </p>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
+            <img class="col-12 imgStudio" src="assets/img/studio-png.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container-fluid blackground">
+      <div class="container imagen-cuerpo">
+        <div class="row mx-auto">
+          <div class="col-6">
+            
+          </div>
+          <div class="col-6" >
+            <div class="col-12 blackground row divStats mx-auto">
+              <div class="col-6">
+                <div class="col-12 contenidoStats">
+                  <h1>200K</h1>
+                  <p>Visualizaciones</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="col-12 contenidoStats">
+                  <h1>1 MILLÓN</h1>
+                  <p>Visualizaciones</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="col-12 contenidoStats">
+                  <h1>
+                    3094
+                  </h1>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="col-12 contenidoStats">
+                  <h1>38984</h1>
+                </div">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="container-fluid blackground">
+      <div class="container">
+        <div class="col-12">
+          <img class="col-12 imgEstadisticas" src="https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg" alt="">
+          <div class=" row contenidoStats blackground">
+            <div class="col-6"><h1>22222</h1></div>
+            <div class="col-6"><h1>22222</h1></div>
+            <div class="col-6"><h1>22222</h1></div>
+            <div class="col-6"><h1>22222</h1></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    
+
 
   </main>
+
+
   <footer>
-    <!-- place footer here -->
+
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+    </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    </script>
 </body>
 
 </html>

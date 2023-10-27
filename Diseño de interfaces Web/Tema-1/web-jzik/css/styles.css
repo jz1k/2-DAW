@@ -1,29 +1,37 @@
 * {
     box-sizing: border-box;
+    border: 1px solid greenyellow;
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg");
     background-size: cover;
+    background-color: rgba(0, 0, 0, 0.493);
+    background-blend-mode:darken;
+    background-image: url("https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg");
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Oswald', sans-serif;
 }
 
+.blackground{
+    /* position: relative; */
+    background-color: black;
+    color: white;
+}
+
 .logo-container {
     text-align: center;
     padding: 20px 0;
-    /* Ajusta el espacio arriba y abajo según sea necesario */
 }
 
 .logo-container img {
     max-width: 200px;
-    /* Tamaño máximo del logo */
 }
 
 .menuNav {
     background-color: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid rgb(32, 32, 32);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.281);
     margin: 1%;
 }
 
@@ -32,11 +40,85 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+ .degradado{
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    color: white; /* Texto en blanco para contraste */
+    padding: 20px; /* Espaciado interior */
+ }
+
+ .noPadding-bot{
+    padding-bottom: 0px !important;
+ }
+
+ .noPadding-tot{
+    padding-top: 0px !important;
+ }
+
+ .noPadding-right{
+    padding-right: 0px !important;
+ }
+
+ .noPadding-left{
+    padding-left: 0px !important;
+ }
+
+
+ .imgStudio{
+    max-width: 300px;
+ }
+
+ .rrss{
+    max-width: 65px;
+    min-width: 65px;
+ }
+
+.imagen-cuerpo{
+    background-image:url(https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg);
+    width: 100%;
+}
+
+.divStats {
+    margin: 5%;
+}
+
+.contenidoStats{
+    margin: 5%;
+}
+
+
+ /* .imgEstadisticas{
+    z-index: 1;
+    position: relative;
+ }
+
+.contenidoStats {
+    width: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: white;
+    padding: 20px;
+}*/
+
+
+
+
 
 /* Media query para reducir el tamaño del logo en pantallas más pequeñas */
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .logo-container img {
         max-width: 150px;
-        /* Tamaño máximo del logo en pantallas más pequeñas */
     }
+    .degradado {
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        color: white; /* Texto en blanco para contraste */
+        padding: 20px; /* Espaciado interior */
+    }
+
+    .rrss{
+        max-width: 50px;
+        min-width: 50px;
+     }
 }
+
