@@ -73,7 +73,9 @@ body {
  }
 
 .imagen-cuerpo{
-    background-image:url(https://i.ibb.co/vwmQx52/TCM06734-1-Grande.jpg);
+    background-image:url(https://i.ibb.co/5LfL7t9/IMG-20230812-224214.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
 }
 
@@ -83,6 +85,12 @@ body {
 
 .contenidoStats{
     margin: 5%;
+    
+}
+
+.blurStats{
+    background-color: rgba(0, 0, 0, 0.274);
+    backdrop-filter: blur(6px);
 }
 
 
