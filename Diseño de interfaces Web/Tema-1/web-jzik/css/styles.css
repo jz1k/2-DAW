@@ -3,6 +3,12 @@
     /* border: 1px solid greenyellow; */
 }
 
+:root {
+    --color-fondo: rgb(0, 0, 0);
+    --color-texto: white;
+    --color-primario: #8a0000;
+  }
+
 body {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.493);
@@ -16,8 +22,8 @@ body {
 
 .blackground {
     /* position: relative; */
-    background-color: black;
-    color: white;
+    background-color:var(--color-fondo);
+    color: var(--color-texto);
 }
 
 .logo-container {
@@ -42,7 +48,7 @@ body {
 
 .degradado {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    color: white;
+    color: var(--color-texto);
     /* Texto en blanco para contraste */
     padding: 20px;
     /* Espaciado interior */
@@ -50,7 +56,7 @@ body {
 
 .degradado-bot {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    color: white;
+    color: var(--color-texto);
     /* Texto en blanco para contraste */
     padding: 20px;
     /* Espaciado interior */
@@ -119,20 +125,20 @@ body {
     margin: 0px !important;
 }
 
-.margin-top {
+.padding-top {
     padding-top: 5%;
 }
 
-.margin-bot {
+.padding-bot {
     padding-bottom: 5%;
 }
 
-.imagen-hover {
+.zoom-hover {
     transition: transform 0.3s;
     /* Agrega una transición suave */
 }
 
-.imagen-hover:hover {
+.zoom-hover:hover {
     transform: scale(1.2);
     /* Cambia el tamaño de la imagen en hover (escala al 120%) */
 }
@@ -140,11 +146,13 @@ body {
 .footer {
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.308);
-    color: white;
+    color: var(--color-texto);
   }
-  
 
 
+
+
+/* Media y Container Queries */
 
 @media (max-width: 768px) {
     .logo-container img {
