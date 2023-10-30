@@ -20,6 +20,10 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
+h1 + p {
+    font-style: italic;
+  }
+
 .blackground {
     /* position: relative; */
     background-color:var(--color-fondo);
@@ -40,6 +44,10 @@ body {
     margin: 1%;
 }
 
+.navBar > header {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
 .row {
     width: 100%;
     display: flex;
@@ -110,8 +118,6 @@ body {
     margin: 5%;
 }
 
-
-
 .blurStats {
     background-color: rgba(0, 0, 0, 0.274);
     backdrop-filter: blur(6px);
@@ -150,10 +156,7 @@ body {
   }
 
 
-
-
 /* Media y Container Queries */
-
 @media (max-width: 768px) {
     .logo-container img {
         max-width: 150px;
