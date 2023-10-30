@@ -1,0 +1,19 @@
+.contenidoMusic{
+    padding: 5%;
+    margin: 5px;
+}
+
+.videoYT{
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* Esto establece la relación de aspecto 16:9 para el video (9 dividido por 16) */
+
+}
+
+.videoYT iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

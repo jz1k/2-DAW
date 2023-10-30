@@ -28,7 +28,7 @@ body {
   }
 
   .date{
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: rgba(0, 0, 0, 0.253);
     backdrop-filter: blur(6px);
     padding: 5%;
     margin-top: 3%;
@@ -38,7 +38,7 @@ body {
 
   }
   
-  .date:first-child {
+  .proximo {
     box-shadow: 0 0 5px 1px rgba(155, 0, 0, 0.5);
   }
 
