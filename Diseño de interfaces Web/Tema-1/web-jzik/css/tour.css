@@ -20,6 +20,8 @@ body {
 
 /* Estilos para botones de las fechas */
 .buttonDate {
+  display: inline-block;
+  text-decoration: none;
   background-color: #8a0000;
   color: white;
   border: none;
@@ -27,6 +29,11 @@ body {
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.buttonDate:hover {
+  color: rgb(190, 190, 190);
+  border: none;
 }
 
 /* Estilos para las fechas */
