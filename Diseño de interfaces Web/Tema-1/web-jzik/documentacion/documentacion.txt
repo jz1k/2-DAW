@@ -1,0 +1,13 @@
+La web es un sitio web que promueve mi marca de artista y proporciona información a los seguidores. Se aplican principios de diseño web responsive, se utilizan efectos visuales y se integran enlaces a las redes sociales y datos relevantes del artista. Se han utilizado colores y paletas de colores acorde al artista, con una escala de rojos y grises.
+
+Se ha logrado una web responsive, lo que significa que es funcional en diferentes dispositivos. Esto se debe en gran parte a la amplia biblioteca de Bootstrap y al uso de Media Queries. Además, se ha empleado una fuente personalizada para darle al sitio un estilo distintivo.
+
+Se han incorporado imágenes, como el logotipo, imágenes de estudio y otros elementos visuales. Además, se aplicaron efectos y transiciones, como efectos hover, degradados y zoom, entre otros, para mejorar la experiencia del usuario.
+
+La barra de navegación se fija en la parte superior una vez se realiza una cierta cantidad de scroll, gracias a JavaScript. También se han utilizado carruseles, enlaces externos y otros elementos para enriquecer la experiencia del usuario.
+
+En resumen, el código HTML y CSS, junto con las tecnologías mencionadas, se utilizan para crear una página web atractiva y funcional.
+
+
+- He usado la web https://autoprefixer.github.io para aplicar el autoprefixer en el CSS de la web
+- El normalize al usar bootstrap, ya está integrado
