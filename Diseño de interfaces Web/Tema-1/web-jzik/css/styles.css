@@ -1,14 +1,11 @@
-* {
-    box-sizing: border-box;
-    /* border: 1px solid greenyellow; */
-}
-
+/* Definición de variables de colores personalizados */
 :root {
     --color-fondo: rgb(0, 0, 0);
     --color-texto: white;
     --color-primario: #8a0000;
-  }
+}
 
+/* Estilos generales para el fondo y la fuente de la página */
 body {
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.493);
@@ -20,89 +17,98 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-h1 + p {
+/* Estilos para un párrafo que sigue a un encabezado h1 */
+h1+p {
     font-style: italic;
-  }
+}
 
+/* Fondo negro */
 .blackground {
-    /* position: relative; */
-    background-color:var(--color-fondo);
+    background-color: var(--color-fondo);
     color: var(--color-texto);
 }
 
+/* Estilos para el contenedor del logo*/
 .logo-container {
     text-align: center;
 }
 
+/* Logo */
 .logo-container img {
     max-width: 60%;
 }
 
+/* Estilos del menu */
 .menuNav {
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 1px solid rgba(255, 255, 255, 0.281);
     margin: 1%;
 }
 
-.navBar > header {
+/* Estilos para la cabecera de la barra de navegación */
+.navBar>header {
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  
+}
+
+/* Flexbox */
 .row {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
+/* Degradado a negro hacia arriba para hacer transicion a fondo negro */
 .degradado {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     color: var(--color-texto);
-    /* Texto en blanco para contraste */
     padding: 20px;
-    /* Espaciado interior */
 }
 
+/* Degradado a negro hacia abajo para hacer transicion a fondo negro */
 .degradado-bot {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     color: var(--color-texto);
-    /* Texto en blanco para contraste */
     padding: 20px;
-    /* Espaciado interior */
 }
 
+/* Estilos para imágenes del carrusel */
 .carousel-img {
     width: 100%;
-    /* Ajusta el ancho al 100% del contenedor del carrusel */
     height: auto;
-    /* Mantiene la proporción de aspecto */
 }
 
+/* Estilos para eliminar el relleno inferior*/
 .noPadding-bot {
     padding-bottom: 0px !important;
 }
 
+/* Estilos para eliminar el relleno superior*/
 .noPadding-tot {
     padding-top: 0px !important;
 }
 
+/* Estilos para eliminar el relleno derecho*/
 .noPadding-right {
     padding-right: 0px !important;
 }
 
+/* Estilos para eliminar el relleno izquierdo*/
 .noPadding-left {
     padding-left: 0px !important;
 }
 
-
+/* Estilos para la imagen de studio */
 .imgStudio {
     max-width: 300px;
 }
 
+/* Estilos para las RRSS */
 .rrss {
     max-width: 65px;
     min-width: 65px;
 }
 
+/* Estilos para la imagen de la mitad del inicio */
 .imagen-cuerpo {
     background-image: url(https://i.ibb.co/5LfL7t9/IMG-20230812-224214.jpg);
     background-position: center;
@@ -110,53 +116,61 @@ h1 + p {
     width: 100%;
 }
 
+/* Estilo para el el div de los datos y estadisticas */
 .divStats {
     margin: 5%;
 }
 
+/* Estilo para el el contenido de los datos y estadisticas */
 .contenidoStats {
     margin: 5%;
 }
 
+/* Estilos para el blur del fondo del apartado datos */
 .blurStats {
     background-color: rgba(0, 0, 0, 0.274);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     margin-top: 20%;
     margin-bottom: 20%;
 }
 
+/* Estilos para el blur del nav */
 .navBlur {
     background-color: rgba(0, 0, 0, 0);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     margin: 0px !important;
 }
 
+/* Añadir padding top*/
 .padding-top {
     padding-top: 5%;
 }
 
+/* Añadir padding bot*/
 .padding-bot {
     padding-bottom: 5%;
 }
 
+/* Transicion del zoom cuando pases el ratón */
 .zoom-hover {
-    transition: transform 0.3s;
-    /* Agrega una transición suave */
+    transition: transform 0.3s, -webkit-transform 0.3s, -o-transition 0.3s;
 }
 
+/* Hover con zoom cuando pases el ratón */
 .zoom-hover:hover {
     transform: scale(1.2);
-    /* Cambia el tamaño de la imagen en hover (escala al 120%) */
 }
 
+/* Clase del footer */
 .footer {
     padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.308);
     color: var(--color-texto);
-  }
+}
 
-
-/* Media y Container Queries */
+/* Medias queries, no he usado @container ya que me ha sido imposible implementarlos */
 @media (max-width: 768px) {
     .logo-container img {
         max-width: 150px;
@@ -171,14 +185,3 @@ h1 + p {
         font-size: 20px;
     }
 }
-
-/* @container (width < 100px) {
-
-    h1 {
-        font-size: 15px;
-    }
-
-    p {
-        font-size: 12px;
-    }
-} */

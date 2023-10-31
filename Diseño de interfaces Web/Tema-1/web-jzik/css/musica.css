@@ -1,8 +1,10 @@
+/* Estilos para el contenido del apartado musica */
 .contenidoMusic{
     padding: 5%;
     margin: 5px;
 }
 
+/* Estilo para los videos incrustados */
 .videoYT{
     position: relative;
     overflow: hidden;
@@ -10,6 +12,7 @@
 
 }
 
+/* Estilo para los videos incrustados */
 .videoYT iframe {
     position: absolute;
     top: 0;
