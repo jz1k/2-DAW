@@ -49,9 +49,15 @@
     background-color: red;
     border-radius: 50%;
     animation-name: moverBolas;
-    animation-duration: 0.5s;
+    animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.bola:hover{
+    animation-play-state: paused;
 }
 
 @keyframes moverBolas{

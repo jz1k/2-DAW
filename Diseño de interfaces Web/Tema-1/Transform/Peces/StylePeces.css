@@ -1,0 +1,86 @@
+*{
+    overflow: hidden;
+}
+
+.fondo{
+    background-image: url(img/fondo-mar.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.pezAzul{
+    position: relative;
+    width: 300px;
+    top: 0;
+    left: 0;
+    animation-name: movimientoPez;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-play-state: running;
+    z-index: 2;
+}
+
+.pezNaranja{
+    position: relative;
+    width: 200px;
+    top: 0;
+    left: 0;
+    animation-name: movimientoPez;
+    animation-duration: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-play-state: running;
+    z-index: 2;
+}
+
+
+.burbujas{
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: burbujeo2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    z-index: 3;
+}
+
+.burbujas2{
+    position: relative;
+    top: 0;
+    left: 0;
+    animation-name: burbujeo;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    z-index: 3;
+}
+
+.tamañoBurbujas{
+    width: 100%;
+}
+
+.tamañoBurbujas2{
+    width: 100%;
+}
+
+@keyframes movimientoPez {
+    0% {top: 0; left: 0;}
+    100% {top: 0; left: 100%;}
+}
+
+@keyframes burbujeo {
+    0% {top: 70%; left: 0;}
+    100% {top: -180%; left: 0;}
+}
+
+@keyframes burbujeo2 {
+    0% {top: 70%; left: -50%;}
+    100% {top: -180%; left: 0;}
+}

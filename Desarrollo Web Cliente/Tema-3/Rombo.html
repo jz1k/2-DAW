@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Dibujo de un rombo en JavaScript con </title>
+  <title>Dibujo de un rombo en JavaScript</title>
 </head>
 <body>
   <pre id="romboCanvas"></pre>
@@ -16,8 +17,8 @@
         for (var j = 1; j <= tamano - i; j++) {
           rombo += ' ';
         }
-        for (var k = 1; k <= 2 i - 1; k++) {
-          rombo += '';
+        for (var k = 1; k <= 2 * i - 1; k++) {  // Corregir aquí (se necesita un asterisco entre "2" e "i")
+          rombo += '*';
         }
         rombo += '\n';
       }
@@ -25,7 +26,7 @@
         for (var j = 1; j <= tamano - i; j++) {
           rombo += ' ';
         }
-        for (var k = 1; k <= 2 i - 1; k++) {
+        for (var k = 1; k <= 2 * i - 1; k++) {  // Corregir aquí (se necesita un asterisco entre "2" e "i")
           rombo += '*';
         }
         rombo += '\n';
