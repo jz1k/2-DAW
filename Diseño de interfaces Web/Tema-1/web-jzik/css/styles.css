@@ -153,6 +153,15 @@ h1+p {
     padding-bottom: 5%;
 }
 
+/* Clase del footer */
+.footer {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.308);
+    color: var(--color-texto);
+}
+
+/*ANIAMCIONES*/
+
 /* Transicion del zoom cuando pases el ratón */
 .zoom-hover {
     transition: transform 0.3s, -webkit-transform 0.3s, -o-transition 0.3s;
@@ -163,12 +172,60 @@ h1+p {
     transform: scale(1.2);
 }
 
-/* Clase del footer */
-.footer {
-    padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.308);
-    color: var(--color-texto);
+/*Transform hover rrss*/
+.rrssRotate{
+    transition-duration: 0.3s;
 }
+
+.rrssRotate:hover{
+    transform: rotate(360deg);
+}
+
+/*Resplandor letras*/
+.flashLetras:hover{
+    animation-name: resplandor;
+    animation-duration: 0.3s;
+}
+
+@keyframes resplandor{
+    0%{ Color: rgb(255, 255, 255);}
+    25%{Color: rgb(0, 0, 0);}
+    50%{ Color: #8a0000;}
+    75%{Color: rgb(0, 0, 0);}
+    100%{ Color: rgb(255, 255, 255);}
+}
+
+
+
+.glitch{
+    animation-name: glitch;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translateX(-5%) skewX(20deg);
+    }
+    20% {
+        transform: translateX(-5%) skewX(10deg);
+    }
+    40% {
+        transform: translateX(-5%) skewX(20deg);
+    }
+    60% {
+        transform: translateX(5%) skewX(-20deg);
+    }
+    80% {
+        transform: translateX(-5%) skewX(10deg);
+    }
+    100% {
+        transform: translateX(-5%) skewX(20deg);
+    }
+  }
+
+
+
 
 /* Medias queries, no he usado @container ya que me ha sido imposible implementarlos */
 @media (max-width: 768px) {
