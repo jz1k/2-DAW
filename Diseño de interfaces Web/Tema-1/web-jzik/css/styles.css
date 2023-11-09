@@ -222,7 +222,7 @@ h1+p {
     100% {
         transform: translateX(-5%) skewX(20deg);
     }
-  }
+}
 
 
 
