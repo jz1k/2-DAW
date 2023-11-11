@@ -1,13 +1,9 @@
-La web es un sitio web que promueve mi marca de artista y proporciona información a los seguidores. Se aplican principios de diseño web responsive, se utilizan efectos visuales y se integran enlaces a las redes sociales y datos relevantes del artista. Se han utilizado colores y paletas de colores acorde al artista, con una escala de rojos y grises.
+En esta nueva versión, se han añadido animaciones a la web, entre ellas:
 
-Se ha logrado una web responsive, lo que significa que es funcional en diferentes dispositivos. Esto se debe en gran parte a la amplia biblioteca de Bootstrap y al uso de Media Queries. Además, se ha empleado una fuente personalizada para darle al sitio un estilo distintivo.
-
-Se han incorporado imágenes, como el logotipo, imágenes de estudio y otros elementos visuales. Además, se aplicaron efectos y transiciones, como efectos hover, degradados y zoom, entre otros, para mejorar la experiencia del usuario.
-
-La barra de navegación se fija en la parte superior una vez se realiza una cierta cantidad de scroll, gracias a JavaScript. También se han utilizado carruseles, enlaces externos y otros elementos para enriquecer la experiencia del usuario.
-
-En resumen, el código HTML y CSS, junto con las tecnologías mencionadas, se utilizan para crear una página web atractiva y funcional.
-
-
-- He usado la web https://autoprefixer.github.io para aplicar el autoprefixer en el CSS de la web
-- El normalize al usar bootstrap, ya está integrado
+- Efecto glitch cambiando de color rapidamente de hover en la barra de navegación (@keyframes resplandor{})
+- Efecto de rotación en las redes sociales debajo de la barra de navegacion (@-webkit-keyframes glitch {})
+- En el apartado de datos, los mas relevantes tienen un efecto de movimiento glitch 
+hecho con @keyframe´s (@keyframes aparecerDesdeDerecha {})
+- Animacion desarrollada por mi que desplaza la imagen de studio png a la izquierda (.aparecerDerecha {)
+- Animacion combinada: (.formNoticias:hover {})
+- He usado una animacion de internet y mejorada con GPT para introducir copos de nieve que caen de forma aleatoria en la pagina principal de INICIO.

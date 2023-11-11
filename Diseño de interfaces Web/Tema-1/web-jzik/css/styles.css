@@ -1,9 +1,67 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Definición de variables de colores personalizados */
 :root {
     --color-fondo: rgb(0, 0, 0);
     --color-texto: white;
     --color-primario: #8a0000;
 }
+/* Nieve */
+.snowfall-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999; /* Asegura que las bolas de nieve estén en la parte superior */
+}
+
+.snowflake {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('https://pngimg.es/d/snowball_PNG4.png') no-repeat center center;
+    background-size: cover;
+    -webkit-animation: snowfall linear infinite;
+            animation: snowfall linear infinite;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+    -webkit-animation-delay: calc(-60s * var(--delay));
+            animation-delay: calc(-60s * var(--delay));
+    top: -30px; /* Ajusta la posición inicial para que las bolas comiencen fuera de la pantalla */
+    left: calc(100% * var(--delay)); /* Distribuye las bolas en toda la pantalla */
+}
+
+@-webkit-keyframes snowfall {
+    from {
+        -webkit-transform: translateY(-100vh) rotate(0deg);
+                transform: translateY(-100vh) rotate(0deg);
+    }
+    to {
+        -webkit-transform: translateY(100vh) rotate(360deg);
+                transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+@keyframes snowfall {
+    from {
+        -webkit-transform: translateY(-100vh) rotate(0deg);
+                transform: translateY(-100vh) rotate(0deg);
+    }
+    to {
+        -webkit-transform: translateY(100vh) rotate(360deg);
+                transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+
+
 
 /* Estilos generales para el fondo y la fuente de la página */
 body {
@@ -53,12 +111,17 @@ h1+p {
 /* Flexbox */
 .row {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 /* Degradado a negro hacia arriba para hacer transicion a fondo negro */
 .degradado {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     color: var(--color-texto);
     padding: 20px;
@@ -66,6 +129,8 @@ h1+p {
 
 /* Degradado a negro hacia abajo para hacer transicion a fondo negro */
 .degradado-bot {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     color: var(--color-texto);
     padding: 20px;
@@ -169,22 +234,38 @@ h1+p {
 
 /* Hover con zoom cuando pases el ratón */
 .zoom-hover:hover {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
 }
 
 /*Transform hover rrss*/
 .rrssRotate{
-    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+         -o-transition-duration: 0.3s;
+            transition-duration: 0.3s;
 }
 
 .rrssRotate:hover{
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
 }
 
 /*Resplandor letras*/
 .flashLetras:hover{
-    animation-name: resplandor;
-    animation-duration: 0.3s;
+    -webkit-animation-name: resplandor;
+            animation-name: resplandor;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+}
+
+@-webkit-keyframes resplandor{
+    0%{ Color: rgb(255, 255, 255);}
+    25%{Color: rgb(0, 0, 0);}
+    50%{ Color: #8a0000;}
+    75%{Color: rgb(0, 0, 0);}
+    100%{ Color: rgb(255, 255, 255);}
 }
 
 @keyframes resplandor{
@@ -196,35 +277,109 @@ h1+p {
 }
 
 
-
 .glitch{
-    animation-name: glitch;
-    animation-duration: 0.5s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: glitch;
+            animation-name: glitch;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes glitch {
+    0% {
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
+    }
+    20% {
+        -webkit-transform: translateX(-5%) skewX(10deg);
+                transform: translateX(-5%) skewX(10deg);
+    }
+    40% {
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
+    }
+    60% {
+        -webkit-transform: translateX(5%) skewX(-20deg);
+                transform: translateX(5%) skewX(-20deg);
+    }
+    80% {
+        -webkit-transform: translateX(-5%) skewX(10deg);
+                transform: translateX(-5%) skewX(10deg);
+    }
+    100% {
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
+    }
 }
 
 @keyframes glitch {
     0% {
-        transform: translateX(-5%) skewX(20deg);
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
     }
     20% {
-        transform: translateX(-5%) skewX(10deg);
+        -webkit-transform: translateX(-5%) skewX(10deg);
+                transform: translateX(-5%) skewX(10deg);
     }
     40% {
-        transform: translateX(-5%) skewX(20deg);
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
     }
     60% {
-        transform: translateX(5%) skewX(-20deg);
+        -webkit-transform: translateX(5%) skewX(-20deg);
+                transform: translateX(5%) skewX(-20deg);
     }
     80% {
-        transform: translateX(-5%) skewX(10deg);
+        -webkit-transform: translateX(-5%) skewX(10deg);
+                transform: translateX(-5%) skewX(10deg);
     }
     100% {
-        transform: translateX(-5%) skewX(20deg);
+        -webkit-transform: translateX(-5%) skewX(20deg);
+                transform: translateX(-5%) skewX(20deg);
     }
 }
 
+/* Animacion para la newsletter */
+.formNoticias:hover {
+    -webkit-transform: scale(1.5) translateX(-1.5rem);
+        -ms-transform: scale(1.5) translateX(-1.5rem);
+            transform: scale(1.5) translateX(-1.5rem);
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+}
 
+/* Elemento que aparece desde la Derecha */
+@-webkit-keyframes aparecerDesdeDerecha {
+    0% {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+@keyframes aparecerDesdeDerecha {
+    0% {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+}
+
+.aparecerDerecha {
+    -webkit-animation-name: aparecerDesdeDerecha;
+            animation-name: aparecerDesdeDerecha;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
 
 
 /* Medias queries, no he usado @container ya que me ha sido imposible implementarlos */

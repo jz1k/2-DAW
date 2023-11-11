@@ -24,9 +24,15 @@
 
 </head>
 
-
-
 <body>
+
+  <!-- Bolas de nieve -->
+  <div class="snowfall-container" id="snowfall-container">
+    <!-- No es necesario agregar elementos iniciales aquí -->
+  </div>
+
+
+
   <header class="container">
     <!-- Logo en la parte superior -->
     <div class="logo-container">
@@ -116,7 +122,7 @@
               difundida en emisoras y mencionada en medios de prensa nacionales.
             </p>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
+          <div class="aparecerDerecha col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
             <img class="col-12 imgStudio" src="assets/img/studio-png.png" alt="">
           </div>
         </div>
@@ -262,7 +268,7 @@
         <div class="col-6 text-center">
           <div class="subscribe-form">
             <p>Suscríbete a nuestro newsletter:</p>
-            <form>
+            <form class="formNoticias">
               <input type="email" placeholder="Tu correo electrónico">
               <button type="submit">Suscribirse</button>
             </form>
@@ -338,6 +344,19 @@
         isNavFixed = false;
       }
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("snowfall-container");
+
+      // Genera bolas de nieve de manera dinámica
+      for (let i = 0; i < 10; i++) { // Cambia 10 a la cantidad deseada de bolas de nieve
+        const snowflake = document.createElement("div");
+        snowflake.className = "snowflake";
+        snowflake.style.setProperty("--delay", Math.random()); // Delay aleatorio
+        container.appendChild(snowflake);
+      }
+    });
+
   </script>
 
 

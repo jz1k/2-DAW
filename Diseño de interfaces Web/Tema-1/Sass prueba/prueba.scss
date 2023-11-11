@@ -1,0 +1,14 @@
+$color-texto: red;
+$color-texto-secundario: green;
+
+
+.pruebacss{
+    h1{
+        color: $color-texto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    p{
+        color: $color-texto-secundario;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
