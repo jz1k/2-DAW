@@ -1,0 +1,67 @@
+// Variables
+$fontstack: "Gotu", sans-serif;
+$fontsize: 16px;
+$primary: rgb(135, 250, 231);
+$primary_dark: darken($primary, 50%);
+
+// Universal reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Standard line-height
+body {
+    line-height: 1.6;
+}
+
+
+body,
+ul {
+    padding: 20px;
+}
+
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    color: $primary_dark;
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+
+    li {
+        width: 100%;
+        background-color: $primary;
+        outline: 1px solid $primary_dark;
+
+        a {
+            color: $primary_dark;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            transition: 1s;
+
+            &:hover {
+                font-weight: bold;
+                color: $primary;
+                background-color: $primary_dark;
+            }
+        }
+    }
+}
+
+main {
+    ul {
+        margin-left: 20px;
+    }
+}
