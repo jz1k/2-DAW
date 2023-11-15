@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo JavaScript</title>
+</head>
+<body>
+    <script>
+        function coche(modelo, color, kms, combustible) {
+            this.modelo = modelo;
+            this.color = color;
+            this.kms = kms;
+            this.combustible = combustible;
+        }
+
+        var elmio = new coche("Mercedes E330", "negro", 120000, "diésel");
+        var eltuyo = new coche("BMW 318", "blanco", 210000, "gasolina");
+
+        // Intentar borrar la propiedad matrícula
+        delete elmio.matricula;
+
+        // Verificar si la propiedad matrícula aún existe en elmio
+        console.log("matricula" in elmio);  // Salida: false
+    </script>
+</body>
+</html>
