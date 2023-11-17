@@ -18,8 +18,26 @@ body {
 }
 
 main {
-    h1 {
-        font: 1.75rem $fontstack-titles;
-        padding-bottom: 5%;
-    }
+  h1 {
+    font: 1.75rem $fontstack-titles;
+    padding-bottom: 5%;
+  }
+}
+
+article {
+  p {
+    padding-bottom: 2%;
+  }
+}
+
+a {
+  width: 130px;
+  font: $fontstack-titles;
+  @include layout(black, 1rem);
+  margin-left: 0px;
+
+  &:hover {
+    @include layout(dimgray, 1rem);
+    margin-left: 0px;
+  }
 }
