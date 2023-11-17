@@ -1,31 +1,49 @@
-// Variables
-$size: 14px;
-$color: #8b0000;
+// Define variables
 $small: 576px;
 $medium: 768px;
 
-body{
-    line-height: 1.5;
+// Define mixin
+@mixin layout($color, $size: 14px) {
+  color: $color;
+  $inverted-color: lighten(invert($color), 20%);
+  background-color: $inverted-color;
+  font-size: $size;
+  margin: $size;
+  padding: $size;
+  line-height: $size * 1.5;
+  border: 5px solid $color;
 }
 
-
-main{
-    
-
-
-
+// Universal reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+// Apply paddings where needed
+body {
+  padding: 20px;
+}
 
-@mixin layout ($color, $size){
-    color: $color;
-    background-color:lightness(invert($color, 100%)-20%) ;
-    font-size: $size;
-    margin: $size;
-    padding: $size;
+main {
+  padding: 20px;
+}
 
-    border: 5px solid $color;
+// Container styles using the mixin
+#container {
+  @include layout(darkred);
 
+  @media (max-width: $small) {
+    @include layout(darkblue, 16px);
+  }
 
+  @media (min-width: $medium) {
+    @include layout(darkgreen, 20px);
+  }
+}
 
+// Font styles
+body {
+  font-family: Verdana, sans-serif;
 }
