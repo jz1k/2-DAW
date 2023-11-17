@@ -1,0 +1,25 @@
+//Reset universal
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: $fontstack-text;
+
+  @media (width<$small) {
+    @include layout(white, 1rem);
+  }
+
+  @media (width>=$small) {
+    @include layout(black, 1.25rem);
+  }
+}
+
+main {
+    h1 {
+        font: 1.75rem $fontstack-titles;
+        padding-bottom: 5%;
+    }
+}

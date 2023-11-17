@@ -1,0 +1,17 @@
+// Import Google font
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+// Import your partials in the correct order
+@import 'variables';
+@import 'mixins';
+@import 'reboot';
+
+
+
+
+// Add the rest of your styles here
+// body {
+//   font-family: 'Anton', sans-serif;
+//   background-color: $primary-color;
+//   color: $secondary-color;
+// }
