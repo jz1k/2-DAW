@@ -1,0 +1,17 @@
+{
+  "name": "sass-exercises",
+  "version": "",
+  "description": "1ITF, Webdesign Advanced, Sass exercises",
+  "main": "",
+  "scripts": {
+    "watch": "live-server",
+    "exercise1": "cd ./exercise1 && sass scss:dist/css --watch",
+    "exercise2": "cd ./exercise2 && sass scss:dist/css --watch",
+    "exercise3": "cd ./exercise3 && sass scss:dist/css --watch",
+    "exercise4": "cd ./exercise4 && sass scss:dist/css --watch",
+    "exercise5": "cd ./exercise5 && sass scss:dist/css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
