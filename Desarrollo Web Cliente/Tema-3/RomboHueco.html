@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dibujo de un rombo con hueco en JavaScript</title>
+</head>
+<body>
+  <div id="romboJS"></div>
+
+  <script>
+    // Tamaño del rombo
+    var tamano = 9;
+
+    // Función para dibujar el rombo con hueco
+    function dibujarRomboConHueco(tamano) {
+      var rombo = '';
+
+      for (var i = 1; i <= tamano; i++) {
+        for (var j = 1; j <= tamano - i; j++) {
+          rombo += '&nbsp;';  // Utiliza un espacio no rompible en lugar de espacio en blanco
+        }
+
+        // Dibuja la parte superior del rombo (sin hueco)
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          if (k == 1 || k == 2 * i - 1) {
+            rombo += '*';
+          } else {
+            rombo += '&nbsp;';
+          }
+        }
+
+        rombo += '<br>';
+      }
+
+      // Dibuja la parte inferior del rombo (sin hueco)
+      for (var i = tamano - 1; i >= 1; i--) {
+        for (var j = 1; j <= tamano - i; j++) {
+          rombo += '&nbsp;';
+        }
+
+        for (var k = 1; k <= 2 * i - 1; k++) {
+          if (k == 1 || k == 2 * i - 1) {
+            rombo += '*';
+          } else {
+            rombo += '&nbsp;';
+          }
+        }
+
+        rombo += '<br>';
+      }
+
+      return rombo;
+    }
+
+    var romboJS = document.getElementById("romboJS");
+    romboJS.innerHTML = dibujarRomboConHueco(tamano);
+  </script>
+</body>
+</html>
