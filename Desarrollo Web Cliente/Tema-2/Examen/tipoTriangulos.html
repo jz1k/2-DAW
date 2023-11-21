@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo segun sus lados</title>
+</head>
+
+<body>
+    <!-- 
+    Introduce lados de cada uno de los 4 triangulos, en total 12 peticiones
+    De cada triangulo, compara la longitud de sus lados para determinar su tipo comparandolos entre ellos
+    Hacer un contador para cada triangulo que vaya contando el numero de tipos de triangulos
+    Comprobar que se introducen bien los datos
+    -->
+
+    <h1>Triangulos segun sus lados</h1>
+
+    <h2>Triangulo 1</h2>
+    <label for="t1"></label>
+    <div id="tipoT1"></div>
+
+    <h2>Triangulo 2</h2>
+    <label for="t2"></label>
+    <div id="tipoT2"></div>
+
+    <h2>Triangulo 3</h2>
+    <label for="t3"></label>
+    <div id="tipoT3"></div>
+
+    <h2>Triangulo 4</h2>
+    <label for="t4"></label>
+    <div id="tipoT4"></div>
+
+    <br>
+
+    <div id="resultadoTriangulo">
+    </div>
+
+    <h3 id="total"><h3/>
+
+    <script src="triangulo.js"></script>
+
+    <!-- EJECUTAMOS FUNCIÓN -->
+    <script>
+        trianguloClasificacion();
+    </script>
+</body>
+
+</html>
