@@ -1,0 +1,8 @@
+Abrimos el archivo en chrome
+- Inspeccionar elemento y nos dirigimos a consola
+	Buscamos las 3 variables que deseamos
+
+- Nos vamos al apartado FUENTES
+	Creamos 2 breakpoints, de forma que se pause cuando el programa pase por esa variable, siendo así visibles los valores en ese mismo momento
+	
+	Creamos un breakpoint condicional, de forma que se pause cuando esa variable alcance el valor que se ha asignado, vamos a probar con j==3
