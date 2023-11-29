@@ -1,0 +1,58 @@
+<html>
+   <head>
+      <title>Página con Javascript.</title>
+      <script language="javascript">
+         var ventana;
+         var colores = ["red", "blue", "green"];
+         var colorSeleccionado = colores[0];
+
+         function abrirVentana() {
+            var parametros = "width=" + document.getElementById('ancho').value + ", height=" + document.getElementById('alto').value;
+            parametros += ", left=" + document.getElementById('x').value + ", top=" + document.getElementById('y').value;
+            parametros += " resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
+            ventana = window.open("", "ventana", parametros);
+            ventana.document.write('<html><head><title>Ventana Secundaria</title></head><body bgcolor="' + colorSeleccionado + '"><h1 id="texto">' + document.getElementById('texto').value + '</h1><button onClick="self.close();">Cerrar</button></body></html>');
+            setTimeout(function(){ ventana.close(); }, document.getElementById('tiempo').value * 1000);
+         }
+
+         function cerrarVentana() {
+            if(ventana) {
+               ventana.close();
+            }
+         }
+
+         function cambiarColor() {
+            colorSeleccionado = document.getElementById('color').value;
+         }
+
+         function enfocarVentana() {
+            if(ventana) {
+               ventana.focus();
+            }
+         }
+
+         function desenfocarVentana() {
+            if(ventana) {
+               ventana.blur();
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <button onClick="abrirVentana();">Abrir ventana</button>
+      <button onClick="cerrarVentana();">Cerrar ventana</button>
+      <button onClick="enfocarVentana();">Enfocar ventana</button>
+      <button onClick="desenfocarVentana();">Desenfocar ventana</button>
+      Coordenadas X: <input type="number" id="x" value="200"><br>
+      Coordenadas Y: <input type="number" id="y" value="150"><br>
+      Ancho: <input type="number" id="ancho" value="400"><br>
+      Alto: <input type="number" id="alto" value="300"><br>
+      Tiempo (segundos): <input type="number" id="tiempo" value="5"><br>
+      Texto: <input type="text" id="texto" value="Texto por defecto"><br>
+      Color: <select id="color" onchange="cambiarColor();">
+         <option value="red">Rojo</option>
+         <option value="blue">Azul</option>
+         <option value="green">Verde</option>
+      </select>
+   </body>
+</html>
