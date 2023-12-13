@@ -1,41 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Dibujo de un rombo en JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo de un rombo en JavaScript</title>
 </head>
+
 <body>
-  <pre id="romboCanvas"></pre>
+    <div id="romboJS"></div>
+    <script>
+        // Tamaño del rombo
+        var tamano = 6;
 
-  <script>
-    // Tamaño del rombo
-    var tamano = 9;
+        // Función para dibujar el rombo
+        var rombo = '';
 
-    // Función para dibujar el rombo
-    function dibujarRombo(tamano) {
-      var rombo = '';
-      for (var i = 1; i <= tamano; i++) {
-        for (var j = 1; j <= tamano - i; j++) {
-          rombo += ' ';
-        }
-        for (var k = 1; k <= 2 * i - 1; k++) {  // Corregir aquí (se necesita un asterisco entre "2" e "i")
-          rombo += '*';
-        }
-        rombo += '\n';
-      }
-      for (var i = tamano - 1; i >= 1; i--) {
-        for (var j = 1; j <= tamano - i; j++) {
-          rombo += ' ';
-        }
-        for (var k = 1; k <= 2 * i - 1; k++) {  // Corregir aquí (se necesita un asterisco entre "2" e "i")
-          rombo += '*';
-        }
-        rombo += '\n';
-      }
-      return rombo;
-    }
+        for (var i = 1; i <= tamano; i++) {
+            for (var j = 1; j <= tamano - i; j++) {
+                rombo += '&nbsp;&nbsp;';  // Utiliza dos espacios no rompibles en lugar de uno
+            }
 
-    var romboCanvas = document.getElementById("romboCanvas");
-    romboCanvas.textContent = dibujarRombo(tamano);
-  </script>
+            // Dibuja la parte superior del rombo
+            for (var k = 1; k <= 2 * i - 1; k++) {
+                rombo += '*';
+            }
+
+            rombo += '<br>';
+        }
+
+        // Dibuja la parte inferior del rombo
+        for (var i = tamano - 1; i >= 1; i--) {
+            for (var j = 1; j <= tamano - i; j++) {
+                rombo += '&nbsp;&nbsp;';
+            }
+
+            for (var k = 1; k <= 2 * i - 1; k++) {
+                rombo += '*';
+            }
+
+            rombo += '<br>';
+        }
+
+        var romboJS = document.getElementById('romboJS');
+        romboJS.innerHTML = rombo; // Cambia dibujarRombo(tamano) a rombo
+    </script>
 </body>
+
 </html>

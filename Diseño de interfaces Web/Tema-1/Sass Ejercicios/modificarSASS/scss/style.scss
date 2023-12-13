@@ -1,0 +1,14 @@
+.breadcrumb {
+  background-color: #e9ecef;
+  padding: 1rem;
+
+  .breadcrumb-item {
+    padding-left: 0.75rem;
+
+    & + .breadcrumb-item::before {
+      color: #6c757d;
+      padding-left: 0.75rem;
+      content: ".";
+    }
+  }
+}

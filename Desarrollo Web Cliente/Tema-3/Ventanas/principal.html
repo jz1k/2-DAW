@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <title>
+        P&aacute;gina con Javascript.
+    </title>
+    <script language="javascript">
+
+        var ventanaSecundaria; // Variable para almacenar la referencia a la ventana secundaria
+
+        var parametros = "width=400, height=300, left=200, top=150, resizable=no, menubar=no, toolbar=no, directories=no, location=no, scrollbars=no, status=no";
+
+        function abrirVentana() {
+            ventanaSecundaria = window.open("secundaria.html", "ventana", parametros);
+        }
+        function cerrarVentana() {
+            if (ventanaSecundaria && !ventanaSecundaria.closed) {
+                ventanaSecundaria.close(); // Cierra la ventana secundaria si está abierta
+            }
+        }
+        function cambiarCoordenadasVentana() {
+            if (ventanaSecundaria) {
+                var nuevaX = prompt("Introduce la nueva coordenada X:");
+                var nuevaY = prompt("Introduce la nueva coordenada Y:");
+
+                // Verifica si se ingresaron coordenadas y si son números válidos
+                if (nuevaX !== null && nuevaY !== null && !isNaN(nuevaX) && !isNaN(nuevaY)) {
+                    ventanaSecundaria.cambiarCoordenadas(Number(nuevaX), Number(nuevaY));
+                } else {
+                    alert("Por favor, introduce valores numéricos válidos.");
+                }
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+        function cambiarColorVentana() {
+            if (ventanaSecundaria) {
+                var selectElement = document.getElementById("colorSelect");
+                var selectedColor = selectElement.value;
+
+                if (selectedColor !== "") {
+                    ventanaSecundaria.cambiarColor(selectedColor);
+                } else {
+                    alert("Por favor, selecciona un color válido.");
+                }
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+        function enfocarVentana() {
+            if (ventanaSecundaria) {
+                ventanaSecundaria.focus();
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+        function desenfocarVentana() {
+            if (ventanaSecundaria) {
+                ventanaSecundaria.blur();
+            } else {
+                alert("La ventana secundaria no está abierta.");
+            }
+        }
+        function cerrarVentanaTiempo(){
+         var tiempo = prompt("Ingresa la cantidad de segundos para que la ventana esté activa:");
+         tiempo*=1000;
+         setTimeout("ventana.close()",tiempo);
+      }
+      function enviarTexto() {
+            var texto = prompt("Ingresa el texto que quieres mostrar en la ventana secundaria:");
+            if (ventanaSecundaria && texto !== null && texto.trim() !== "") {
+                ventanaSecundaria.mostrarTexto(texto);
+            } else {
+                alert("Por favor, ingresa un texto válido.");
+            }
+        }
+    </script>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h5 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>EJERCICIO VENTANAS JAIRO SÁNCHEZ GAVILÁN</h1>
+        <h5>1. Poner boton de cierre de la ventana secundaria en la ventana principal </h5>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button onclick="abrirVentana()" type="button" class="btn btn-primary bg-danger border-danger">Abrir
+                        Ventana</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button onclick="cerrarVentana()" type="button" class="btn btn-primary bg-black border-dark">Cerrar
+                        Ventana</button>
+                </div>
+            </div>
+        </div>
+        <h5>2. Pedir las coordenadas de la ventana secundaria en la ventana principal y poner un boton para aplicarlas
+        </h5>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="d-grid gap-2">
+                    <button onclick="cambiarCoordenadasVentana()" type="button"
+                        class="btn btn-primary bg-gradient">Mover Ventana</button>
+                </div>
+            </div>
+        </div>
+        <h5>3. Con un control option en la ventana principal seleccionar al menos 3 colores de la ventana secundaria
+        </h5>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <label for="colorSelect">Selecciona un color:</label>
+                <select id="colorSelect">
+                    <option value="">Selecciona un color</option>
+                    <option value="red">Rojo</option>
+                    <option value="blue">Azul</option>
+                    <option value="green">Verde</option>
+                </select>
+                <br>
+                <br>
+                <div class="d-grid gap-2">
+                    <button onclick="cambiarColorVentana()" type="button"
+                        class="btn btn-primary bg-danger">Cambiar Color Ventana</button>
+                </div>
+            </div>
+        </div>
+        <h5>4. Utilizar en la ventana principal un boton para focus y otro para blur.
+        </h5>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button onclick="enfocarVentana()" type="button"
+                        class="btn btn-primary bg-dark border-dark">Focus en Ventana Secundaria</button>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="d-grid gap-2">
+                    <button onclick="desenfocarVentana()" type="button"
+                        class="btn btn-primary bg-danger border-danger">Blur en Ventana Secundaria</button>
+                </div>
+            </div>
+        </div>
+        <h5>5. Pedir en la ventana principal el tiempo que quieres que este activa la ventana secundaria
+        </h5>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="d-grid gap-2">
+                    <button onclick="cerrarVentanaTiempo()" type="button"
+                        class="btn btn-primary bg-gradient">Tiempo de la ventana secundaria</button>
+                </div>
+            </div>
+        </div>
+        <h5>6. Pedir en la ventana principal el tiempo que quieres que este activa la ventana secundaria
+        </h5>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="d-grid gap-2">
+                    <button onclick="enviarTexto()" type="button"
+                        class="btn btn-primary bg-dark">Enviar Texto a Ventana Secundaria</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

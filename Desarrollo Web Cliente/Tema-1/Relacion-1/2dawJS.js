@@ -41,7 +41,41 @@ function diasVividos() {
         alert("Por favor, ingrese una edad válida.");
     }
 }
+j
 
+function calcularMCM() {
+    const numero1Input = document.getElementById('numero1');
+    const numero2Input = document.getElementById('numero2');
+    const resultadoDiv = document.getElementById('resultado');
+
+    // Obtener los números ingresados por el usuario
+    const numero1 = parseInt(numero1Input.value);
+    const numero2 = parseInt(numero2Input.value);
+
+    // Verificar si los números son enteros positivos
+    if (numero1 <= 0 || numero2 <= 0 || !Number.isInteger(numero1) || !Number.isInteger(numero2)) {
+        resultadoDiv.innerHTML = 'Por favor, ingrese dos números enteros positivos.';
+        return;
+    }
+
+    // Calcular el MCM usando la fórmula MCM(a, b) = |a * b| / MCD(a, b)
+    const mcm = Math.abs(numero1 * numero2) / calcularMCD(numero1, numero2);
+
+    // Mostrar el resultado
+    resultadoDiv.innerHTML = `El Mínimo Común Múltiplo de numero1 y numero2 es mcm.`;
+
+    
+}
+
+function calcularMCD(a, b) {
+    // Algoritmo de Euclides para calcular el MCD
+    while (b !== 0) {
+        const temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
 function dobleTripleCuadruple() {
     // Solicitar al usuario un número
     var num1 = prompt("Ingresa un numero");
@@ -54,6 +88,39 @@ function dobleTripleCuadruple() {
     } else {
         alert("Por favor, ingresa un numero");
     }
+}
+
+function crono() {
+    var elCrono;
+    var miFecha = new Date();
+    var horas = miFecha.getHours();
+    var minutos = miFecha.getMinutes();
+    var segundos = miFecha.getSeconds();
+    var ampm;
+
+    if (horas > 12) {
+        ampm = 'pm';
+        horas -= 12;
+    } else {
+        ampm = 'am';
+    }
+
+    if (horas < 10) {
+        horas = '0' + horas;
+    }
+    if (minutos < 10) {
+        minutos = '0' + minutos;
+    }
+    if (segundos < 10) {
+        segundos = '0' + segundos;
+    }
+
+    var texto = document.getElementById('laHora');
+    texto.innerHTML = horas + ':' + minutos + ':' + segundos + ' ' + ampm;
+}
+
+window.onload = function () {
+    elCrono = setInterval(crono, 1000);
 }
 
 function longitud() {
@@ -236,6 +303,8 @@ function contadorNumeros2() {
     alert("Número de números introducidos (excluyendo el 9999): " + contador);
     alert("Suma de los números introducidos (excluyendo el 9999): " + suma);
 }
+
+
 
 function contadorNumeros3() {
     var contador = 0;
