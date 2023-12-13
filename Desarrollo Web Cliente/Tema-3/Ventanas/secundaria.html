@@ -1,0 +1,30 @@
+<html>
+   <head>
+      <title>
+         P&aacute;gina con Javascript.
+      </title>
+      <script>
+         function cambiarCoordenadas(x, y) {
+            window.moveTo(x, y);
+        }
+        function cambiarColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function mostrarTexto(texto) {
+            document.getElementById('textoMostrado').innerText = texto;
+        }
+      </script>
+   </head>
+   <body>
+      <h1>
+         &Eacute;sta es la
+         <br>
+         ventana secundaria.
+      </h1>
+      <p id="textoMostrado"></p>
+      <button onClick="self.close();">
+         Cerrar
+      </button>
+      
+   </body>
+</html>
