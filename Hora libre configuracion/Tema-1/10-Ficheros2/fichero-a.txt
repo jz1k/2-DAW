@@ -1,0 +1,10 @@
+Este es el contenido de la línea 1.
+Esta es la línea 2 con algunas vocales.
+La línea 3 también tiene vocales.
+Otra línea más para llegar a 10 líneas.
+Aquí estamos en la línea 5.
+Seis es el número de esta línea.
+Siete viene después de seis.
+Ocho es un buen número.
+Nueve es más grande que ocho.
+Diez es el final.
