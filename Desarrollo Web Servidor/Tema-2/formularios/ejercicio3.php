@@ -2,10 +2,28 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejercicio 1</title>
+    <title>Ejercicio 3</title>
 </head>
 <body>
-    <form action="ejercicio1-resultados.php" method="post">
+    <?php
+    // Procesar el formulario
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Recoger y mostrar los datos
+        $texto_busqueda = isset($_POST['texto_busqueda']) ? $_POST['texto_busqueda'] : '';
+        $buscar_en = isset($_POST['buscar_en']) ? $_POST['buscar_en'] : '';
+        $genero = isset($_POST['genero']) ? $_POST['genero'] : 'todos';
+
+        echo "<p>Formulario simple. Resultados del formulario</p>";
+        echo "<p>Estos son los datos introducidos:</p>";
+        echo "• Texto de búsqueda: $texto_busqueda<br>";
+        echo "• Buscar en: $buscar_en<br>";
+        echo "• Género: $genero<br>";
+
+        echo '<br><a href="ejercicio3.php">Nueva búsqueda</a>';
+    }
+    ?>
+
+    <form action="ejercicio3.php" method="post">
         <label for="texto_busqueda">Texto a buscar:</label>
         <input type="text" name="texto_busqueda" id="texto_busqueda">
         <br>
