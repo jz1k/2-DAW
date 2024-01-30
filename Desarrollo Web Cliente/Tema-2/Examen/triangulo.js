@@ -45,7 +45,6 @@ function trianguloClasificacion() {
 
 //Comprueba cada posibilidad de combinacion de los lados para clasificarlos
 function clasificarLados(lado1, lado2, lado3) {
-
     if (lado1 == lado2 || lado1 == lado3) {
         if (lado3 == lado2 && lado3 == lado1) {
             //Incrementamos contador y devolvemos valor
