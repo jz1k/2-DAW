@@ -1,6 +1,31 @@
+:root {
+  --main-background-color: #000000;
+  --main-background-color2: #141414;
+  --main-text-color: white;
+  --navbar-background-color: black;
+  --navbar-text-color: whitesmoke;
+  --navbar-hover-color: #f00a0a;
+  --overlay-menu-background-color: rgb(36, 36, 36);
+  --overlay-menu-text-color: whitesmoke;
+  --overlay-menu-hover-color: #a10000;
+}
+
+html::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background-image: url(//www.dreambeach.es/wp-content/themes/yootheme/vendor/assets/uikit-themes/master-vibe/images//base-body-overlay.gif);
+  opacity: .08;
+  pointer-events: none;
+}
+
 * {
   /* background-color: rgb(19, 19, 19); */
-  border: rgb(0, 255, 42) 1px solid;
+  /* border: rgb(0, 255, 42) 1px solid; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,12 +33,86 @@
 }
 
 body {
-  background-color: #7c2c2c;
+  background-color: var(--main-background-color);
   font-family: 'Termina Test', sans-serif;
   font-weight: 800;
-  color: white;
+  color: var(--main-text-color1);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h4{
+  font-weight: 600;
+  font-style: italic;
+}
+
+.paddinBorder {
+  border: white 1px solid;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 4rem;
+  /* background-color: var(--main-background-color2); */
+  color: whitesmoke;
+  padding: 4rem;
+  text-align: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.884);
+  background-blend-mode: darken;
+  background-image: url('../assets/img/camisetas.jpg');
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.paddin{
+  border: white 1px solid;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  color: whitesmoke;
+  padding: 2rem;
+  text-align: center;
+}
+
+.camiseta{
+  width: 100%;
+  max-width: 18rem;
+}
+
+.camiseta:hover{
+  transform:scale(1.3);
+  transition: 0.5s;
+}
+
+.paddin2{
+  border: white 1px solid;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  color: whitesmoke;
+  padding: 1rem;
+  text-align: center;
+  height: 30%;
+  width: 30%;
+}
+
+.paddinRed{
+  border: white 1px solid;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  color: whitesmoke;
+  text-align: center;
+  background-color:var(--navbar-hover-color);
+}
+
+.paddinRed:hover{
+  background-color:whitesmoke;
+  transition: 0.5s;
+  color: var(--navbar-hover-color);
 
 }
+
+
 
 a {
   color: inherit;
@@ -26,6 +125,34 @@ a {
   width: 10vh;
 }
 
+.red:hover {
+  animation-name: resplandor;
+  animation-duration: 0.3s;
+}
+
+@keyframes resplandor {
+  0% {
+    Color: rgb(255, 255, 255);
+  }
+
+  25% {
+    Color: rgb(0, 0, 0);
+  }
+
+  50% {
+    Color: #8a0000;
+  }
+
+  75% {
+    Color: rgb(0, 0, 0);
+  }
+
+  100% {
+    Color: rgb(255, 255, 255);
+  }
+}
+
+
 
 
 
@@ -33,16 +160,15 @@ a {
                             Navbar
     ======================================================*/
 #navbar {
-  background: black;
-  color: #F00A0A;
-  position: fixed;
+  background: var(--navbar-background-color);
+  color: var(--navbar-text-color);
   top: 0;
   height: 90px;
   line-height: 60px;
   width: 100vw;
   text-align: center;
   padding: 3px;
-  padding-top: 5px;
+  padding-top: 1.5rem;
 }
 
 #navbar .col-2 {
@@ -57,15 +183,11 @@ a {
   width: 70%;
 }
 
-@media(max-width: 768px) {
-  .nav-wrapper {
-    width: 90%;
-  }
-}
 
-@media(max-width: 638px) {
+@media(max-width: 870px) {
   .nav-wrapper {
     width: 100%;
+    font-size: 90;
   }
 }
 
@@ -80,7 +202,7 @@ a {
   -webkit-transition: transform 0.5s ease-out;
 }
 
-@media(max-width: 640px) {
+@media(max-width: 600px) {
   #navbar ul {
     display: none;
   }
@@ -97,7 +219,7 @@ a {
 }
 
 #navbar li a {
-  color: #F00A0A;
+  color: whitesmoke;
   display: block;
   font-size: 1em;
   height: 50px;
@@ -113,7 +235,7 @@ a {
 
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: #a10000;
+  color: var(--navbar-hover-color);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
@@ -126,7 +248,8 @@ a {
   width: 0%;
   height: 1px;
   bottom: -1px;
-  background: #F00A0A;
+  background: #f00a0a;
+  ;
   ;
 }
 
@@ -136,14 +259,16 @@ a {
 }
 
 #navbar li a:after {
-  background: #F00A0A;
+  background: #f00a0a;
+  ;
   ;
   right: 0;
   /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
 }
 
 #navbar li a:hover:before {
-  background: #F00A0A;
+  background: #f00a0a;
+  ;
   ;
   width: 100%;
   transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
@@ -174,7 +299,7 @@ a {
 
   /* Icon Bars */
   .icon-bars {
-    background: #F00A0A;
+    background: whitesmoke;
     ;
     position: absolute;
     left: 1px;
@@ -186,7 +311,7 @@ a {
   }
 
   .icon-bars::before {
-    background: #F00A0A;
+    background: whitesmoke;
     ;
     content: '';
     position: absolute;
@@ -202,7 +327,7 @@ a {
 
   .icon-bars::after {
     margin-top: 0px;
-    background: #F00A0A;
+    background: whitesmoke;
     ;
     content: '';
     position: absolute;
@@ -218,8 +343,8 @@ a {
 
   /* Bars Shadows */
   .icon-bars.overlay {
-    background: #a10000;
-    background: #a10000;
+    background: whitesmoke;
+    background: white;
     width: 20px;
     animation: middleBar 3s infinite 0.5s;
     -webkit-animation: middleBar 3s infinite 0.5s;
@@ -254,8 +379,8 @@ a {
   }
 
   .icon-bars.overlay::before {
-    background: #a10000;
-    background: #a10000;
+    background: whitesmoke;
+    background: white;
     width: 10px;
     animation: topBar 3s infinite 0.2s;
     -webkit-animation: topBar 3s infinite 0s;
@@ -290,8 +415,8 @@ a {
   }
 
   .icon-bars.overlay::after {
-    background: #a10000;
-    background: #a10000;
+    background: whitesmoke;
+    background: white;
     width: 15px;
     animation: bottomBar 3s infinite 1s;
     -webkit-animation: bottomBar 3s infinite 1s;
@@ -353,6 +478,12 @@ a {
     -webkit-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
   }
+
+  .menuIcon {
+    padding-top: 4rem;
+  }
+
+
 }
 
 
@@ -360,9 +491,8 @@ a {
                      Responsive Mobile Menu 
     ======================================================*/
 .overlay-menu {
-  background: rgb(36, 36, 36);
-  color: #F00A0A;
-  ;
+  background: var(--overlay-menu-background-color);
+  color: var(--overlay-menu-text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,7 +529,7 @@ a {
 
 .overlay-menu li a:hover,
 .overlay-menu li a:active {
-  color: #a10000;
+  color: var(--overlay-menu-hover-color);
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
