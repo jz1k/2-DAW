@@ -20,6 +20,11 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
 </head>
 
 <body>
@@ -31,15 +36,15 @@
                 <!-- Navbar Logo -->
                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <!-- Logo Placeholder for Inlustration -->
-                    <a href="#home">
+                    <a href="index.html">
                         <img class="logo" src="assets/logo.svg" alt="" srcset="">
                     </a>
                 </div>
 
                 <!-- Navbar Links -->
                 <ul id="menu" class="col-10 my-auto">
-                    <li><a href="#Contacto">Contacto</a></li>
-                    <li><a href="#FAQ">F.A.Q</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="#myCollapse">F.A.Q</a></li>
                 </ul>
             </div>
         </nav>
@@ -54,8 +59,8 @@
 
         <div class="overlay-menu">
             <ul id="menu">
-                <li><a href="#Contacto">Contacto</a></li>
-                <li><a href="#FAQ">F.A.Q</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#myCollapse">F.A.Q</a></li>
             </ul>
         </div>
 
@@ -135,7 +140,7 @@
             </div>
         </div>
     </div>
-    <br><br>
+    <br>
 
     <div class="container-fluid fondoRojo ">
         <h3 style="text-align: center; padding: 1rem;">¿QUIENES <strong>SOMOS?</strong>
@@ -144,45 +149,277 @@
 
         <div class="row col-12 mx-auto ">
             <div class="row col-10 somos mx-auto ">
-                <p>Somos un equipo de entusiastas del fútbol con bastantes años de experiencia en el sector que se han
-                    unido para poder ofreceros la mejor selección de equipos, prendas y accesorios de fútbol.
-                </p>
-                Nuestra tienda cuenta con productos de primera calidad de las mejores marcas de la industria, incluidas
-                Nike, Adidas, Puma y muchas otras. Tanto si eres un profesional experimentado como si acabas de empezar,
-                tenemos artículos para todos.
-                <p>
-                    A lo largo de los años hemos ido creciendo poco a poco y con vuestra ayuda cada vez podemos
-                    ofreceros más artículos.
-                </p>
-                Además de nuestra amplia selección de productos, también ofrecemos un excepcional servicio al cliente,
-                por el cual normalmente destacamos.
-                <p>
-                    Nuestro personal capacitado siempre está feliz de ayudarlo a encontrar el artículo perfecto o
-                    responder
-                    cualquier pregunta que pueda tener.
-                </p>
-                También tenéis la posibilidad de ver todas las opiniones de nuestros clientes a lo largo de los años en
-                las historias destacadas de Instagram llamadas “VALORACIONES”, o en los ME GUSTA de Twitter.
-                <p>
-                    <br> ¡GRACIAS POR ELEGIR NUESTRA TIENDA!
-                </p>
+                <p>Somos apasionados del fútbol con años de experiencia, comprometidos a ofrecer la mejor selección de
+                    equipos y accesorios de alta calidad. Con productos de marcas líderes como Nike y Adidas, atendemos
+                    a profesionales y aficionados por igual. Crecemos gracias a vuestro apoyo, expandiendo continuamente
+                    nuestra oferta.</p>
+
+                <p>Destacamos por nuestro excepcional servicio al cliente, con personal capacitado para ayudarte a
+                    encontrar el artículo perfecto. Explora las opiniones de clientes en nuestras historias destacadas
+                    de Instagram y en los "ME GUSTA" de Twitter.</p>
+
+                <p>¡GRACIAS POR ELEGIR NUESTRA TIENDA!</p>
+
+
             </div>
         </div>
     </div>
 
     <div class="container-fuid">
-        <br><br>
+        <br>
         <div class="container paddin mx-auto">
             <div class="row paddin  mx-auto ">
-                    <h3>ENVIOS <strong>GRATUITOS</strong></h3>
-                    <hr>
-                        <p>Tenemos envíos internacionales a todo el mundo menos a Brasil, México y Colombia que por la dureza de
-                            sus aduanas suelen dar muchos problemas. <strong>Todos los envíos son GRATUITOS.</strong>
-                        </p>
+                <h3>ENVIOS <strong>GRATUITOS</strong></h3>
+                <hr>
+                <p>Tenemos envíos internacionales a todo el mundo menos a Brasil, México y Colombia que por la dureza de
+                    sus aduanas suelen dar muchos problemas. <strong>Todos los envíos son GRATUITOS.</strong>
+                </p>
             </div>
         </div>
         <br>
     </div>
+
+
+
+    <div class="container-fluid">
+        <div class="container paddin mx-auto">
+            <div class="row paddin mx-auto">
+                <h3>PREGUNTAS <strong>FRECUENTES</strong></h3>
+                <div id="myCollapse" class="accordion" style="background-color: black; color: white;">
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCollapseTab1687543810438">¿Quienes Somos?</a>
+                        <div class="collapse" role="tabpanel" id="myCollapseTab1687543810438">
+                            <div class="card-body">
+                                <p class="card-text text-white"><hr> Somos un equipo de entusiastas del fútbol con bastantes
+                                    años de experiencia en el sector que se han unido para poder ofreceros la mejor
+                                    selección de equipos, prendas y accesorios de fútbol.</p>
+                                <p class="card-text text-white"><hr> Nuestra tienda cuenta con productos de primera calidad
+                                    de las mejores marcas de la industria, incluidas Nike, Adidas, Puma y muchas otras.
+                                    Tanto si eres un profesional experimentado como si acabas de empezar, tenemos
+                                    artículos para todos.</p>
+                                <p class="card-text text-white"><hr> A lo largo de los años hemos ido creciendo poco a poco y
+                                    con vuestra ayuda cada vez podemos ofreceros más artículos.</p>
+                                <p class="card-text text-white"><hr> Además de nuestra amplia selección de productos, también
+                                    ofrecemos un excepcional servicio al cliente, por el cual normalmente destacamos.
+                                </p>
+                                <p class="card-text text-white"><hr> Nuestro personal capacitado siempre está feliz de
+                                    ayudarlo a encontrar el artículo perfecto o responder cualquier pregunta que pueda
+                                    tener.</p>
+                                <p class="card-text text-white"><hr> También tenéis la posibilidad de ver todas las opiniones
+                                    de nuestros clientes a lo largo de los años en las historias destacadas de Instagram
+                                    llamadas “VALORACIONES”, o en los ME GUSTA de Twitter.</p>
+                                <p class="card-text text-white"><hr> ¡Gracias por elegir nuestra tienda!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCollapseTab1687543810439">¿Cual es el precio de los envíos y a donde los
+                            enviamos?</a>
+                        <div class="collapse" role="tabpanel" id="myCollapseTab1687543810439">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Tenemos envíos internacionales a todo el mundo menos a
+                                    Brasil, México y Colombia que por la dureza de sus aduanas suelen dar muchos
+                                    problemas. Todos los envíos son GRATUITOS.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCollapseTab1687543810440">¿Cuanto tardan en llegar los pedidos?</a>
+                        <div class="collapse" role="tabpanel" id="myCollapseTab1687543810440">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> En condiciones normales los envíos se realizan 2-3 días
+                                    después de que nos llegue el pago y suelen tardar unos 15/30 días laborales, todo
+                                    esto dependerá de la época del año en la que nos encontremos, en la cual habrá más o
+                                    menos saturación en los envíos. Nuestros envíos vienen desde Tailandia y tienen que
+                                    pasar una serie de controles y procesos aduaneros, de ahí que tarden ese tiempo en
+                                    llegar. Los artículos de la categoría de STOCK tardan 2/4 días laborales en llegar,
+                                    tal y como indicamos posteriormente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse1">¿Cómo puedo seguir mi pedido?</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse1">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Cuando tengamos disponible el seguimiento de tu pedido,
+                                    lo podrás ver dentro de tu pedido, bajo la casilla de TRACKING NUMBER. Es un código
+                                    de letras y números, bastará con darle click y nos llevará a una web donde podremos
+                                    ver sus actualizaciones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse2">¿Qué son los productos de la categoría stock?</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse2">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Estos productos solo están disponibles en la talla y
+                                    personalización que ponga en el título del artículo, los ponemos a la venta a un
+                                    precio más bajo que cuando haces un pedido normal, sólo se envían a España, no
+                                    admitimos devoluciones en estos artículos y además suelen tardar 3/4 días laborables
+                                    en llegar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse3">Métodos de pago</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse3">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Los métodos de pago con los que trabajamos son:</p>
+                                <p class="card-text text-white"><hr> Transferencia: al usar este método de pago se
+                                    facilitarán los datos necesarios para que la podáis realizar correctamente, y en
+                                    cuanto nos llegue se aceptará y actualizará el estado de vuestro pedido. Para los
+                                    artículos de la categoría de STOCK, si usáis este método de pago podrá llegar otro
+                                    cliente que use el pago por tarjeta y compre el artículo antes que vosotros, por lo
+                                    que cuando nos llegue el pago se devolverá no pudiendo adquirir ese artículo.</p>
+                                <p class="card-text text-white"><hr> Tarjeta: al usar éste sencillo método de pago solo
+                                    tendréis que facilitar los datos de la tarjeta y se realizará el pago al momento,
+                                    enviándose directamente el pedido al proveedor para agilizar el envío.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse4">He perdido el correo y no puedo acceder a la web</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse4">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Este es uno de los problemas que ocurren más a menudo ya
+                                    que mayormente el correo se queda en spam y se acaba eliminando. Cuando esto ocurra
+                                    solo tenéis que escribirnos por Twitter o Instagram y os pasaremos el enlace
+                                    directamente para poder entrar. NO ES NECESARIO VOLVER A PEDIR EL ACCESO, porque
+                                    como ya os habéis registrado anteriormente una vez volváis a pasarnos los datos de
+                                    nuevo se borrarán automáticamente y no se pasará ningún correo. Os aconsejamos que
+                                    guardéis el enlace en favoritos de vuestro navegador para poder tenerlo a mano en
+                                    futuras compras.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse5">Diferencias entre versión normal y versión jugador</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse5">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Principales diferencias entre los artículos que pone
+                                    versión jugador, en los que no pone nada es versión normal. En la gran mayoría de
+                                    artículos no está la versión jugador disponible:</p>
+                                <p class="card-text text-white"><hr> VERSIÓN JUGADOR: más transpirable, más elástica, más
+                                    ceñida al cuerpo (por lo que aconsejamos pedir una talla de más), versión con la que
+                                    los jugadores juegan los partidos, escudo termosellado.</p>
+                                <p class="card-text text-white"><hr> VERSION NORMAL: talla normal, corte recto, escudo
+                                    bordado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse6">Tallaje</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse6">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> En todos los artículos de nuestra web podréis ver guías
+                                    de tallas para orientarse. Todas las camisetas tallan normal por lo que aconsejamos
+                                    pedir la talla que se use normalmente. Las únicas excepciones serían la versión
+                                    jugador que al ser más ceñidas aconsejamos pedir una talla de más siempre, y las
+                                    retro que tienen el corte que se usaba antiguamente y para que queden bien también
+                                    aconsejamos pedir una talla de más.</p>
+                                <p class="card-text text-white"><hr> Las tallas de todos los artículos van de S - 2XL, pero
+                                    hay algunos modelos que tenemos disponibles hasta la 5XL. Para saber hasta cual hay
+                                    disponible solo tenéis que pulsar en el artículo y en el desplegable de tallas, en
+                                    el cual aparecerán todas las que hay disponibles.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse7">Cambios o devoluciones</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse7">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Nuestro proveedor NO da opción a cambios o devoluciones
+                                    si el artículo que se pide llega tal cual se ha pedido. Estos cambios solo serían
+                                    posibles si el artículo que te llega no es el correcto respecto a la talla
+                                    seleccionada, parches, dorsal o similar, o si el artículo llega dañado. Para
+                                    solucionar este problema solo tenéis que escribirnos por Twitter o Instagram y
+                                    comentarnos qué es lo que ha ocurrido para poder solucionarlo con la mayor rapidez
+                                    posible. Por ello recomendamos si tenéis alguna duda respecto a talla o detalles del
+                                    producto que nos preguntéis y nosotros os podemos aconsejar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse8">¿Dónde puedo ver las novedades?</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse8">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Tenemos una categoría en concreto que se llama NOVEDADES
+                                    donde podéis ver los últimos artículos que hemos añadido a la web, además también
+                                    podéis seguirnos en el canal de telegram en el cual vamos subiendo también todas las
+                                    novedades y mandando toda la información de interés.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse9">Parches</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse9">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> En cada artículo podemos ver los parches que se pueden
+                                    seleccionar como extra, teniendo en cuenta que solo podrán llevarlos como las
+                                    camisetas oficiales por lo cual muchas combinaciones no estarán disponibles (Ej:
+                                    LIGA+CHAMPIONS no se pueden poner juntos). Si algún artículo no da la opción de
+                                    parches es porque no están disponibles y no hay manera de añadírselos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-dark paddinRed" style="margin: 1%;">
+                        <a href="#" role="tab" data-toggle="collapse" aria-expanded="false"
+                            class="collapsed card-header text-white" data-parent="#myCollapse"
+                            data-target="#myCustomCollapse10">¿Cómo puedo contactar con vosotros?</a>
+                        <div class="collapse" role="tabpanel" id="myCustomCollapse10">
+                            <div class="card-body text-white">
+                                <p class="card-text text-white"><hr> Puedes contactarnos a través de nuestras redes sociales:
+                                </p>
+                                <p class="card-text text-white"><hr> Twitter: <a href="https://twitter.com/" target="_blank"
+                                        class="text-white">@Twitter</a></p>
+                                <p class="card-text text-white"><hr> Instagram: <a href="https://www.instagram.com/"
+                                        target="_blank" class="text-white">@Instagram</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <br>
 
 
 
