@@ -21,7 +21,7 @@ html::after {
   z-index: 1100;
   background-image: url(//www.dreambeach.es/wp-content/themes/yootheme/vendor/assets/uikit-themes/master-vibe/images//base-body-overlay.gif);
   background-repeat: repeat;
-  opacity: .08;
+  opacity: .10;
   pointer-events: none;
 }
 
@@ -36,6 +36,8 @@ html::after {
 }
 
 body {
+  scrollbar-color: red white;
+  scrollbar-width: auto;
   background-color: var(--main-background-color);
   font-family: 'Termina Test', sans-serif;
   font-weight: 800;
