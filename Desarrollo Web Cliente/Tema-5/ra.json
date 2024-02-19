@@ -1,0 +1,65 @@
+{
+    "RA Proyecto Desarrollo Aplicaciones Web": [
+        {
+            "id": "RA1",
+            "textoRA": "Identificación de Necesidades del Sector Productivo.",
+            "criterios": {
+                "a": "Clasificación de empresas por características organizativas y tipo de producto o servicio.",
+                "b": "Caracterización de empresas tipo con estructura organizativa y funciones departamentales.",
+                "c": "Identificación de necesidades más demandadas por las empresas.",
+                "d": "Valoración de oportunidades de negocio en el sector.",
+                "e": "Identificación del tipo de proyecto requerido.",
+                "f": "Determinación de características específicas del proyecto.",
+                "g": "Identificación de obligaciones fiscales, laborales y de prevención de riesgos.",
+                "h": "Identificación de posibles ayudas o subvenciones para nuevas tecnologías.",
+                "i": "Elaboración del guión de trabajo para la elaboración del proyecto."
+            },
+            "peso": "25%"
+        },
+        {
+            "id": "RA2",
+            "textoRA": "Diseño de Proyectos.",
+            "criterios": {
+                "a": "Recopilación de información relevante para el proyecto.",
+                "b": "Estudio de viabilidad técnica.",
+                "c": "Identificación de fases o partes del proyecto y su contenido.",
+                "d": "Establecimiento de objetivos con alcance identificado.",
+                "e": "Previsión de recursos materiales y personales.",
+                "f": "Elaboración del presupuesto económico.",
+                "g": "Identificación de necesidades de financiación.",
+                "h": "Definición y elaboración de documentación para el diseño.",
+                "i": "Identificación de aspectos para garantizar la calidad del proyecto."
+            },
+            "peso": "30%"
+        },
+        {
+            "id": "RA3",
+            "textoRA": "Planificación de la Ejecución del Proyecto.",
+            "criterios": {
+                "a": "Secuenciación de actividades según necesidades de ejecución.",
+                "b": "Determinación de recursos y logística para cada actividad.",
+                "c": "Identificación de permisos y autorizaciones necesarios.",
+                "d": "Establecimiento de procedimientos de ejecución de actividades.",
+                "e": "Identificación de riesgos y plan de prevención.",
+                "f": "Planificación de asignación de recursos y tiempos de ejecución.",
+                "g": "Valoración económica para la implementación.",
+                "h": "Definición y elaboración de documentación para la implementación."
+            },
+            "peso": "25%"
+        },
+        {
+            "id": "RA4",
+            "textoRA": "Definición de Procedimientos de Seguimiento y Control.",
+            "criterios": {
+                "a": "Definición del procedimiento de evaluación de actividades.",
+                "b": "Definición de indicadores de calidad para la evaluación.",
+                "c": "Procedimiento para evaluar incidencias y su registro.",
+                "d": "Procedimiento para gestionar cambios en recursos y actividades.",
+                "e": "Documentación necesaria para evaluación de actividades y del proyecto.",
+                "f": "Procedimiento para participación de usuarios o clientes en evaluación.",
+                "g": "Establecimiento de sistema para garantizar cumplimiento del pliego de condiciones."
+            },
+            "peso": "20%"
+        }
+    ]
+}
