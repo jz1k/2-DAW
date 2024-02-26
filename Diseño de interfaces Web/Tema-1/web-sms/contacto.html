@@ -38,15 +38,16 @@
                 <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <!-- Logo Placeholder for Inlustration -->
                     <a href="index.html">
-                        <img class="logo" src="assets/logo.svg" alt="" srcset="">
+                        <img class="logo" src="assets/logo.svg" alt="Soccer Master Shirts Logo" srcset="">
                     </a>
                 </div>
 
                 <!-- Navbar Links -->
                 <ul id="menu" class="col-10 my-auto">
                     <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="index.html#myCollapse">F.A.Q</a></li>
+                    <li><a href="index.html#myCollapse">Preguntas Frecuentes</a></li>
                 </ul>
+                
             </div>
         </nav>
 
@@ -80,47 +81,79 @@
         <div class="container paddin mx-auto">
             <div class="row paddin  mx-auto ">
                 <div class="container mt-5">
-        <h2 class="mb-4">Estoy buscando...</h2>
-        <form>
-            <div class="form-group">
-                <label for="tipoCamiseta">Tipo de Camiseta</label>
-                <select class="form-control" id="tipoCamiseta">
-                    <option>Camiseta de Equipo</option>
-                    <option>Camiseta de Liga Extranjera</option>
-                    <option>Camiseta Retro</option>
-                    <option>Otro</option>
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="equipo">Quiero una del equipo...</label>
-                <select class="form-control" id="equipo">
-                    <option>Barcelona</option>
-                    <option>Real Madrid</option>
-                    <option>Almería</option>
-                    <option>Manchester City</option>
-                    <option>Otro</option>
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="presupuesto">Mi presupuesto es...</label>
-                <select class="form-control" id="presupuesto">
-                    <option>Menos de 30€</option>
-                    <option>30€ - 50€</option>
-                    <option>50€ - 80€</option>
-                    <option>Más de 80€</option>
-                </select>
-            </div>
-            <br>
-            <div class="form-group">
-                <label for="mensaje">Mensaje (Especifica todo)</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-        </form>
-    </div>
+                    <h1 id="formTitle" class="red">Formulario de Pedido de Camisetas</h1>
+                    <form role="form" aria-labelledby="formTitle">
+                        <hr>
+                        <h2 class="mb-4">Estoy buscando...</h2>
+                        <fieldset>
+                            <legend>Tipo de Camiseta</legend>
+                            <div class="form-group">
+                                <label for="tipoCamiseta">Selecciona el tipo de camiseta</label>
+                                <select class="form-control" id="tipoCamiseta" aria-describedby="tipoCamisetaHelp" required>
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Equipo">Camiseta de Equipo</option>
+                                    <option value="LigaExtranjera">Camiseta de Liga Extranjera</option>
+                                    <option value="Retro">Camiseta Retro</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <br>
+                            <legend>Equipo Favorito</legend>
+                            <div class="form-group">
+                                <label for="equipo">Selecciona tu equipo favorito</label>
+                                <select class="form-control" id="equipo" aria-describedby="equipoHelp" required>
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Barcelona">Barcelona</option>
+                                    <option value="RealMadrid">Real Madrid</option>
+                                    <option value="Almeria">Almería</option>
+                                    <option value="ManCity">Manchester City</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <br>
+                            <legend>Presupuesto</legend>
+                            <div class="form-group">
+                                <label for="presupuesto">Selecciona tu presupuesto</label>
+                                <select class="form-control" id="presupuesto" aria-describedby="presupuestoHelp" required>
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Menos30">Menos de 30€</option>
+                                    <option value="30a50">30€ - 50€</option>
+                                    <option value="50a80">50€ - 80€</option>
+                                    <option value="Mas80">Más de 80€</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <br>
+                            <legend>Correo Electrónico</legend>
+                            <div class="form-group">
+                                <label for="correo">Ingresa tu correo electrónico</label>
+                                <input type="email" class="form-control" id="correo" aria-describedby="correoHelp" required>
+                            </div>
+                        </fieldset>
+                    
+                        <fieldset>
+                            <br>
+                            <legend>Mensaje</legend>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje (Especifica todo)</label>
+                                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" aria-describedby="mensajeHelp" required></textarea>
+                            </div>
+                        </fieldset>
+                        <br>
+                    
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                    
+
+                </div>
             </div>
         </div>
     </div>

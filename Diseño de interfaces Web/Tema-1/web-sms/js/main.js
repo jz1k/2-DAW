@@ -22,3 +22,4 @@ toggleIcon.addEventListener('click', () => {
         toggleIcon.className = 'menuIcon';
     }
 });
+
