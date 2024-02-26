@@ -1,71 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba Practica RA4_abcde-Recuperación</title>
 </head>
+
 <body>
 
-    <button onclick="openWindow('ventana1', 'lightgreen')">Abrir Ventana 1</button>
-    <button onclick="openWindow('ventana2', 'lightblue')">Abrir Ventana 2</button>
-    <button onclick="openWindow('ventana3', 'pink')">Abrir Ventana 3</button>
-    <br>
-    <button onclick="closeWindow('ventana1')">Cerrar Ventana 1</button>
-    <button onclick="closeWindow('ventana2')">Cerrar Ventana 2</button>
-    <button onclick="closeWindow('ventana3')">Cerrar Ventana 3</button>
-    <br>
-    <br>
-    <br>
+    
+    
 
-<!-- Ventanas -->
-<div id="window1" class="window">
-    <form id="userForm">
-        Usuario: <input type="text" id="username" required pattern="[a-z]{5}"><br>
-        Contraseña: <input type="password" id="password" required pattern="\d{4}"><br>
-        Repita Contraseña: <input type="password" id="repeatPassword" required pattern="\d{4}"><br>
-        <button type="button" onclick="crearUsuario()">Crear Usuario</button>
-        <p id="message"></p>
-    </form>
-</div>
+    <select id="list1">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
 
-<div id="window2" class="window">
-    <p id="userData"></p>
-    <button type="button" onclick="deletePassword()">Borrar Contraseña</button>
-</div>
+    <select id="list2">
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+    </select>
+    
+    <br><br>
 
-<div id="window3" class="window">
-    <p id="countdown"></p>
-</div>
+    <button type="button" onclick="openWindow1()">Abrir Ventana 1</button>
+    <button type="button" onclick="closeWindow1()">Cerrar Ventana 1</button><br>
+    
+    <button type="button" onclick="openWindow2()">Abrir Ventana 2</button>
+    <button type="button" onclick="closeWindow2()">Cerrar Ventana 2</button><br>
+    
+    <button type="button" onclick="openWindow3()">Abrir Ventana 3</button>
+    <button type="button" onclick="closeWindow3()">Cerrar Ventana 3</button><br><br>
 
-<!-- Controles Select -->
-<select id="list1">
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-</select>
 
-<select id="list2">
-    <option value="20">20</option>
-    <option value="21">21</option>
-    <option value="22">22</option>
-    <option value="23">23</option>
-    <option value="24">24</option>
-    <option value="25">25</option>
-    <option value="26">26</option>
-    <option value="27">27</option>
-    <option value="28">28</option>
-    <option value="29">29</option>
-    <option value="30">30</option>
-</select>
 
-<p id="valores"></p>
-<button type="button" onclick="showSelectedValues()">Mostrar Lista</button>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
