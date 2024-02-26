@@ -1,5 +1,3 @@
-// script.js
-
 // Variables para almacenar contraseña y reloj
 var contraseñaNueva = "muydificil";
 var reloj;
