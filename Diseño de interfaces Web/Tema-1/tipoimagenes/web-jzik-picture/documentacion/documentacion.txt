@@ -1,9 +1,52 @@
-En esta nueva versión, se han añadido animaciones a la web, entre ellas:
+BailonRubi_Juan-Carlos
 
-- Efecto glitch cambiando de color rapidamente de hover en la barra de navegación (@keyframes resplandor{})
-- Efecto de rotación en las redes sociales debajo de la barra de navegacion (@-webkit-keyframes glitch {})
-- En el apartado de datos, los mas relevantes tienen un efecto de movimiento glitch 
-hecho con @keyframe´s (@keyframes aparecerDesdeDerecha {})
-- Animacion desarrollada por mi que desplaza la imagen de studio png a la izquierda (.aparecerDerecha {)
-- Animacion combinada: (.formNoticias:hover {})
-- He usado una animacion de internet y mejorada con GPT para introducir copos de nieve que caen de forma aleatoria en la pagina principal de INICIO.
+1. Reconocimiento de Implicaciones Legales:
+
+El uso adecuado de imágenes en diseño web es crucial, no solo estéticamente, sino también legalmente. El correcto uso asegura el cumplimiento de derechos de autor, evita problemas legales y preserva la reputación del sitio web.
+
+2. Reconocimiento de Implicaciones Legales:
+
+Licencias y derechos de autor: Es fundamental comprender las licencias asociadas a las imágenes. Las licencias Creative Commons, por ejemplo, varían en términos de restricciones. Es necesario respetar las restricciones de cada imagen para evitar conflictos legales.
+
+Ejemplos de fuentes de imágenes: Sitios como Unsplash, Pexels (gratuitos) o Shutterstock, Adobe Stock (de pago) ofrecen imágenes de calidad para diferentes propósitos. Es crucial leer y entender los términos de licencia antes de utilizarlas.
+
+3. Identificación de Formatos de Imagen:
+
+Formatos recomendados: JPEG para fotografías, PNG para imágenes con fondo transparente y GIF o WebP para animaciones. La elección se basa en las características específicas de cada formato y su adecuación al propósito.
+4. Herramientas para el Tratamiento Digital de Imágenes:
+
+Herramientas de manipulación: Adobe Photoshop, GIMP o Canva. Estas herramientas permiten ajustes de color, tamaño y calidad, mejorando la apariencia de las imágenes.
+
+Ejemplos prácticos: Retocar fotografías, ajustar colores y aplicar filtros para lograr un aspecto coherente con la temática del sitio.
+
+5. Importación y Exportación de Imágenes:
+
+Habilidad de importar/exportar: Utilización de funciones de software como "Guardar Como" para seleccionar el formato deseado.
+
+Relación con el propósito: Exportar imágenes en formatos web ligeros para asegurar una carga rápida del sitio.
+
+6. Aplicación de la Guía de Estilo:
+
+Guía de estilo: Documento que establece pautas visuales para mantener coherencia. Incluye colores, tipografía y tratamiento de imágenes.
+
+Implementación: Aplicar consistentemente filtros, bordes y tamaños según la guía de estilo. Esto mejora la coherencia visual del sitio.
+
+7. Creación de Animaciones a partir de Imágenes:
+
+Capacidad para crear animaciones: Uso de herramientas como Photoshop o herramientas en línea para generar GIFs o WebP.
+
+Ejemplos de animaciones: Slideshows de productos, transiciones suaves entre secciones del sitio.
+
+8. Importación y Exportación de Multimedia:
+
+Adaptación de formatos: Convertir videos o animaciones en formatos compatibles con la web, optimizando para la velocidad de carga.
+9. Aplicación Continua de la Guía de Estilo:
+
+Contribución a la cohesión general: La guía de estilo asegura que todas las imágenes se ajusten a un estilo común, manteniendo la armonía visual en todo el sitio.
+10. Conclusión:
+
+Recapitulación: Hemos abordado aspectos legales, formatos de imagen, herramientas y la aplicación de guías de estilo. Estos elementos son esenciales para un diseño web efectivo.
+
+Importancia de la atención al detalle: La atención a detalle asegura una experiencia del usuario consistente y profesional. La coherencia en el uso de imágenes y la adherencia a la guía de estilo son elementos clave.
+
+En resumen, el uso de imágenes en diseño web va más allá de lo estético; implica consideraciones legales, elección de formatos adecuados, uso de herramientas eficientes y la aplicación coherente de una guía de estilo para lograr una experiencia de usuario efectiva.

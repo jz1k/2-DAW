@@ -26,17 +26,34 @@
 
 <body>
 
-  <!-- Bolas de nieve -->
-  <div class="snowfall-container" id="snowfall-container">
-    <!-- No es necesario agregar elementos iniciales aquí -->
-  </div>
-
-
 
   <header class="container">
     <!-- Logo en la parte superior -->
     <div class="logo-container">
-      <img src="assets/img/jzik-logo.png" alt="JZIK Logo">
+      <picture class="">
+        <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+        <source srcset="assets/img/jzik-logo_s.webp" type="image/webp" media="(max-width: 575.98px)">
+        <source srcset="assets/img/jzik-logo_s.jpg" type="image/jpg" media="(max-width: 575.98px)">
+
+        <!-- Imagen para pantallas medianas (md) -->
+        <source srcset="assets/img/jzik-logo_m.webp" type="image/webp"
+          media="(min-width: 576px) and (max-width: 767.98px)">
+        <source srcset="assets/img/jzik-logo_m.jpg" type="image/jpg"
+          media="(min-width: 576px) and (max-width: 767.98px)">
+
+        <!-- Imagen para pantallas grandes (lg) -->
+        <source srcset="assets/img/jzik-logo_l.webp" type="image/webp"
+          media="(min-width: 768px) and (max-width: 991.98px)">
+        <source srcset="assets/img/jzik-logo_l.jpg" type="image/jpg"
+          media="(min-width: 768px) and (max-width: 991.98px)">
+
+        <!-- Imagen para pantallas extra grandes (xl) -->
+        <source srcset="assets/img/jzik-logo_xl.webp" type="image/webp" media="(min-width: 992px)">
+        <source srcset="assets/img/jzik-logo_xl.jpg" type="image/jpg" media="(min-width: 992px)">
+
+        <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+        <img src="assets/img/jzik-logo.png" alt="JZIK Logo" class="logo">
+      </picture>
     </div>
 
     <!-- Barra de navegación -->
@@ -73,33 +90,118 @@
           <div class="rrss">
             <a href="https://open.spotify.com/intl-es/artist/5i5uS1VKmwOfhZLSVg89lh?si=uYi5fp3xT-eyPltAkUf-vg"
               target="_blank">
-              <img class="col-12 rrssRotate" src="assets/rrss/spotify.png" alt="">
+              <picture class="col-12 rrssRotate">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/spotify_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/spotify_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/spotify_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/spotify_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/spotify.png" alt="" class="col-12 rrssRotate">
+              </picture>
             </a>
           </div>
           <!-- YouTube -->
           <div class="rrss">
             <a href="https://www.youtube.com/channel/UCc_URCIQD3qwn_tM7NU7HCg" target="_blank">
-              <img class="col-12 rrssRotate " src="assets/rrss/youtube.png" alt="">
+              <picture class="col-12 rrssRotate">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/youtube_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/youtube_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/youtube_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/youtube_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/youtube.png" alt="" class="col-12 rrssRotate">
+              </picture>
             </a>
           </div>
 
           <!-- Soundcloud -->
           <div class="rrss">
             <a href="https://soundcloud.com/jzik" target="_blank">
-              <img class="col-12 rrssRotate " src="assets/rrss/soundcloud.png" alt="">
+              <picture class="col-12 rrssRotate">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/soundcloud_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/soundcloud_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/soundcloud_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/soundcloud_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/soundcloud.png" alt="" class="col-12 rrssRotate">
+              </picture>
             </a>
           </div>
 
           <!-- Instagram -->
           <div class="rrss">
             <a href="https://www.instagram.com/jzik_/" target="_blank">
-              <img class="col-12 rrssRotate " src="assets/rrss/instagram.png" alt="">
+              <picture class="col-12 rrssRotate">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/instagram_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/instagram_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/instagram_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/instagram_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/instagram.png" alt="" class="col-12 rrssRotate">
+              </picture>
             </a>
           </div>
           <!-- Twitter -->
           <div class="rrss">
             <a href="https://twitter.com/JZIKMUSIC" target="_blank">
-              <img class="col-12 rrssRotate " src="assets/rrss/twitter.png" alt="">
+              <picture class="col-12 rrssRotate">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/twitter_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/twitter_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/twitter_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/twitter_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/twitter.png" alt="" class="col-12 rrssRotate">
+              </picture>
             </a>
           </div>
         </div>
@@ -123,7 +225,32 @@
             </p>
           </div>
           <div class="aparecerDerecha col-xl-6 col-lg-6 col-md-6 col-sm-12" style="text-align: center;">
-            <img class="col-12 imgStudio" src="assets/img/studio-png.png" alt="">
+            <picture class="col-12 imgStudio">
+              <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+              <source srcset="assets/img/studio-png_s.webp" type="image/webp" media="(max-width: 575.98px)">
+              <source srcset="assets/img/studio-png_s.png" type="image/png" media="(max-width: 575.98px)">
+
+              <!-- Imagen para pantallas medianas (md) -->
+              <source srcset="assets/img/studio-png_m.webp" type="image/webp"
+                media="(min-width: 576px) and (max-width: 767.98px)">
+              <source srcset="assets/img/studio-png_m.png" type="image/png"
+                media="(min-width: 576px) and (max-width: 767.98px)">
+
+              <!-- Imagen para pantallas grandes (lg) -->
+              <source srcset="assets/img/studio-png_l.webp" type="image/webp"
+                media="(min-width: 768px) and (max-width: 991.98px)">
+              <source srcset="assets/img/studio-png_l.png" type="image/png"
+                media="(min-width: 768px) and (max-width: 991.98px)">
+
+              <!-- Imagen para pantallas extra grandes (xl) -->
+              <source srcset="assets/img/studio-png_xl.webp" type="image/webp" media="(min-width: 992px)">
+              <source srcset="assets/img/studio-png_xl.png" type="image/png" media="(min-width: 992px)">
+
+              <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+              <img src="assets/img/studio-png.png" alt="" class="col-12 imgStudio">
+            </picture>
+
+
           </div>
         </div>
       </div>
@@ -188,19 +315,105 @@
               </ol>
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <img src="assets/carteles/1.jpg" class="w-100 d-block carousel-img" alt="Primer Cartel">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/carteles/1_s.jpg" type="image/jpg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/carteles/1_m.jpg" type="image/jpg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/carteles/1_l.jpg" type="image/jpg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/carteles/1_xl.jpg" type="image/jpg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/carteles/1.jpg" alt="Primer Cartel" class="w-100 d-block carousel-img">
+                  </picture>
+
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/carteles/2.jpg" class="w-100 d-block carousel-img" alt="Segundo Cartel">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/carteles/2_s.jpg" type="image/jpg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/carteles/2_m.jpg" type="image/jpg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/carteles/2_l.jpg" type="image/jpg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/carteles/2_xl.jpg" type="image/jpg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/carteles/2.jpg" alt="Segundo Cartel" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/carteles/3.jpg" class="w-100 d-block carousel-img" alt="Tercer Cartel">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/carteles/3_s.jpg" type="image/jpg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/carteles/3_m.jpg" type="image/jpg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/carteles/3_l.jpg" type="image/jpg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/carteles/3_xl.jpg" type="image/jpg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/carteles/3.jpg" alt="Tercer Cartel" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/carteles/4.jpg" class="w-100 d-block carousel-img" alt="Cuarto Cartel">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/carteles/4_s.jpg" type="image/jpg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/carteles/4_m.jpg" type="image/jpg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/carteles/4_l.jpg" type="image/jpg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/carteles/4_xl.jpg" type="image/jpg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/carteles/4.jpg" alt="Cuarto Cartel" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/carteles/5.png" class="w-100 d-block carousel-img" alt="Quinto Cartel">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/carteles/5_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/carteles/5_m.png" type="image/png"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/carteles/5_l.png" type="image/png"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/carteles/5_xl.png" type="image/png" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/carteles/5.png" alt="Quinto Cartel" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
@@ -226,16 +439,84 @@
               </ol>
               <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                  <img src="assets/img/1.jpeg" class="w-100 d-block carousel-img" alt="Primera Foto">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/img/1_s.jpeg" type="image/jpeg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/img/1_m.jpeg" type="image/jpeg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/img/1_l.jpeg" type="image/jpeg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/img/1_xl.jpeg" type="image/jpeg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/img/1.jpeg" alt="Primera Foto" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/img/2.jpg" class="w-100 d-block carousel-img" alt="Segundoa Foto">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/img/2_s.webp" type="image/webp" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/img/2_m.webp" type="image/webp"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/img/2_l.webp" type="image/webp"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/img/2_xl.webp" type="image/webp" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/img/2.webp" alt="Segunda Foto" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/img/3.jpeg" class="w-100 d-block carousel-img" alt="Tercera Foto">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/img/3_s.jpeg" type="image/jpeg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/img/3_m.jpeg" type="image/jpeg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/img/3_l.jpeg" type="image/jpeg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/img/3_xl.jpeg" type="image/jpeg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/img/3.jpeg" alt="Tercera Foto" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
                 <div class="carousel-item">
-                  <img src="assets/img/4.jpeg" class="w-100 d-block carousel-img" alt="Cuartoa Foto">
+                  <picture class="w-100 d-block carousel-img">
+                    <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                    <source srcset="assets/img/4_s.jpeg" type="image/jpeg" media="(max-width: 575.98px)">
+
+                    <!-- Imagen para pantallas medianas (md) -->
+                    <source srcset="assets/img/4_m.jpeg" type="image/jpeg"
+                      media="(min-width: 576px) and (max-width: 767.98px)">
+
+                    <!-- Imagen para pantallas grandes (lg) -->
+                    <source srcset="assets/img/4_l.jpeg" type="image/jpeg"
+                      media="(min-width: 768px) and (max-width: 991.98px)">
+
+                    <!-- Imagen para pantallas extra grandes (xl) -->
+                    <source srcset="assets/img/4_xl.jpeg" type="image/jpeg" media="(min-width: 992px)">
+
+                    <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                    <img src="assets/img/4.jpeg" alt="Cuartoa Foto" class="w-100 d-block carousel-img">
+                  </picture>
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselId-2" data-bs-slide="prev">
@@ -279,33 +560,118 @@
           <div class="rrss">
             <a href="https://open.spotify.com/intl-es/artist/5i5uS1VKmwOfhZLSVg89lh?si=uYi5fp3xT-eyPltAkUf-vg"
               target="_blank">
-              <img class="col-12 zoom-hover" src="assets/rrss/spotify.png" alt="">
+              <picture class="col-12 zoom-hover">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/spotify_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/spotify_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/spotify_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/spotify_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/spotify.png" alt="" class="col-12 zoom-hover">
+              </picture>
             </a>
           </div>
           <!-- YouTube -->
           <div class="rrss">
             <a href="https://www.youtube.com/channel/UCc_URCIQD3qwn_tM7NU7HCg" target="_blank">
-              <img class="col-12 zoom-hover" src="assets/rrss/youtube.png" alt="">
+              <picture class="col-12 zoom-hover">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/youtube_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/youtube_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/youtube_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/youtube_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/youtube.png" alt="" class="col-12 zoom-hover">
+              </picture>
             </a>
           </div>
 
           <!-- Soundcloud -->
           <div class="rrss">
             <a href="https://soundcloud.com/jzik" target="_blank">
-              <img class="col-12 zoom-hover" src="assets/rrss/soundcloud.png" alt="">
+              <picture class="col-12 zoom-hover">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/soundcloud_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/soundcloud_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/soundcloud_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/soundcloud_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/soundcloud.png" alt="" class="col-12 zoom-hover">
+              </picture>
             </a>
           </div>
 
           <!-- Instagram -->
           <div class="rrss">
             <a href="https://www.instagram.com/jzik_/" target="_blank">
-              <img class="col-12 zoom-hover" src="assets/rrss/instagram.png" alt="">
+              <picture class="col-12 zoom-hover">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/instagram_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/instagram_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/instagram_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/instagram_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/instagram.png" alt="" class="col-12 zoom-hover">
+              </picture>
             </a>
           </div>
           <!-- Twitter -->
           <div class="rrss">
             <a href="https://twitter.com/JZIKMUSIC" target="_blank">
-              <img class="col-12 zoom-hover" src="assets/rrss/twitter.png" alt="">
+              <picture class="col-12 zoom-hover">
+                <!-- Imagen para pantallas extra pequeñas (xs) y pequeñas (sm) -->
+                <source srcset="assets/rrss/twitter_s.png" type="image/png" media="(max-width: 575.98px)">
+
+                <!-- Imagen para pantallas medianas (md) -->
+                <source srcset="assets/rrss/twitter_m.png" type="image/png"
+                  media="(min-width: 576px) and (max-width: 767.98px)">
+
+                <!-- Imagen para pantallas grandes (lg) -->
+                <source srcset="assets/rrss/twitter_l.png" type="image/png"
+                  media="(min-width: 768px) and (max-width: 991.98px)">
+
+                <!-- Imagen para pantallas extra grandes (xl) -->
+                <source srcset="assets/rrss/twitter_xl.png" type="image/png" media="(min-width: 992px)">
+
+                <!-- Imagen por defecto para navegadores que no soportan la etiqueta <source> -->
+                <img src="assets/rrss/twitter.png" alt="" class="col-12 zoom-hover">
+              </picture>
             </a>
           </div>
         </div>

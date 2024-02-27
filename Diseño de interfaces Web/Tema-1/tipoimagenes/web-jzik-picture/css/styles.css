@@ -11,55 +11,6 @@
     --color-texto: white;
     --color-primario: #8a0000;
 }
-/* Nieve */
-.snowfall-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999; /* Asegura que las bolas de nieve estén en la parte superior */
-}
-
-.snowflake {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: url('https://pngimg.es/d/snowball_PNG4.png') no-repeat center center;
-    background-size: cover;
-    -webkit-animation: snowfall linear infinite;
-            animation: snowfall linear infinite;
-    -webkit-animation-duration: 5s;
-            animation-duration: 5s;
-    -webkit-animation-delay: calc(-60s * var(--delay));
-            animation-delay: calc(-60s * var(--delay));
-    top: -30px; /* Ajusta la posición inicial para que las bolas comiencen fuera de la pantalla */
-    left: calc(100% * var(--delay)); /* Distribuye las bolas en toda la pantalla */
-}
-
-@-webkit-keyframes snowfall {
-    from {
-        -webkit-transform: translateY(-100vh) rotate(0deg);
-                transform: translateY(-100vh) rotate(0deg);
-    }
-    to {
-        -webkit-transform: translateY(100vh) rotate(360deg);
-                transform: translateY(100vh) rotate(360deg);
-    }
-}
-
-@keyframes snowfall {
-    from {
-        -webkit-transform: translateY(-100vh) rotate(0deg);
-                transform: translateY(-100vh) rotate(0deg);
-    }
-    to {
-        -webkit-transform: translateY(100vh) rotate(360deg);
-                transform: translateY(100vh) rotate(360deg);
-    }
-}
-
 
 
 
@@ -115,7 +66,7 @@ h1+p {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 /* Degradado a negro hacia arriba para hacer transicion a fondo negro */
@@ -235,116 +186,154 @@ h1+p {
 /* Hover con zoom cuando pases el ratón */
 .zoom-hover:hover {
     -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 /*Transform hover rrss*/
-.rrssRotate{
+.rrssRotate {
     -webkit-transition-duration: 0.3s;
-         -o-transition-duration: 0.3s;
-            transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 
-.rrssRotate:hover{
+.rrssRotate:hover {
     -webkit-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 
 /*Resplandor letras*/
-.flashLetras:hover{
+.flashLetras:hover {
     -webkit-animation-name: resplandor;
-            animation-name: resplandor;
+    animation-name: resplandor;
     -webkit-animation-duration: 0.3s;
-            animation-duration: 0.3s;
+    animation-duration: 0.3s;
 }
 
-@-webkit-keyframes resplandor{
-    0%{ Color: rgb(255, 255, 255);}
-    25%{Color: rgb(0, 0, 0);}
-    50%{ Color: #8a0000;}
-    75%{Color: rgb(0, 0, 0);}
-    100%{ Color: rgb(255, 255, 255);}
+@-webkit-keyframes resplandor {
+    0% {
+        Color: rgb(255, 255, 255);
+    }
+
+    25% {
+        Color: rgb(0, 0, 0);
+    }
+
+    50% {
+        Color: #8a0000;
+    }
+
+    75% {
+        Color: rgb(0, 0, 0);
+    }
+
+    100% {
+        Color: rgb(255, 255, 255);
+    }
 }
 
-@keyframes resplandor{
-    0%{ Color: rgb(255, 255, 255);}
-    25%{Color: rgb(0, 0, 0);}
-    50%{ Color: #8a0000;}
-    75%{Color: rgb(0, 0, 0);}
-    100%{ Color: rgb(255, 255, 255);}
+@keyframes resplandor {
+    0% {
+        Color: rgb(255, 255, 255);
+    }
+
+    25% {
+        Color: rgb(0, 0, 0);
+    }
+
+    50% {
+        Color: #8a0000;
+    }
+
+    75% {
+        Color: rgb(0, 0, 0);
+    }
+
+    100% {
+        Color: rgb(255, 255, 255);
+    }
 }
 
 
-.glitch{
+.glitch {
     -webkit-animation-name: glitch;
-            animation-name: glitch;
+    animation-name: glitch;
     -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
+    animation-duration: 0.5s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes glitch {
     0% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
+
     20% {
         -webkit-transform: translateX(-5%) skewX(10deg);
-                transform: translateX(-5%) skewX(10deg);
+        transform: translateX(-5%) skewX(10deg);
     }
+
     40% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
+
     60% {
         -webkit-transform: translateX(5%) skewX(-20deg);
-                transform: translateX(5%) skewX(-20deg);
+        transform: translateX(5%) skewX(-20deg);
     }
+
     80% {
         -webkit-transform: translateX(-5%) skewX(10deg);
-                transform: translateX(-5%) skewX(10deg);
+        transform: translateX(-5%) skewX(10deg);
     }
+
     100% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
 }
 
 @keyframes glitch {
     0% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
+
     20% {
         -webkit-transform: translateX(-5%) skewX(10deg);
-                transform: translateX(-5%) skewX(10deg);
+        transform: translateX(-5%) skewX(10deg);
     }
+
     40% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
+
     60% {
         -webkit-transform: translateX(5%) skewX(-20deg);
-                transform: translateX(5%) skewX(-20deg);
+        transform: translateX(5%) skewX(-20deg);
     }
+
     80% {
         -webkit-transform: translateX(-5%) skewX(10deg);
-                transform: translateX(-5%) skewX(10deg);
+        transform: translateX(-5%) skewX(10deg);
     }
+
     100% {
         -webkit-transform: translateX(-5%) skewX(20deg);
-                transform: translateX(-5%) skewX(20deg);
+        transform: translateX(-5%) skewX(20deg);
     }
 }
 
 /* Animacion para la newsletter */
 .formNoticias:hover {
     -webkit-transform: scale(1.5) translateX(-1.5rem);
-        -ms-transform: scale(1.5) translateX(-1.5rem);
-            transform: scale(1.5) translateX(-1.5rem);
+    -ms-transform: scale(1.5) translateX(-1.5rem);
+    transform: scale(1.5) translateX(-1.5rem);
     -webkit-transition: -webkit-transform 1s;
     transition: -webkit-transform 1s;
     -o-transition: transform 1s;
@@ -356,29 +345,32 @@ h1+p {
 @-webkit-keyframes aparecerDesdeDerecha {
     0% {
         -webkit-transform: translateX(100%);
-                transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 }
+
 @keyframes aparecerDesdeDerecha {
     0% {
         -webkit-transform: translateX(100%);
-                transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 .aparecerDerecha {
     -webkit-animation-name: aparecerDesdeDerecha;
-            animation-name: aparecerDesdeDerecha;
+    animation-name: aparecerDesdeDerecha;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
 }
 
 

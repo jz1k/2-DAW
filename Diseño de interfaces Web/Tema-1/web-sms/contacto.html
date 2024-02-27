@@ -31,6 +31,11 @@
 <body>
     <!-- BARRA DE NAVEGACION -->
     <header>
+        <!-- Con esto hacemos que pueda tabular directamente al contenido importante sin necesidad 
+            del tabindex, que puede ser tedioso cuando se usan tecnologias de accesibilidad -->
+        <a href="#aria-contacto" class="aria-contacto">Ir al formulario de contacto</a>
+
+
 
         <nav id="navbar" class="container-fluid">
             <div class="row nav-wrapper col-12 align-items-center mx-auto my-auto">
@@ -81,17 +86,15 @@
         <div class="container paddin mx-auto">
             <div class="row paddin  mx-auto ">
                 <div class="container mt-5">
-                    <h1 id="formTitle" class="red">Formulario de Pedido de Camisetas</h1>
+                    <h1 id="formTitle" class="red">Haz tu pedido...</h1>
                     <form role="form" aria-labelledby="formTitle" class="mx-auto">
                         <hr>
-                        <h2 class="mb-4">Estoy buscando...</h2>
-
                         <fieldset>
                             <legend>Tipo de Camiseta</legend>
                             <div class="form-group">
-                                <label for="tipoCamiseta">Selecciona el tipo de camiseta</label>
+                                <label for="tipoCamiseta" id="aria-contacto">Selecciona el tipo de camiseta</label>
                                 <select class="form-control" id="tipoCamiseta" aria-describedby="tipoCamisetaHelp"
-                                    required tabindex="1">
+                                    required>
                                     <option value="" disabled selected hidden>Selecciona una opción</option>
                                     <option value="Equipo">Camiseta de Equipo</option>
                                     <option value="LigaExtranjera">Camiseta de Liga Extranjera</option>
@@ -103,18 +106,13 @@
 
                         <fieldset>
                             <br>
-                            <legend>Equipo Favorito</legend>
+                            <legend>Cantidad de Camisetas</legend>
                             <div class="form-group">
-                                <label for="equipo">Selecciona tu equipo favorito</label>
-                                <select class="form-control" id="equipo" aria-describedby="equipoHelp" required required
-                                    tabindex="2">
-                                    <option value="" disabled selected hidden>Selecciona una opción</option>
-                                    <option value="Barcelona">Barcelona</option>
-                                    <option value="RealMadrid">Real Madrid</option>
-                                    <option value="Almeria">Almería</option>
-                                    <option value="ManCity">Manchester City</option>
-                                    <option value="Otro">Otro</option>
-                                </select>
+                                <label for="cantidadCamisetas">Selecciona la cantidad de camisetas a comprar</label>
+                                <input type="range" class="form-control" id="cantidadCamisetas"
+                                    aria-describedby="cantidadCamisetasHelp" min="1" max="10" step="1" value="1"
+                                    oninput="actualizarCantidadCamisetas()">
+                                <span id="cantidadCamisetasValue">1</span>
                             </div>
                         </fieldset>
 
@@ -124,7 +122,7 @@
                             <div class="form-group">
                                 <label for="presupuesto">Selecciona tu presupuesto</label>
                                 <select class="form-control" id="presupuesto" aria-describedby="presupuestoHelp"
-                                    required required tabindex="3">
+                                    required required>
                                     <option value="" disabled selected hidden>Selecciona una opción</option>
                                     <option value="Menos30">Menos de 30€</option>
                                     <option value="30a50">30€ - 50€</option>
@@ -140,7 +138,8 @@
                             <div class="form-group">
                                 <label for="correo">Ingresa tu correo electrónico</label>
                                 <input type="email" class="form-control" id="correo" aria-describedby="correoHelp"
-                                    required required tabindex="4">
+                                    required aria-live="assertive" oninput="validarCorreo()">
+                                <div id="mensajeCorreo" aria-live="polite"></div>
                             </div>
                         </fieldset>
 
@@ -150,7 +149,7 @@
                             <div class="form-group">
                                 <label for="mensaje">Mensaje (Especifica todo)</label>
                                 <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje"
-                                    aria-describedby="mensajeHelp" required required tabindex="5"></textarea>
+                                    aria-describedby="mensajeHelp" required required></textarea>
                             </div>
                         </fieldset>
 
@@ -160,7 +159,9 @@
                             <div class="form-group">
                                 <label for="fechaNacimiento">Selecciona tu fecha de nacimiento</label>
                                 <input type="date" class="form-control" id="fechaNacimiento"
-                                    aria-describedby="fechaNacimientoHelp" required tabindex="6">
+                                    aria-describedby="fechaNacimientoHelp" required aria-live="assertive"
+                                    oninput="validarFechaNacimiento()">
+                                <div id="mensajeFechaNacimiento" aria-live="polite"></div>
                             </div>
                         </fieldset>
 
@@ -170,12 +171,12 @@
                             <div class="form-check col-6 mx-auto ">
                                 <div class="form-check col-6 mx-auto">
                                     <input class="form-check-input" type="radio" name="genero" id="generoMasculino"
-                                        value="Masculino" required tabindex="7">
+                                        value="Masculino" required>
                                     <label class="form-check-label" for="generoMasculino">Masculino</label>
                                 </div>
                                 <div class="form-check col-6 mx-auto">
                                     <input class="form-check-input" type="radio" name="genero" id="generoFemenino"
-                                        value="Femenino" required tabindex="8">
+                                        value="Femenino" required>
                                     <label class="form-check-label" for="generoFemenino">Femenino</label>
                                 </div>
                             </div>
@@ -187,14 +188,13 @@
                             <div class="form-check mx-auto col-5">
                                 <label class="form-check-label" for="ofertas">Acepto recibir ofertas por correo
                                     electrónico</label>
-                                <input class="form-check-input" type="checkbox" id="ofertas" value="aceptoOfertas"
-                                    tabindex="9">
+                                <input class="form-check-input" type="checkbox" id="ofertas" value="aceptoOfertas">
                             </div>
                         </fieldset>
 
                         <br>
 
-                        <button type="submit" class="btn btn-primary" required tabindex="10">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary" required>Enviar Mensaje</button>
                     </form>
 
 
@@ -203,9 +203,6 @@
         </div>
     </div>
     <br>
-
-
-
 
 
     <footer class="footer">
@@ -232,6 +229,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('skipToForm').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('tipoCamiseta').focus();
+        });
+    </script>
 </body>
 
 

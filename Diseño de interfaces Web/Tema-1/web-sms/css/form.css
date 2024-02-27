@@ -8,6 +8,13 @@
     border-color: white;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     background-color: #f00a0a;
+}
+
+.aria-contacto {
+	position: absolute;
+	left: -9999px;
+	top: auto;
 }
