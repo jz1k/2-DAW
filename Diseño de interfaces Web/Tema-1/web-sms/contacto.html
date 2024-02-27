@@ -47,7 +47,7 @@
                     <li><a href="contacto.html">Contacto</a></li>
                     <li><a href="index.html#myCollapse">Preguntas Frecuentes</a></li>
                 </ul>
-                
+
             </div>
         </nav>
 
@@ -82,14 +82,16 @@
             <div class="row paddin  mx-auto ">
                 <div class="container mt-5">
                     <h1 id="formTitle" class="red">Formulario de Pedido de Camisetas</h1>
-                    <form role="form" aria-labelledby="formTitle">
+                    <form role="form" aria-labelledby="formTitle" class="mx-auto">
                         <hr>
                         <h2 class="mb-4">Estoy buscando...</h2>
+
                         <fieldset>
                             <legend>Tipo de Camiseta</legend>
                             <div class="form-group">
                                 <label for="tipoCamiseta">Selecciona el tipo de camiseta</label>
-                                <select class="form-control" id="tipoCamiseta" aria-describedby="tipoCamisetaHelp" required>
+                                <select class="form-control" id="tipoCamiseta" aria-describedby="tipoCamisetaHelp"
+                                    required tabindex="1">
                                     <option value="" disabled selected hidden>Selecciona una opción</option>
                                     <option value="Equipo">Camiseta de Equipo</option>
                                     <option value="LigaExtranjera">Camiseta de Liga Extranjera</option>
@@ -98,13 +100,14 @@
                                 </select>
                             </div>
                         </fieldset>
-                    
+
                         <fieldset>
                             <br>
                             <legend>Equipo Favorito</legend>
                             <div class="form-group">
                                 <label for="equipo">Selecciona tu equipo favorito</label>
-                                <select class="form-control" id="equipo" aria-describedby="equipoHelp" required>
+                                <select class="form-control" id="equipo" aria-describedby="equipoHelp" required required
+                                    tabindex="2">
                                     <option value="" disabled selected hidden>Selecciona una opción</option>
                                     <option value="Barcelona">Barcelona</option>
                                     <option value="RealMadrid">Real Madrid</option>
@@ -114,13 +117,14 @@
                                 </select>
                             </div>
                         </fieldset>
-                    
+
                         <fieldset>
                             <br>
                             <legend>Presupuesto</legend>
                             <div class="form-group">
                                 <label for="presupuesto">Selecciona tu presupuesto</label>
-                                <select class="form-control" id="presupuesto" aria-describedby="presupuestoHelp" required>
+                                <select class="form-control" id="presupuesto" aria-describedby="presupuestoHelp"
+                                    required required tabindex="3">
                                     <option value="" disabled selected hidden>Selecciona una opción</option>
                                     <option value="Menos30">Menos de 30€</option>
                                     <option value="30a50">30€ - 50€</option>
@@ -129,29 +133,70 @@
                                 </select>
                             </div>
                         </fieldset>
-                    
+
                         <fieldset>
                             <br>
                             <legend>Correo Electrónico</legend>
                             <div class="form-group">
                                 <label for="correo">Ingresa tu correo electrónico</label>
-                                <input type="email" class="form-control" id="correo" aria-describedby="correoHelp" required>
+                                <input type="email" class="form-control" id="correo" aria-describedby="correoHelp"
+                                    required required tabindex="4">
                             </div>
                         </fieldset>
-                    
+
                         <fieldset>
                             <br>
                             <legend>Mensaje</legend>
                             <div class="form-group">
                                 <label for="mensaje">Mensaje (Especifica todo)</label>
-                                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje" aria-describedby="mensajeHelp" required></textarea>
+                                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje"
+                                    aria-describedby="mensajeHelp" required required tabindex="5"></textarea>
                             </div>
                         </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Fecha de Nacimiento</legend>
+                            <div class="form-group">
+                                <label for="fechaNacimiento">Selecciona tu fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento"
+                                    aria-describedby="fechaNacimientoHelp" required tabindex="6">
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Género</legend>
+                            <div class="form-check col-6 mx-auto ">
+                                <div class="form-check col-6 mx-auto">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoMasculino"
+                                        value="Masculino" required tabindex="7">
+                                    <label class="form-check-label" for="generoMasculino">Masculino</label>
+                                </div>
+                                <div class="form-check col-6 mx-auto">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoFemenino"
+                                        value="Femenino" required tabindex="8">
+                                    <label class="form-check-label" for="generoFemenino">Femenino</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Newsletter</legend>
+                            <div class="form-check mx-auto col-5">
+                                <label class="form-check-label" for="ofertas">Acepto recibir ofertas por correo
+                                    electrónico</label>
+                                <input class="form-check-input" type="checkbox" id="ofertas" value="aceptoOfertas"
+                                    tabindex="9">
+                            </div>
+                        </fieldset>
+
                         <br>
-                    
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+
+                        <button type="submit" class="btn btn-primary" required tabindex="10">Enviar Mensaje</button>
                     </form>
-                    
+
 
                 </div>
             </div>
