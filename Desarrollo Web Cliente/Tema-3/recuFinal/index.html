@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Practica RA4_abcde</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba Práctica RA4_abcde-Recuperación</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Prueba Practica RA4_abcde - Bard</h1>
-    <div class="botones">
-        <button id="btnVentana1">Abrir Ventana 1</button>
-        <button id="btnVentana2">Abrir Ventana 2</button>
-        <button id="btnVentana3">Abrir Ventana 3</button>
-        <button id="btnVentana4">Abrir Ventana 4</button>
+  <h1>Prueba Práctica RA4_abcde-Recuperación</h1>
+  <p>Por [Tu nombre]</p>
+
+  <div id="botones-ventanas">
+    <button onclick="abrirVentana1()">Abrir Ventana 1</button>
+    <button onclick="abrirVentana2()">Abrir Ventana 2</button>
+    <button onclick="abrirVentana3()">Abrir Ventana 3</button>
+  </div>
+
+  <div id="ventanas">
+    <div id="ventana1" class="ventana verde">
+      <h2>Ventana 1</h2>
+      <p>Formulario de usuario</p>
+      <form onsubmit="crearUsuario()">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" maxlength="5">
+        <br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" maxlength="4">
+        <br>
+        <label for="repetir-contraseña">Repetir contraseña:</label>
+        <input type="password" id="repetir-contraseña" name="repetir-contraseña" maxlength="4">
+        <br>
+        <button type="submit">Crear usuario</button>
+      </form>
+      <p id="mensaje-usuario"></p>
     </div>
-    <div class="controles">
-        <label for="longitudLista">Longitud de la lista:</label>
-        <select id="longitudLista" name="longitudLista">
-            <option value="50">50</option>
-            <option value="51">51</option>
-            <option value="52">52</option>
-            ...
-            <option value="59">59</option>
-            <option value="60">60</option>
-        </select>
-        <label for="numValoresAleatorios">Número de valores aleatorios:</label>
-        <select id="numValoresAleatorios" name="numValoresAleatorios">
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-        </select>
+    <div id="ventana2" class="ventana azul">
+      <h2>Ventana 2</h2>
+      <p>Usuario y contraseña actuales</p>
+      <p id="usuario-actual"></p>
+      <p id="contraseña-actual"></p>
+      <button onclick="borrarContraseña()">Borrar contraseña</button>
+      <p id="mensaje-contraseña"></p>
     </div>
-    <div id="ventana1"></div>
-    <div id="ventana2"></div>
-    <div id="ventana3"></div>
-    <div id="ventana4"></div>
-    <script src="script.js"></script>
+    <div id="ventana3" class="ventana rosa">
+      <h2>Ventana 3</h2>
+      <p>Cuenta atrás y valores pares</p>
+      <p id="cuenta-atras"></p>
+      <p id="valores-pares"></p>
+    </div>
+  </div>
+
+  <div id="controles">
+    <label for="numero-aleatorios">Número de valores aleatorios:</label>
+    <select id="numero-aleatorios">
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      ...
+      <option value="29">29</option>
+      <option value="30">30</option>
+    </select>
+    <br>
+    <label for="numero-escoger">Número a escoger:</label>
+    <select id="numero-escoger">
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      ...
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <br>
+    <button onclick="mostrarValoresPares()">Mostrar valores pares</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

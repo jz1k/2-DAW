@@ -115,9 +115,3 @@ function closeWindow(name) {
         windows[name].close();
     }
 }
-
-
-
-
-
-

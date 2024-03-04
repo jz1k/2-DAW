@@ -1,131 +1,84 @@
-// Funciones para las ventanas
+// Define an empty object to store user information
+let usuario = {};
+
+// Functions for opening windows (implementation details omitted)
 function abrirVentana1() {
-    // Crear ventana 1
-    let ventana1 = window.open("", "", "width=300,height=300,top=50,left=50");
-    ventana1.document.write("<p style='color: lightgreen'>Ventana 1</p>");
-    // Formulario
-    let formulario = ventana1.document.createElement("form");
-    formulario.innerHTML = `
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario">
-        <br>
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena">
-        <br>
-        <label for="nuevaContrasena">Nueva contraseña:</label>
-        <input type="password" id="nuevaContrasena" name="nuevaContrasena">
-        <br><br>
-        <button type="button" id="btnValidar">Validar</button>
-    `;
-    ventana1.document.body.appendChild(formulario);
-
-    // Función para validar el usuario y la contraseña
-    let btnValidar = ventana1.document.getElementById("btnValidar");
-    btnValidar.addEventListener("click", function() {
-        let usuario = ventana1.document.getElementById("usuario").value;
-        let contrasena = ventana1.document.getElementById("contrasena").value;
-        let nuevaContrasena = ventana1.document.getElementById("nuevaContrasena").value;
-
-        if (usuario === "alumno" && contrasena === "bueno") {
-            alert("Datos correctos, ¿Deseas cambiar la contraseña?");
-            if (nuevaContrasena.length > 0) {
-                // Cambiar la contraseña
-                // ...
-            } else {
-                alert("No se ha cambiado la contraseña");
-            }
-        } else {
-            alert("Datos incorrectos. ¿Quieres intentarlo de nuevo?");
-        }
-    });
+  // Open window 1 with size 300x300 and position (top: 0, left: 0)
+  // Set background color to light green
+  // ... (Implement window manipulation using DOM methods)
 }
 
 function abrirVentana2() {
-    // Obtener la longitud de la lista y el número de valores aleatorios
-    let longitudLista = document.getElementById("longitudLista").value;
-    let numValoresAleatorios = document.getElementById("numValoresAleatorios").value;
-
-    // Generar una lista de números
-    let listaNumeros = [];
-    for (let i = 1; i <= longitudLista; i++) {
-        listaNumeros.push(i);
-    }
-
-    // Generar valores aleatorios
-    let valoresAleatorios = [];
-    for (let i = 0; i < numValoresAleatorios; i++) {
-        let indiceAleatorio = Math.floor(Math.random() * listaNumeros.length);
-        valoresAleatorios.push(listaNumeros.splice(indiceAleatorio, 1)[0]);
-    }
-
-    // Crear ventana 2
-    let ventana2 = window.open("", "", "width=300,height=300,top=150,left=50");
-    ventana2.document.write("<p style='color: lightblue'>Ventana 2</p>");
-
-    // Mostrar la lista y los valores aleatorios
-    ventana2.document.write("<p>Valores aleatorios: " + valoresAleatorios.join(", ") + "</p>");
-    ventana2.document.write("<p>Lista a representar: ");
-    for (let i = 0; i < listaNumeros.length; i++) {
-        ventana2.document.write(listaNumeros[i] + " ");
-    }
-    ventana2.document.write("</p>");
+  // Open window 2 with size 300x300 and position (top: 0, right: window width - 300)
+  // Set background color to light blue
+  // ... (Implement window manipulation using DOM methods)
 }
-
-
 
 function abrirVentana3() {
-    // Obtener la longitud de la lista y el número de valores aleatorios
-    let longitudLista = document.getElementById("longitudLista").value;
-    let numValoresAleatorios = document.getElementById("numValoresAleatorios").value;
-
-    // Generar una lista de números
-    let listaNumeros = [];
-    for (let i = 1; i <= longitudLista; i++) {
-        listaNumeros.push(i);
-    }
-
-    // Generar valores aleatorios
-    let valoresAleatorios = [];
-    for (let i = 0; i < numValoresAleatorios; i++) {
-        let indiceAleatorio = Math.floor(Math.random() * listaNumeros.length);
-        valoresAleatorios.push(listaNumeros.splice(indiceAleatorio, 1)[0]);
-    }
-
-    // Filtrar valores impares
-    let valoresImpares = valoresAleatorios.filter(numero => numero % 2 !== 0);
-
-    // Ordenar valores impares
-    valoresImpares.sort((a, b) => a - b);
-
-    // Crear ventana 3
-    let ventana3 = window.open("", "", "width=300,height=300,top=150,right=50");
-    ventana3.document.write("<p style='color: pink'>Ventana 3</p>");
-
-    // Mostrar los valores impares ordenados
-    ventana3.document.write("<p>Valores impares ordenados: " + valoresImpares.join(", ") + "</p>");
+  // Open window 3 with size 300x300 and position (bottom: window height - 300, left: window width / 2 - 150)
+  // Set background color to pink
+  // ... (Implement window manipulation using DOM methods)
 }
 
+// Function to create user with validation
+function crearUsuario(event) {
+  event.preventDefault(); // Prevent default form submission
 
-function abrirVentana4() {
-    // Implementar la funcionalidad para la ventana 4
-    // Debería mostrar la contraseña actual (suponiendo que hay un objeto usuario)
-    // y la fecha y hora de la última actualización (aún no implementada)
+  const nombreUsuario = document.getElementById("usuario").value;
+  const contraseña = document.getElementById("contraseña").value;
+  const repetirContraseña = document.getElementById("repetir-contraseña").value;
 
-    let ventana4 = window.open("", "", "width=300,height=300,bottom=50,left=50");
-    ventana4.document.write("<p style='color: orange'>Ventana 4</p>");
-    // ... (completar con el código para mostrar la contraseña y fecha/hora)
+  // Check if username is valid (lowercase letters, 5 characters)
+  if (!/^[a-z]{5}$/.test(nombreUsuario)) {
+    document.getElementById("mensaje-usuario").textContent = "Usuario inválido. Debe tener 5 caracteres en minúscula.";
+    return;
+  }
+
+  // Check if passwords are valid (numbers, 4 digits) and match
+  if (!/^\d{4}$/.test(contraseña) || contraseña !== repetirContraseña) {
+    document.getElementById("mensaje-usuario").textContent = "Contraseña inválida. Debe tener 4 dígitos y coincidir con la repetición.";
+    return;
+  }
+
+  usuario.nombre = nombreUsuario;
+  usuario.contraseña = contraseña;
+
+  document.getElementById("mensaje-usuario").textContent = "Usuario y contraseña creados correctamente";
+  // Update user display in window 2 (if applicable)
+  actualizarVentana2();
 }
 
+// Function to clear password and update display
+function borrarContraseña() {
+  usuario.contraseña = undefined;
+  document.getElementById("mensaje-contraseña").textContent = "Contraseña borrada correctamente. Debe introducirla de nuevo.";
+  document.getElementById("contraseña-actual").textContent = "";
+  // Close window 2 after 5 seconds
+  setTimeout(() => {
+    document.getElementById("ventana2").style.display = "none";
+  }, 5000);
+}
 
-// Asignar eventos a los botones
-let btnVentana1 = document.getElementById("btnVentana1");
-btnVentana1.addEventListener("click", abrirVentana1);
+// Function to update user display in window 2 (if applicable)
+function actualizarVentana2() {
+  if (usuario.nombre && usuario.contraseña) {
+    document.getElementById("usuario-actual").textContent = "Usuario: " + usuario.nombre;
+    document.getElementById("contraseña-actual").textContent = "Contraseña: " + usuario.contraseña;
+  } else {
+    document.getElementById("usuario-actual").textContent = "";
+    document.getElementById("contraseña-actual").textContent = "";
+  }
+}
 
-let btnVentana2 = document.getElementById("btnVentana2");
-btnVentana2.addEventListener("click", abrirVentana2);
+// Placeholder functions for showing values (replace with your implementation)
+function mostrarValoresPares() {
+  // Implement logic to get selected number of values and generate random values
+  // Use the selected number and generated values to display only even numbers
+  document.getElementById("valores-pares").textContent = "Valores pares (función pendiente de implementación)";
+}
 
-let btnVentana3 = document.getElementById("btnVentana3");
-btnVentana3.addEventListener("click", abrirVentana3);
-
-let btnVentana4 = document.getElementById("btnVentana4");
-btnVentana4.addEventListener("click", abrirVentana4);
+// Placeholder function for countdown (replace with your provided code)
+function iniciarCuentaAtras() {
+  // Implement countdown logic using your provided code
+  document.getElementById("cuenta-atras").textContent = "Cuenta atrás (función pendiente de implementación)";
+}
