@@ -1,79 +1,67 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prueba Práctica RA4_abcde-Recuperación</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Practica RA4_abcde-Recuperación -- Alberto Gómez Morales</title>
 </head>
 <body>
-  <h1>Prueba Práctica RA4_abcde-Recuperación</h1>
-  <p>Por [Tu nombre]</p>
+    <h1> Prueba Practica RA4_abcde-Recuperación -- Alberto Gómez Morales </h1>
+    <!-- Abrir Ventana 1-->
+    <p> Ventana 1</p>
+    <button onclick="ventana1Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana1Cerrar()">
+        Cerrar
+    </button>
 
-  <div id="botones-ventanas">
-    <button onclick="abrirVentana1()">Abrir Ventana 1</button>
-    <button onclick="abrirVentana2()">Abrir Ventana 2</button>
-    <button onclick="abrirVentana3()">Abrir Ventana 3</button>
-  </div>
+    <!-- Abrir Ventana 2 -->
+    <p> Ventana 2 </p>
+    <button onclick="ventana2Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana2Cerrar()">
+        Cerrar
+    </button>
 
-  <div id="ventanas">
-    <div id="ventana1" class="ventana verde">
-      <h2>Ventana 1</h2>
-      <p>Formulario de usuario</p>
-      <form onsubmit="crearUsuario()">
-        <label for="usuario">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" maxlength="5">
-        <br>
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" maxlength="4">
-        <br>
-        <label for="repetir-contraseña">Repetir contraseña:</label>
-        <input type="password" id="repetir-contraseña" name="repetir-contraseña" maxlength="4">
-        <br>
-        <button type="submit">Crear usuario</button>
-      </form>
-      <p id="mensaje-usuario"></p>
-    </div>
-    <div id="ventana2" class="ventana azul">
-      <h2>Ventana 2</h2>
-      <p>Usuario y contraseña actuales</p>
-      <p id="usuario-actual"></p>
-      <p id="contraseña-actual"></p>
-      <button onclick="borrarContraseña()">Borrar contraseña</button>
-      <p id="mensaje-contraseña"></p>
-    </div>
-    <div id="ventana3" class="ventana rosa">
-      <h2>Ventana 3</h2>
-      <p>Cuenta atrás y valores pares</p>
-      <p id="cuenta-atras"></p>
-      <p id="valores-pares"></p>
-    </div>
-  </div>
+    <!-- Abrir Ventana 3 -->
+    <p> Ventana 3 </p>
+    <button onclick="ventana3Abrir()">
+        Abrir
+    </button>
+    <button onclick="ventana3Cerrar()">
+        Cerrar
+    </button>
 
-  <div id="controles">
-    <label for="numero-aleatorios">Número de valores aleatorios:</label>
-    <select id="numero-aleatorios">
-      <option value="20">20</option>
-      <option value="21">21</option>
-      <option value="22">22</option>
-      ...
-      <option value="29">29</option>
-      <option value="30">30</option>
+    <br><br>
+
+    <!-- Select de Números -->
+    <p> Selector Números Cuenta Atrás</p>
+    <select name="CantidadLista1" id="lista1">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
     </select>
-    <br>
-    <label for="numero-escoger">Número a escoger:</label>
-    <select id="numero-escoger">
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      ...
-      <option value="9">9</option>
-      <option value="10">10</option>
+    
+    <p> Selector números aleatorios</p>
+    <select name="CantidadLista2" id="lista2">
+        <option value="20">20</option>
+        <option value="20">21</option>
+        <option value="20">22</option>
+        <option value="20">23</option>
+        <option value="20">24</option>
+        <option value="20">25</option>
+        <option value="20">26</option>
+        <option value="20">27</option>
+        <option value="20">28</option>
+        <option value="20">29</option>
+        <option value="30">30</option>
     </select>
-    <br>
-    <button onclick="mostrarValoresPares()">Mostrar valores pares</button>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
