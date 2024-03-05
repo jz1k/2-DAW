@@ -11,6 +11,7 @@ var arrayNumeros = [];
 function abrirVentana1() {
     // Abre una nueva ventana
     // Al no poner coordenadas ya se abre arriba a la izquierda.
+    
     var miVentana = window.open('ventana1.html', 'Ventana 1', 'width=300,height=300,resizable=no');
     // Espera a que la ventana se cargue completamente
     miVentana.onload = function () {

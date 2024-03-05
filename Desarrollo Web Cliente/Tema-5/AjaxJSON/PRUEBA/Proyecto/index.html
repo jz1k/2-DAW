@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidad Didáctica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jspdf.js"></script>
+    <script src="js/jspdf.plugin.autotable.js"></script>
+    <script src="js/json.js" defer></script>
+    <script src="js/pdf.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <form>
+        <h1>Unidad Didáctica</h1>
+        <h2>Módulo: <span id="modulo"></span></h2><!-- Desarrollo Web en Entorno Cliente -->
+        <h3>
+            <label for="profesor">Profesor: </label>
+            <input type="text" id="profesor" name="profesor" autocomplete="name" disabled>
+        </h3>
+        <div id="cargarDatos">
+            <label>Cargar datos</label>
+            <button type="button" onclick="verlogin()">Botón Acceso Admin</button>
+        </div>
+        <div id="formulariologin">
+            <table>
+                <tr>
+                    <th><label for="usuario">usuario:</label></th>
+                    <td><input type="text" id="usuario" name="usuario" autocomplete="username"></td>
+                </tr>
+                <tr>
+                    <th><label for="pass">contraseña:</label></th>
+                    <td><input type="password" id="pass" name="pass" autocomplete="current-password"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="login()">Login</button></td>
+                    <td id="errores"></td>
+                </tr>
+            </table>
+        </div>
+        <table id="tablapdf">
+            <tr>
+                <td colspan="2">Objetivo</td>
+                <td colspan="5">Pendiente de programar</td>
+            </tr>
+            <tr>
+                <td>RA</td>
+                <td colspan="3">
+                    <select id="losRA" name="losRA" onchange="actualizarRA()">
+                        <option id="RAvacio" value="">Selecciona un RA</option>
+                    </select>
+                </td>
+                <td><button type="button">Añadir RA</button></td>
+                <td><button type="button">Quitar RA</button></td>
+                <td><input type="number" id="peso" name="peso" placeholder="Peso RA"> %</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Criterio</td>
+                <td colspan="2">
+                    <select id="losCriterios" name="losCriterios">
+                        <option id="Cvacio" value="">Selecciona un criterio</option>
+                    </select>
+                </td>
+                <td><button type="button">Añadir Cr.</button></td>
+                <td><button type="button">Quitar Cr.</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Tipo Tarea: <select id="tipoTarea" name="tipoTarea">
+                    <option value="1">Tipo 1</option>
+                    <option value="2">Tipo 2</option>
+                    <option value="3">Tipo 3</option>
+                </select></td>
+                <td><input type="text" id="nombreTarea" name="nombreTarea" placeholder="Nombre Tarea"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">Contenido</td>
+                <td>Nombre: <select id="contenido" name="contenido">
+                    <option value="1">Contenido 1</option>
+                    <option value="2">Contenido 2</option>
+                    <option value="3">Contenido 3</option>
+                </select></td>
+                <td></td>
+                <td>Fuente:</td>
+                <td colspan="2"><input type="text" name="fuente" id="fuente"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+        <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
+    </form>
+    <hr>
+    <table id="tablapdfresultado">
+        <tr>
+            <td colspan="2">Objetivo</td>
+            <td colspan="5">Pendiente de programar</td>
+        </tr>
+        <tr>
+            <td>RA</td>
+            <td colspan="5" id="RASeleccionado"></td>
+            <td id="peso2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Criterio</td>
+            <td colspan="5" id="criterioSeleccionado"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Tipo Tarea: <span id="tipoTarea2"></span></td>
+            <td id="nombreTarea2"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2">Contenido</td>
+            <td>Nombre: <span id="contenido2"></span></td>
+            <td></td>
+            <td>Fuente:</td>
+            <td colspan="2" id="fuente2"></td>
+        </tr>
+    </table>
+    <iframe id="iframe" src="" frameborder="0"></iframe>
+</body>
+
+</html>
