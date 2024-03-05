@@ -3,30 +3,27 @@ var doc;
 function prepararPDF() {
     // Variables
     var pdfRA = document.getElementById('losRA');
+    var pdfCriterio = document.getElementById('losCriterios');
+    var listaCriterios = document.getElementById('listaCriterios');
+
+    // Verificar si los elementos existen antes de acceder a sus propiedades
+    if (!pdfRA || !pdfCriterio || !listaCriterios) {
+        console.error("Error: Elementos no encontrados.");
+        return;
+    }
+
+    // Modificar estas líneas para evitar el error mencionado
     var modulo = document.getElementById('modulo');
     var profesor = document.getElementById('profesor');
-    var pdfCriterio = document.getElementById('losCriterios');
-    var RASeleccionado = document.getElementById('RASeleccionado');
-    var criterioSeleccionado = document.getElementById('criterioSeleccionado');
-    var peso = document.getElementById('peso');
-    var peso2 = document.getElementById('peso2');
-    var fuente = document.getElementById('fuente');
-    var fuente2 = document.getElementById('fuente2');
-    var contenido = document.getElementById('contenido');
-    var contenido2 = document.getElementById('contenido2');
-    var tipoTarea = document.getElementById('tipoTarea');
-    var tipoTarea2 = document.getElementById('tipoTarea2');
-    var nombreTarea = document.getElementById('nombreTarea');
-    var nombreTarea2 = document.getElementById('nombreTarea2');
 
-    // Preparar la tabla
-    RASeleccionado.innerHTML = pdfRA.options[pdfRA.selectedIndex].text;
-    criterioSeleccionado.innerHTML = pdfCriterio.options[pdfCriterio.selectedIndex].text;
-    peso2.innerHTML = peso.value + " %";
-    fuente2.innerHTML = fuente.value;
-    contenido2.innerHTML = contenido.options[contenido.selectedIndex].text;
-    tipoTarea2.innerHTML = tipoTarea.options[tipoTarea.selectedIndex].text;
-    nombreTarea2.innerHTML = nombreTarea.value;
+    // Obtener el valor del RA seleccionado
+    var selectedRA = pdfRA.options[pdfRA.selectedIndex].text;
+
+    // Obtener todos los criterios de la lista
+    var allCriterios = obtenerCriteriosLista(listaCriterios);
+
+    // Crear un array con todos los RA (incluidos los agregados dinámicamente)
+    var allRA = obtenerTodosRA(pdfRA, allCriterios);
 
     // Crea un nuevo objeto JSPDF
     var options = {
@@ -44,12 +41,12 @@ function prepararPDF() {
     doc.setProperties({
         title: 'Formulario',
         subject: 'Prueba PDF',
-        author: 'Daniel Marcos Guerra Gómez',
+        author: 'Juan Carlos Bailon Rubi',
         keywords: 'formulario, pdf, daw, dwec',
-        creator: 'Daniel Marcos Guerra Gómez'
+        creator: 'Juan Carlos Bailon Rubi'
     });
 
-    // Información de las imágenes
+    // Información de las imágenes (necesitas proporcionar las rutas correctas)
     var imgJunta = new Image;
     var imgMurgi = new Image;
     imgJunta.src = "img/junta.jpg";
@@ -62,11 +59,40 @@ function prepararPDF() {
     doc.setFont(undefined, 'bold');
     doc.setFontSize(12);
     doc.text(centrar, 60, 'Unidad Didáctica', { align: 'center' });
-    doc.text(centrar, 70, 'Módulo: ' + modulo.innerHTML, { align: 'center' });
-    doc.text(centrar, 80, 'Profesor: ' + profesor.value, { align: 'center' });
+    doc.text(centrar, 70, 'Módulo: Proyecto Desarrollo Aplicaciones Web', { align: 'center' });
+    doc.text(centrar, 80, 'Profesor: ' + (profesor ? profesor.value : ''), { align: 'center' });
+    doc.text(centrar, 90, 'RA Seleccionado: ' + selectedRA, { align: 'center' });
+    doc.text(centrar, 110, 'Todos los RA:', { align: 'center' });
+
+    // Mostrar todos los RA (excepto los seleccionados)
+    allRA.forEach(function (ra, index) {
+        if (ra !== selectedRA) {
+            doc.text(10, 120 + index * 10, ra);
+        }
+    });
+
     doc.setFont(undefined, 'normal');
     doc.setFontSize(10);
-    doc.autoTable({ html: '#tablapdfresultado', startY: 90, useCss: true });
+    doc.autoTable({ html: '#tablapdfresultado', startY: 130 + allRA.length * 10, useCss: true });
+}
+
+function obtenerCriteriosLista(lista) {
+    var criterios = [];
+    var items = lista.getElementsByTagName('li');
+    for (var i = 0; i < items.length; i++) {
+        var texto = items[i].textContent.trim();
+        criterios.push(texto);
+    }
+    return criterios;
+}
+
+function obtenerTodosRA(selectRA, criterios) {
+    var allRA = [];
+    
+    criterios.forEach(function (criterio) {
+        allRA.push(criterio);
+    });
+    return allRA;
 }
 
 document.getElementById('generarPDF').addEventListener('click', function () {

@@ -1,5 +1,5 @@
 var resultado = document.getElementById("info");
-var selectRA = document.getElementById("raSelect");
+var selectRA = document.getElementById("losRA"); // Cambiado el ID aquí
 
 function cargarRA() {
     var xmlhttp;
@@ -29,7 +29,7 @@ function cargarRA() {
 }
 
 function mostrarCriterios(criterios) {
-    var criteriosList = document.getElementById("criteriosList");
+    var criteriosList = document.getElementById("listaCriterios"); // Cambiado el ID aquí
     criteriosList.innerHTML = ""; // Limpiar la lista previa
 
     for (var k in criterios) {
@@ -41,7 +41,10 @@ function mostrarCriterios(criterios) {
 
 function mostrarDatosRA() {
     var selectedRA = selectRA.value;
-    resultado.innerHTML = ""; // Limpiar el contenido previo
+    var listaCriterios = document.getElementById('listaCriterios');
+
+    // Limpiar la lista de criterios
+    listaCriterios.innerHTML = "";
 
     if (selectedRA !== "") {
         var xmlhttp;
@@ -58,11 +61,18 @@ function mostrarDatosRA() {
                 for (var i in datos) {
                     for (var j = 0; j < datos[i].length; j++) {
                         if (datos[i][j].id === selectedRA) {
-                            resultado.innerHTML += datos[i][j].id + ": " + datos[i][j].textoRA + " - Peso: " + datos[i][j].peso + "<br/>";
+                            // Crear un elemento de lista para el RA
+                            var listItem = document.createElement('li');
+                            listItem.textContent = datos[i][j].id + ": " + datos[i][j].textoRA + " - Peso: " + datos[i][j].peso;
+                            listaCriterios.appendChild(listItem);
 
                             var criterios = datos[i][j].criterios;
                             for (var k in criterios) {
-                                resultado.innerHTML += "&nbsp;&nbsp;&nbsp;&nbsp;" + k + ": " + criterios[k] + "<br/>";
+                                // Crear un elemento de lista para cada criterio
+                                var criterioItem = document.createElement('li');
+                                criterioItem.textContent = k + ": " + criterios[k];
+                                criterioItem.style.marginLeft = '20px'; // Ajustar la indentación
+                                listaCriterios.appendChild(criterioItem);
                             }
                             return;
                         }
@@ -76,26 +86,32 @@ function mostrarDatosRA() {
     }
 }
 
+
 function quitarRA() {
     // Implementar la lógica para quitar el RA actual
     console.log("Quitar RA actual");
 }
 
 function mostrarNombreProfesor() {
-    var nombreProfesorInput = document.getElementById("nombreProfesorInput").value;
+    var nombreProfesorInput = document.getElementById("profesor").value;
     var nombreProfesorParagraph = document.getElementById("nombreProfesor");
     nombreProfesorParagraph.innerHTML = "Profesor: " + nombreProfesorInput;
 }
 
 function adminLogin() {
-    var adminUser = document.getElementById("adminUser").value;
-    var adminPassword = document.getElementById("adminPassword").value;
+    var adminUser = document.getElementById("adminUser").value.toLowerCase();
+    var adminPassword = document.getElementById("adminPassword").value.toLowerCase();
 
-    // Implementar la lógica de login del administrador aquí
-
-    // Mostrar el campo para introducir el nombre del profesor
-    document.getElementById("nombreProfesorContainer").style.display = "block";
+    // Verificar si el usuario y la contraseña son correctos
+    if (adminUser === "admin" && adminPassword === "admin") {
+        // Mostrar el campo para introducir el nombre del profesor
+        document.getElementById("nombreProfesorContainer").style.display = "block";
+    } else {
+        // Mensaje de error o cualquier otra acción si el login falla
+        alert("Credenciales de administrador incorrectas. Por favor, inténtelo de nuevo.");
+    }
 }
+
 
 var contadorCriterios = 1; // Inicializar el contador para identificadores únicos
 
@@ -105,10 +121,10 @@ function mostrarFormulario() {
 }
 
 function agregarRA() {
-    var inputPeso = document.getElementById("inputPeso").value;
-    var inputCriterio = document.getElementById("inputCriterio").value;
-    var tipoActividad = document.getElementById("tipoActividad").value;
-    var nombreActividad = document.getElementById("nombreActividad").value;
+    var inputPeso = document.getElementById("peso").value; // Cambiado el ID aquí
+    var inputCriterio = document.getElementById("losCriterios").value; // Cambiado el ID aquí
+    var tipoActividad = document.getElementById("tipoTarea").value; // Cambiado el ID aquí
+    var nombreActividad = document.getElementById("nombreTarea").value; // Cambiado el ID aquí
 
     // Validar que todos los campos estén completos
     if (inputPeso.trim() === "" || inputCriterio.trim() === "" || tipoActividad === "" || nombreActividad.trim() === "") {
@@ -134,14 +150,15 @@ function agregarRA() {
     listaCriterios.appendChild(nuevaCriterio);
 
     // Limpiar los campos del formulario
-    document.getElementById("inputPeso").value = "";
-    document.getElementById("inputCriterio").value = "";
-    document.getElementById("tipoActividad").value = "";
-    document.getElementById("nombreActividad").value = "";
+    document.getElementById("peso").value = ""; // Cambiado el ID aquí
+    document.getElementById("losCriterios").value = ""; // Cambiado el ID aquí
+    document.getElementById("tipoTarea").value = ""; // Cambiado el ID aquí
+    document.getElementById("nombreTarea").value = ""; // Cambiado el ID aquí
 
     // Ocultar el formulario
     document.getElementById("formularioNuevoRA").style.display = "none";
 }
+
 
 function eliminarCriterio() {
     var listaCriterios = document.getElementById("listaCriterios");
@@ -156,33 +173,6 @@ function eliminarCriterio() {
         listaCriterios.removeChild(criterioElemento);
     });
 }
-
-// function imprimirPDF() {
-//     console.log("Función imprimirPDF() se está ejecutando.");
-
-//     // Verificar si jsPDF está definido
-//     if (typeof jsPDF !== 'undefined') {
-//         var doc = new jsPDF();
-
-//         // Título del PDF
-//         doc.text("Reporte de Actividades", 20, 10);
-
-//         // Contenido de la lista de criterios
-//         var listaCriterios = document.getElementById("listaCriterios").getElementsByTagName("li");
-//         var yPos = 30; // Posición inicial del contenido
-
-//         for (var i = 0; i < listaCriterios.length; i++) {
-//             var textoCriterio = listaCriterios[i].innerText;
-//             doc.text(textoCriterio, 20, yPos);
-//             yPos += 10; // Incrementar la posición para el siguiente elemento
-//         }
-
-//         // Guardar el PDF con un nombre específico
-//         doc.save("reporte_actividades.pdf");
-//     } else {
-//         console.error("Error: jsPDF no está definido. Asegúrate de cargar la biblioteca correctamente.");
-//     }
-// }
 
 // Cargar RA al cargar la página
 cargarRA();

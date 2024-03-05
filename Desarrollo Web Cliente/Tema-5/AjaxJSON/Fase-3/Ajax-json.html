@@ -16,7 +16,7 @@
             <h1>Proyecto Desarrollo Aplicaciones Web</h1>
             <div id="nombreProfesorContainer" style="display: none;">
                 <label for="nombreProfesorInput">Nombre del Profesor:</label>
-                <input type="text" id="nombreProfesorInput">
+                <input type="text" id="profesor">
                 <button onclick="mostrarNombreProfesor()">Mostrar Nombre</button>
                 <p id="nombreProfesor"></p>
             </div>
@@ -33,22 +33,29 @@
         <br>
 
         <div id="app">
-            <label for="raSelect">Selecciona un RA:</label>
-            <select id="raSelect"></select>
-            <button onclick="mostrarDatosRA()">Mostrar Datos</button>
+            <div id="pdfRAContainer">
+                <label for="losRA">Selecciona un RA:</label>
+                <select id="losRA">
+                </select>
+                <button onclick="mostrarDatosRA()">Mostrar Datos</button>
+            </div>
+            <br>
+            <hr>
             <button onclick="mostrarFormulario()">Agregar Nuevo RA</button>
             <button onclick="eliminarCriterio()">Eliminar Criterio</button>
-
+            <hr>
             <!-- Formulario para agregar nuevo RA -->
             <div id="formularioNuevoRA" style="display: none;">
                 <label for="inputPeso">Introduce peso:</label>
-                <input type="number" id="inputPeso">
+                <input type="number" id="peso">
 
-                <label for="inputCriterio">Introduce Criterio:</label>
-                <input type="text" id="inputCriterio">
+                <div id="pdfCriterioContainer">
+                    <label for="losCriterios">Introduce Criterio:</label>
+                    <input type="text" id="losCriterios">
+                </div>
 
                 <label for="tipoActividad">Tipo de actividad:</label>
-                <select id="tipoActividad">
+                <select id="tipoTarea">
                     <option value="Test">Test</option>
                     <option value="Prueba escrita">Prueba escrita</option>
                     <option value="Trabajo">Trabajo</option>
@@ -58,9 +65,9 @@
                 </select>
 
                 <label for="nombreActividad">Nombre de actividad:</label>
-                <input type="text" id="nombreActividad" oninput="this.value = this.value.toUpperCase()">
-
+                <input type="text" id="nombreTarea">
                 <button onclick="agregarRA()">Agregar RA</button>
+                <hr>
             </div>
 
             <div id="info">
@@ -71,10 +78,9 @@
             </ul>
         </div>
 
-        <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" onclick="prepararPDF()" />
-        <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF"
-            onclick="prepararPDF()" />
-
+        <hr>
+        <input type="button" name="generarPDF" id="generarPDF" value="Descargar en PDF" />
+        <input type="button" name="previsualizarPDF" id="previsualizarPDF" value="Previsualizar PDF" />
 
     </div>
 
