@@ -1,0 +1,109 @@
+/* Estilos generales */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #dae9dd, #a1ebb1, #dae9dd);
+}
+
+.container {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #28a745;
+}
+
+/* Estilos para el formulario de administrador */
+
+#adminLogin {
+    margin-bottom: 20px;
+}
+
+#adminLogin label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#adminLogin input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#adminLogin button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario de nuevo RA */
+
+#formularioNuevoRA {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#formularioNuevoRA label,
+#formularioNuevoRA select,
+#formularioNuevoRA input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de RA y Criterios */
+
+#pdfRAContainer,
+#listaCriterios,
+#info,
+#selectRA,
+#criteriosContainer,
+#listaCriteriosSeleccionados {
+    margin-bottom: 20px;
+}
+
+#pdfRAContainer select,
+#selectRA,
+#selectCriterios {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#pdfRAContainer button,
+#app button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#app button:last-child {
+    margin-right: 0;
+}
+
+/* Estilos para la sección de PDF */
+
+hr {
+    margin: 20px 0;
+}
+
+#generarPDF,
+#previsualizarPDF {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Estilos adicionales según necesidades */

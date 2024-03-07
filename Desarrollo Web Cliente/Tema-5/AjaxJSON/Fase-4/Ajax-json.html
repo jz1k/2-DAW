@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto Desarrollo Aplicaciones Web</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container col-12">
+        <div>
+            <h1>Proyecto Desarrollo Aplicaciones Web</h1>
+            <div id="nombreProfesorContainer" style="display: none;">
+                <label for="nombreProfesorInput">Nombre del Profesor:</label>
+                <input type="text" id="profesor">
+                <button onclick="mostrarNombreProfesor()">Mostrar Nombre</button>
+                <p class="nombreProfesor" id="nombreProfesor"></p>
+            </div>
+        </div>
+
+        <div id="adminLogin">
+            <label for="adminUser">Usuario:</label>
+            <input type="text" id="adminUser">
+            <label for="adminPassword">Contraseña:</label>
+            <input type="password" id="adminPassword">
+            <button onclick="adminLogin()">Iniciar sesión</button>
+        </div>
+
+        <br>
+
+        <div id="app">
+            <div id="pdfRAContainer">
+                <label for="losRA">Selecciona un RA:</label>
+                <select id="losRA">
+                </select>
+                <button onclick="mostrarDatosRA()">Ver todos los RA</button>
+            </div>
+
+            <hr>
+
+            <!-- Lista de criterios -->
+            <ul id="listaCriterios">
+            </ul>
+            <hr>
+
+            <div id="info">
+            </div>
+
+            <button onclick="mostrarFormulario()">Agregar Nuevo Criterio</button>
+            <button onclick="eliminarCriterio()">Eliminar Criterio</button>
+            <hr>
+
+            <!-- Formulario para agregar nuevo RA -->
+            <div id="formularioNuevoRA" style="display: none;">
+                <label for="inputPeso">Introduce peso:</label>
+                <input type="number" id="peso">
+
+                <div id="pdfCriterioContainer">
+                    <label for="losCriterios">Introduce Criterio:</label>
+                    <input type="text" id="losCriterios">
+                </div>
+
+                <label for="tipoActividad">Tipo de actividad:</label>
+                <select id="tipoTarea">
+                    <option value="Test">Test</option>
+                    <option value="Prueba escrita">Prueba escrita</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Prueba práctica">Prueba práctica</option>
+                    <option value="Prueba Teórico-práctica">Prueba Teórico-práctica</option>
+                    <option value="Proyecto">Proyecto</option>
+                </select>
+
+                <label for="nombreActividad">Nombre de actividad:</label>
+                <input type="text" id="nombreTarea">
+                <button onclick="agregarRA()">Agregar RA</button>
+                <hr>
+            </div>
+
+            <button onclick="agregarSeleccion()">Añadir a la lista</button>
+            <br>
+            <!-- Añadir un desplegable para seleccionar RA -->
+            <label for="selectRA">Selecciona un RA:</label>
+            <select id="selectRA" onchange="cargarCriteriosSeleccionados()">
+                <option value="">Selecciona un RA</option>
+            </select>
+
+            <!-- Añadir un desplegable para los criterios del RA seleccionado -->
+            <div id="criteriosContainer" style="display: none;">
+                <label for="selectCriterios">Selecciona el criterio:</label>
+                <select id="selectCriterios">
+                    <!-- Opciones se agregarán dinámicamente con JavaScript -->
+                </select>
+            </div>
+            <hr>
+
+            <h3>Lista:</h3>
+
+            <!-- Lista de criterios seleccionados -->
+            <ul id="listaCriteriosSeleccionados">
+                <!-- Los elementos se agregarán dinámicamente con JavaScript -->
+            </ul>
+
+        </div>
+
+        <hr>
+        <input type="button" name="generarPDF" id="generarPDF" value="Descargar PDF" />
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="js/jspdf.js"></script>
+    <script type="text/javascript" src="js/jspdf.plugin.autotable.js"></script>
+    <script type="text/javascript" src="js/pdf.js" defer></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>
