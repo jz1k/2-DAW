@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Soccer Master Shirts</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/termina-test" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/logo.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- BARRA DE NAVEGACION -->
+    <header>
+        <!-- Con esto hacemos que pueda tabular directamente al contenido importante sin necesidad 
+            del tabindex, que puede ser tedioso cuando se usan tecnologias de accesibilidad -->
+        <a href="#aria-contacto" class="aria-contacto">Ir al formulario de contacto</a>
+
+
+
+        <nav id="navbar" class="container-fluid">
+            <div class="row nav-wrapper col-12 align-items-center mx-auto my-auto">
+                <!-- Navbar Logo -->
+                <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                    <!-- Logo Placeholder for Inlustration -->
+                    <a href="index.html">
+                        <img class="logo" src="assets/logo.svg" alt="Soccer Master Shirts Logo" srcset="">
+                    </a>
+                </div>
+
+                <!-- Navbar Links -->
+                <ul id="menu" class="col-10 my-auto">
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="index.html#myCollapse">Preguntas Frecuentes</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+            <span class="icon icon-bars"></span>
+            <span class="icon icon-bars overlay"></span>
+        </div>
+
+
+        <div class="overlay-menu">
+            <ul id="menu">
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#myCollapse">F.A.Q</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <!-- PRINCIPAL -->
+    <div class="container-fluid">
+        <div class="container paddinBorder mx-auto">
+            <h1 class="red">SOCCER MASTER SHIRTS</h1>
+            <br>
+            <h4 class="">FORMULARIO DE CONTACTO</h4>
+        </div>
+
+
+
+        <div class="container paddin mx-auto">
+            <div class="row paddin  mx-auto ">
+                <div class="container mt-5">
+                    <h1 id="formTitle" class="red">Haz tu pedido...</h1>
+                    <form role="form" aria-labelledby="formTitle" class="mx-auto">
+                        <hr>
+                        <fieldset>
+                            <legend>Tipo de Camiseta</legend>
+                            <div class="form-group">
+                                <label for="tipoCamiseta" id="aria-contacto">Selecciona el tipo de camiseta</label>
+                                <select class="form-control" id="tipoCamiseta" aria-describedby="tipoCamisetaHelp"
+                                    required>
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Equipo">Camiseta de Equipo</option>
+                                    <option value="LigaExtranjera">Camiseta de Liga Extranjera</option>
+                                    <option value="Retro">Camiseta Retro</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Cantidad de Camisetas</legend>
+                            <div class="form-group">
+                                <label for="cantidadCamisetas">Selecciona la cantidad de camisetas a comprar</label>
+                                <input type="range" class="form-control" id="cantidadCamisetas"
+                                    aria-describedby="cantidadCamisetasHelp" min="1" max="10" step="1" value="1"
+                                    oninput="actualizarCantidadCamisetas()">
+                                <span id="cantidadCamisetasValue">1</span>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Presupuesto</legend>
+                            <div class="form-group">
+                                <label for="presupuesto">Selecciona tu presupuesto</label>
+                                <select class="form-control" id="presupuesto" aria-describedby="presupuestoHelp"
+                                    required required>
+                                    <option value="" disabled selected hidden>Selecciona una opción</option>
+                                    <option value="Menos30">Menos de 30€</option>
+                                    <option value="30a50">30€ - 50€</option>
+                                    <option value="50a80">50€ - 80€</option>
+                                    <option value="Mas80">Más de 80€</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Correo Electrónico</legend>
+                            <div class="form-group">
+                                <label for="correo">Ingresa tu correo electrónico</label>
+                                <input type="email" class="form-control" id="correo" aria-describedby="correoHelp"
+                                    required aria-live="assertive" oninput="validarCorreo()">
+                                <div id="mensajeCorreo" aria-live="polite"></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Mensaje</legend>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje (Especifica todo)</label>
+                                <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje"
+                                    aria-describedby="mensajeHelp" required required></textarea>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Fecha de Nacimiento</legend>
+                            <div class="form-group">
+                                <label for="fechaNacimiento">Selecciona tu fecha de nacimiento</label>
+                                <input type="date" class="form-control" id="fechaNacimiento"
+                                    aria-describedby="fechaNacimientoHelp" required aria-live="assertive"
+                                    oninput="validarFechaNacimiento()">
+                                <div id="mensajeFechaNacimiento" aria-live="polite"></div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Género</legend>
+                            <div class="form-check col-6 mx-auto ">
+                                <div class="form-check col-6 mx-auto">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoMasculino"
+                                        value="Masculino" required>
+                                    <label class="form-check-label" for="generoMasculino">Masculino</label>
+                                </div>
+                                <div class="form-check col-6 mx-auto">
+                                    <input class="form-check-input" type="radio" name="genero" id="generoFemenino"
+                                        value="Femenino" required>
+                                    <label class="form-check-label" for="generoFemenino">Femenino</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <br>
+                            <legend>Newsletter</legend>
+                            <div class="form-check mx-auto col-5">
+                                <label class="form-check-label" for="ofertas">Acepto recibir ofertas por correo
+                                    electrónico</label>
+                                <input class="form-check-input" type="checkbox" id="ofertas" value="aceptoOfertas">
+                            </div>
+                        </fieldset>
+
+                        <br>
+
+                        <button type="submit" class="btn btn-primary" required>Enviar Mensaje</button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center" Style="text-decoration: none; color: white;">
+                <div s class="text-center">
+                    <p class="mb-0">&copy; 2023 SMS. Todos los derechos reservados.</p>
+                    <p class="mb-0">
+                        <a href="#">Política de Privacidad</a> |
+                        <a href="#">Términos y Condiciones</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('skipToForm').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('tipoCamiseta').focus();
+        });
+    </script>
+</body>
+
+
+
+<script src="js/main.js"></script>
+
+</html>

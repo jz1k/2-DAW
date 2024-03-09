@@ -1,0 +1,76 @@
+<!-- Enunciado:
+
+1.- (2 puntos) Realiza un programa en javascript que mediante un formulario me permita recopilar los datos de Nombre, Apellidos y código de verificación de 4 dígitos y una letra mayúscula (comprueba el código con expresiones regulares)
+
+
+2.- (3 puntos) Junto con el formulario de nombre, apellidos y código de verificación debe de haber otro formulario donde nos solicite dos campos llamados
+Usuario Administrador
+Clave de Acceso.
+Estos campos deben de verificarse para comprobar si coinciden con
+
+Usuario Administrador = Admin
+
+clave de acceso = El código introducido anteriormente pero sin letra.
+
+Si es correcto debe mostrarnos un mensaje que diga: Usuario y clave correctas. Si no es así mostrará: Inténtelo de nuevo
+
+
+
+3.- (4 puntos) Si lo hacemos correctamente se nos habilitará un botón con el literal “cambiar a ingles” que cuando lo pulsemos cambiará por “cambiar a español” y a su vez nos modificará los nombres de los campos de formulario a ingles. Cuando volvamos a pulsar lo dejará de nuevo en español, y así hasta que pulsemos otro botón para salir del modo administrador. Este proceso se debe de hacer modificando los nodos del DOM.
+
+4.- (1 puntos) Si no pulsamos el botón de salir del modo administrador  se cerrara automáticamente en 10 segundos.
+
+
+Nota: Traducción al ingles:
+Administator
+Password
+Name
+Last name -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen DOM</title>
+</head>
+
+<body>
+    <form id="formularioPrincipal">
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" placeholder="Juan Carlos">
+        <br><br>
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" id="apellidos" placeholder="Bailon">
+        <br><br>
+
+
+        <label for="codigoVerificacion">Codigo verificación: </label>
+        <input type="text" id="codigoVerificacion" placeholder="1234X" maxlength="5">
+        <hr>
+
+        <p id="mensajes"></p>
+        <label for="usuarioAdmin" >Usuario Administrador: </label>
+        <input type="text" id="usuarioAdmin" placeholder="Admin">
+        <br><br>
+        <label for="claveAcceso">Clave Acceso: </label>
+        <input type="password" id="claveAcceso" maxlength="4" placeholder="Misma que el codigo SIN LETRA"> <br><br>
+        <button id="enviarBtn" type="submit">Enviar</button><!-- Debe ser el mismo que codigo de verificación PERO SIN LETRA-->
+        <br><br>
+
+        <!-- Si la verificación va correctamente aparece el boton cambiar inglés durante 10 segundos, despues se cierra-->
+        <hr>
+        <div id="cambiarIdiomas" style="display: none;">
+            <!-- Cuando se le pulsa se cambia a "cambiar a español" -->
+            <!-- Cuando se pulsa se debe cambiar a inglés los nombres del t: Nombre, apellidos, codigo de verificacion, usuario administrado y clave de acceso -->
+            <button id="cambiarIdiomaBtn">Cambiar a inglés</button>
+            <!-- Boton de salir -->
+            <button id="salirBtn">Salir</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

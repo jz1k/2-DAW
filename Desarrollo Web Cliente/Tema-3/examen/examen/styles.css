@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.ventana {
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    padding: 10px;
+    display: none;
+}
+
+#ventana1 {
+    top: 0;
+    left: 0;
+    background-color: lightgreen;
+}
+
+#ventana2 {
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+}
+
+#ventana3 {
+    bottom: 0;
+    right: 0;
+    background-color: lightpink;
+}
+
+#ventana4 {
+    bottom: 0;
+    left: 0;
+    background-color: lightsalmon;
+}

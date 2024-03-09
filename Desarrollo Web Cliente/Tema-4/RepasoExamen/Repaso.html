@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form id="formularioOriginal" onsubmit="return false">
+        <span>Nombre:</span> <br>
+        <input type="text" name="nombre" id="nombre" onblur="validarNombre()"><br>
+
+        <span>Apellidos:</span> <br>
+        <input type="text" name="apellidos" id="apellidos" onblur="validarApellidos()"><br>
+
+        <span>Código de verificación:</span> <br>
+        <input type="text" name="codigoVerificacion" id="codigoVerificacion" onblur="validarCodigo()"><br><br>
+
+        <hr>
+        <span>Usuario administrador:</span> <br>
+        <input type="text" name="usuario" id="usuario" onblur="validarUsuario()"><br>
+
+        <span>Clave de acceso:</span><br>
+        <input type="password" name="clave" id="clave"><br><br>
+
+        <input type="submit" name="enviar" id="botonEnviar" value="Enviar formulario" onclick="comprobarDatos()"><br>
+
+        <div id="resultado"></div><br><br>
+        <div id="errores"></div>
+    </form>
+
+    <form id="formulario" name="formularios" hidden onsubmit="return false">
+        <input type="text" name="numero" id="numero" hidden>
+        <span id="cronometro">0</span><br>
+
+        <span>Nueva contraseña:</span>
+        <input type="password" name="nuevaContraseña" id="nuevaContraseña">
+        <input type="submit" name="enviar1" value="Cambiar contraseña" onclick="cambiarContraseña()">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

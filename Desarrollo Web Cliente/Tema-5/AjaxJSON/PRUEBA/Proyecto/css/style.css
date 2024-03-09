@@ -1,0 +1,31 @@
+form {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#formulariologin, #tablapdfresultado {
+    display: none;
+}
+
+#cargarDatos {
+    margin-bottom: 10px;
+}
+
+#errores {
+    color: red;
+}
+
+#tablapdf,  #tablapdfresultado, #tablapdf td,  #tablapdfresultado td {
+    border: 1px solid black;
+}
+
+#tablapdf,  #tablapdfresultado {
+    border-collapse: collapse;
+}
+
+#tablapdf td,  #tablapdfresultado td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}

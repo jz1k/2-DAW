@@ -1,9 +1,0 @@
-En esta nueva versión, se han añadido animaciones a la web, entre ellas:
-
-- Efecto glitch cambiando de color rapidamente de hover en la barra de navegación (@keyframes resplandor{})
-- Efecto de rotación en las redes sociales debajo de la barra de navegacion (@-webkit-keyframes glitch {})
-- En el apartado de datos, los mas relevantes tienen un efecto de movimiento glitch 
-hecho con @keyframe´s (@keyframes aparecerDesdeDerecha {})
-- Animacion desarrollada por mi que desplaza la imagen de studio png a la izquierda (.aparecerDerecha {)
-- Animacion combinada: (.formNoticias:hover {})
-- He usado una animacion de internet y mejorada con GPT para introducir copos de nieve que caen de forma aleatoria en la pagina principal de INICIO.

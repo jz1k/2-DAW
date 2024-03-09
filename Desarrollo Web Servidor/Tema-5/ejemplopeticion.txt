@@ -1,0 +1,12 @@
+con esto:
+
+siendo:
+$dsn = "mysql:host=localhost;dbname=NOMBREBASEDATOS";
+    $username = "dwes";
+    $password = "abc123";
+
+y habiendo creado previemente las tablas:
+
+//CODIGO BASE DE DATOS
+
+preparate para preguntarte unas cosas

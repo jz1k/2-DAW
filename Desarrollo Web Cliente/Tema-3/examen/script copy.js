@@ -43,6 +43,8 @@ function cerrarVentana2() {
     ventana2.close();
 }
 
+
+
 function abrirVentana3() {
     ventana3 = window.open("ventana3.html", "Ventana3", "top=0, right=0, width=300,height=300, background-color: lightcoral");
     generarArrays();

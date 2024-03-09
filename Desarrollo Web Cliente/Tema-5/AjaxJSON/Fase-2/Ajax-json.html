@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container col-12">
+        <div>
+            
+            <h1>Proyecto Desarrollo Aplicaciones Web</h1>
+            <div id="nombreProfesorContainer" style="display: none;">
+                <label for="nombreProfesorInput">Nombre del Profesor:</label>
+                <input type="text" id="nombreProfesorInput">
+                <button onclick="mostrarNombreProfesor()">Mostrar Nombre</button>
+                <p id="nombreProfesor"></p>
+            </div>
+        </div>
+        
+        <div id="adminLogin">
+            <label for="adminUser">Usuario:</label>
+            <input type="text" id="adminUser">
+            <label for="adminPassword">Contraseña:</label>
+            <input type="password" id="adminPassword">
+            <button onclick="adminLogin()">Iniciar sesión</button>
+        </div>
+        
+        <br>
+        
+        <div id="app">
+            <label for="raSelect">Selecciona un RA:</label>
+            <select id="raSelect"></select>
+            <button onclick="mostrarDatosRA()">Mostrar Datos</button>
+            <button onclick="mostrarFormulario()">Agregar Nuevo RA</button>
+            <button onclick="eliminarCriterio()">Eliminar Criterio</button>
+        
+            <!-- Formulario para agregar nuevo RA -->
+            <div id="formularioNuevoRA" style="display: none;">
+                <label for="inputPeso">Introduce peso:</label>
+                <input type="number" id="inputPeso">
+        
+                <label for="inputCriterio">Introduce Criterio:</label>
+                <input type="text" id="inputCriterio">
+        
+                <button onclick="agregarRA()">Agregar RA</button>
+            </div>
+        
+            <div id="info">
+            </div>
+        
+            <!-- Lista de criterios -->
+            <ul id="listaCriterios">
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Practica RA4_abcde - Nombre del Estudiante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Prueba Practica RA4_abcde - Nombre del Estudiante</h1>
+    
+    <!-- Ventana 1 -->
+    <button onclick="openWindow(1)">Abrir Ventana 1</button>
+
+    <!-- Ventana 2 -->
+    <button onclick="openWindow(2)">Abrir Ventana 2</button>
+
+    <!-- Ventana 3 -->
+    <button onclick="openWindow(3)">Abrir Ventana 3</button>
+
+    <!-- Ventana 4 -->
+    <button onclick="openWindow(4)">Abrir Ventana 4</button>
+
+    <label for="longitudLista">Longitud de la lista de números:</label>
+    <select id="longitudLista" onchange="generarValoresAleatorios()">
+        <option value="50">50</option>
+        <option value="51">51</option>
+        <option value="52">52</option>
+        <option value="53">53</option>
+        <option value="54">54</option>
+        <option value="55">55</option>
+        <option value="56">56</option>
+        <option value="57">57</option>
+        <option value="58">58</option>
+        <option value="59">59</option>
+        <option value="60">60</option>
+    </select>
+
+    <label for="numAleatoriosEscoger">Número de valores aleatorios a escoger:</label>
+    <select id="numAleatoriosEscoger" onchange="generarValoresAleatorios()">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+
+    <script src="script.js"></script>
+</body>
+</html>

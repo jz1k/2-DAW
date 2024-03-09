@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de Cookies</title>
+</head>
+
+<body>
+    <h1>Manejo de Cookies</h1>
+    <!-- Botón para crear cookies -->
+    <button type="button" onclick="crearCookies()">Crear Cookies</button>
+
+    <!-- Botón para ver las cookies -->
+    <button type="button" onclick="verCookies()">Ver Cookies</button>
+
+    <!-- Botón para borrar las cookies -->
+    <button type="button" onclick="borrarCookies()">Borrar Cookies</button>
+
+    <script>
+        // Función para crear cookies
+        function crearCookies() {
+            // Nombre del usuario
+            var nombreUsuario = prompt("Ingresa tu nombre:");
+            document.cookie = "usuario=" + encodeURIComponent(nombreUsuario) + "; expires=Sat, 6 Aug 2023 12:15:00 GMT";
+
+            // Contador de visitas
+            var visitas = obtenerVisitas() + 1;
+            document.cookie = "visitas=" + visitas + "; expires=Sat, 6 Aug 2023 12:15:00 GMT";
+
+            alert("Cookies creadas correctamente");
+        }
+
+        // Función para ver las cookies
+        function verCookies() {
+            alert("Cookies:\n" + document.cookie);
+        }
+
+        // Función para borrar las cookies
+        function borrarCookies() {
+            document.cookie = "usuario=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            document.cookie = "visitas=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            alert("Cookies borradas correctamente");
+        }
+
+        // Función para obtener el valor de la cookie de visitas
+        function obtenerVisitas() {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.startsWith("visitas=")) {
+                    return parseInt(cookie.substring("visitas=".length, cookie.length)) || 0;
+                }
+            }
+            return 0;
+        }
+    </script>
+</body>
+</html>

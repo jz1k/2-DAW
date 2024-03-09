@@ -1,0 +1,39 @@
+#player-container {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#audio-player {
+    display: none; /* Oculta el reproductor de audio estándar */
+}
+
+#player-container {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.player-controls button {
+    margin: 0 5px;
+}
+
+.player-progress {
+    margin: 10px 0;
+}
+
+.player-like button {
+    margin-left: 5px;
+}
+
+
+.player-controls button {
+    margin: 0 5px;
+}
+
+.player-progress {
+    margin: 10px 0;
+}
+
+.player-like button {
+    margin-left: 5px;
+}
+
