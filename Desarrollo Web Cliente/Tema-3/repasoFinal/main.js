@@ -91,7 +91,7 @@ function cuentaAtras() {
 
         if (segundos < 0) {
             clearInterval(interval);
-            window3.document.body.innerHTML = "<p>El array con numeros pares es "+lista2+"</p>";
+            window2.document.body.innerHTML = "<p>El array con numeros pares es "+lista2+"</p>";
             //window3.close();
         }
     }, 1000);
@@ -103,7 +103,6 @@ function rellenarArray(max) {
         if (numeroRandom % 2 === 0) {
             lista2.push(numeroRandom);
         }
-        
     }
     return lista2;
 }

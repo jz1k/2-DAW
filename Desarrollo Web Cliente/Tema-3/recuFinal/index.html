@@ -1,11 +1,81 @@
+<!-- 1. (2 puntos) Crea una página web con el titulo : "Prueba Practica RA4_abcde- 2 Recuperación" junto a tu nombre, donde muestres botones para abrir 2 ventanas y justo debajo el correspondiente botón para cerrar cada ventana.
+Ventana 1 de 300x 300 pixeles en la parte superior izquierda y color verde claro.
+Ventana 2 de 300 x 300 pixeles en la parte superior derecha y de color azul claro.
+Además debemos poder seleccionar mediante dos controles select los siguientes datos.
+
+Numero a escoger de una lista1 entre 5 y 10 y lo guardaras en una variable llamada nlista1
+Un botón para mostrar la lista2 de valores con nlista1 valores aleatorios entre 2024 y 2050. Debes utilizar arrays y funciones creadas por el usuario2(3 puntos)
+
+2. (3 puntos) En la ventana 1 debe de mostrar un formulario con los siguientes campos: 
+
+Usuario: _________ Contraseña: __________ Repita Contraseña: ___________
+
+donde nos solicite un nombre y una contraseña, si no se ha introducido nunca o se ha borrado desde la ventana 2. El usuario debe ser de solo caracteres (5 caracteres) en mayúscula y la contraseña solo números (3 cifras). Si no introduces la misma contraseña correcta te mostrará un mensaje en la misma ventana diciendo:
+
+contraseña incorrecta. Las dos contraseñas deben de ser iguales. (te queda un intento)
+
+Si introduces la contraseña correcta te mostrará un mensaje diciendo:
+
+Usuario y contraseña creados correctamente
+
+Solo tienes 2 intentos para poner la contraseña correcta si los agotas usaras la contraseña por defecto que es 000
+
+Debes utilizar un objeto denominado usuario (con sus propiedades) y que permita autenticar a la persona junto con un método para crear la contraseña y contar los intentos. ( Si no usas Objetos el Ejercicio no se dará como válido)
+
+
+
+3.  (2,5 puntos) En la ventana 2 debes mostrar el usuario y contraseña actuales y un botón para poner la contraseña por defecto (000). cuando se pulse debe de aparecer en la ventana el mensaje:
+
+Contraseña por defecto establecida correctamente. 
+
+
+
+(2,5 puntos) Además una vez pulsado el botón,  mostraras  una cuenta  atrás con 5 segundos y cuando termina deberá mostrar en dicha ventana los valores pares de la  lista2  de valores aleatorios obtenidos en el apartado 1. -->
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prueba Practica RA4_abcde-Recuperación</title>
 </head>
+
 <body>
+    <!-- Botones -->
+    <button type="button" onclick="openWindow1()">Abrir Ventana 1</button>
+    <button type="button" onclick="closeWindow1()">Cerrar Ventana 1</button>
+    <br>
+    <button type="button" onclick="openWindow2()">Abrir Ventana 2</button>
+    <button type="button" onclick="closeWindow2()">Cerrar Ventana 2</button>
+    <br><br>
+
+    <!-- Lista a escoger -->
+    <label for="">Selecciona</label>
+    <select id="lista1">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select> <br><br>
+
+    <button type="button" onclick="mostrarLista1()">Mostrar Lista 1</button>
     
+    <p id="lista2">
+    </p>
+    
+    
+    <p>Nota: Para mostrar la lista PAR de la ventana2 es necesario que previamente se haya generado la lista1</p>
+
+
+
+
+
+
+    <script src="main.js"></script>
 </body>
+
 </html>
