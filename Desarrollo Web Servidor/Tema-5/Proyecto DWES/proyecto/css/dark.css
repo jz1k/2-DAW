@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+h2, h3 {
+    color: #fff;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button,
+input[type="submit"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+button {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #444;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #555;
+    background-color: #444;
+}
+
+fieldset legend {
+    font-weight: bold;
+    color: #fff;
+}
+
+p {
+    color: red;
+    margin-top: -10px;
+}

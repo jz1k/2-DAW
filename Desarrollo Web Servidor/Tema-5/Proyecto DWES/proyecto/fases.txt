@@ -1,0 +1,49 @@
+Pagina administracion que:
+	--Añadir/eliminar usuarios
+	--Administrar archivos
+	--No puede entrar en la web por defecto de los usuarios
+	
+Pagina usuario (escuchar.php)
+	--Ver todos los archivos
+	--Poder añadirlos al carrito (lista)
+	
+Cockies
+	--Hacer dinamico el color de la web (darker)
+
+
+
+
+Para adaptar el enunciado a una plataforma de música, puedes seguir los siguientes pasos:
+
+    Definición de Usuarios:
+        Mantén la estructura de usuarios con al menos dos perfiles: "normal" y "administrador".
+        Los usuarios normales serán aquellos que pueden escuchar música, subir sus propios archivos musicales y ver las canciones de otros.
+        Los administradores tendrán acceso a la administración de usuarios y a la gestión de las canciones en la plataforma.
+
+    Página de Login:
+        Desarrolla una página de inicio de sesión donde los usuarios ingresen su usuario y contraseña.
+        Al autenticarse, redirige a la página de escucha para usuarios normales o a la página de administración para administradores.
+
+    Gestión de Usuarios:
+        Los administradores podrán dar de alta o baja a usuarios. Puedes agregar esta funcionalidad en la página de administración.
+
+    Gestión de Canciones:
+        Las canciones (archivos musicales) deben tener un nombre, imagen y descripción. Estos datos deben almacenarse en la base de datos.
+        La gestión de canciones debe realizarse desde la página de administración. Los administradores podrán agregar o quitar canciones de la plataforma.
+
+    Subida de Archivos:
+        Los usuarios normales podrán subir sus propios archivos musicales. Implementa un formulario de carga de archivos para ello.
+
+    Personalización con Cookies:
+        Utiliza cookies para personalizar la web. Puedes permitir a los usuarios cambiar la combinación de colores o el idioma y almacenar estas preferencias en cookies.
+
+    Validación de Formularios:
+        Asegúrate de validar todos los datos recogidos en formularios, incluyendo la información de inicio de sesión, la subida de archivos y cualquier otro formulario presente en la aplicación.
+
+    Seguridad y Restricciones:
+        Implementa restricciones para asegurar que los usuarios normales no puedan acceder a las funciones de administración y viceversa.
+
+    Página de Escucha:
+        Desarrolla una página de escucha donde los usuarios normales puedan reproducir y explorar las canciones disponibles.
+
+Recuerda adaptar cada paso según tus necesidades específicas y la lógica de tu aplicación musical. También, ten en cuenta las medidas de seguridad necesarias para proteger la aplicación contra posibles vulnerabilidades.
