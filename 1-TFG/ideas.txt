@@ -1,0 +1,9 @@
+Horientar todo a archivos, no musica
+En un menu en un lateral que aparezcan los grupos (grupos de archivos que has creado)
+    ##Que pida nombre de grupo al crearlo
+    #Si no hay grupos previamente creados que diga un mensaje con poco contraste "no has creado ningun grupo"
+    - Apuntes de clase
+    - Musica
+    - Audios de clase, etc
+
+La pantalla principal que sea
